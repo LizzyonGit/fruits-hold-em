@@ -18,10 +18,10 @@ Sotis is a life coach, and this is his website. The website targets people inter
 
 ### Site goals
 
-- Inform visitors about Sotis the life coach, who he is, how he works and what he offers. 
-- Give visitors practical information such as address and contact information, prices and session lengths. 
-- Convince visitors to book an appointment with Sotis the life coach and provide a way to book this appointment. 
-- The website aims to be responsive across all screen sizes, with user-friendly navigation and present information in a clear consistent way without overinforming. 
+The website aims to offer users:
+- a fun and simple game to quickly and easily test their luck, 
+- a responsive website across all screen sizes,
+- a user-friendly, simple navigation across the website. 
 
 ### User stories
 
