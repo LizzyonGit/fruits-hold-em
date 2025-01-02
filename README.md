@@ -18,10 +18,10 @@ Sotis is a life coach, and this is his website. The website targets people inter
 
 ### Site goals
 
-The website aims to offer users:
-- a fun and simple game to quickly and easily test their luck, 
-- a responsive website across all screen sizes,
-- a user-friendly, simple navigation across the website. 
+The website aims to offer users a:
+- fun and simple game to quickly and easily test their luck, 
+- responsive website across all screen sizes,
+- user-friendly, simple navigation across the website. 
 
 ### User stories
 
@@ -29,9 +29,13 @@ The website aims to offer users:
 
 - be able to navigate to all pages on any device and experience a user-friendly website.
 
-#### As a person interested in seeing a life coach, I want to:
+#### As a gamer, I want to:
 
--  find information about Sotis the life coach and how he works, so that I can decide if I consider booking an appointment with him.
+- find information on how the game works, so that I can play the game,
+- keep track of how many spins I have left, so that I can adapt my tactic,
+- keep track of my credit, so that I can see how lucky I am,
+- keep track of how many games I have played, so that I can decide if I should stop or continue,
+- be able to quit or restart the game, so I have control over the game without needing to leave the website.
 
 #### As a potential client, I want to:
 
