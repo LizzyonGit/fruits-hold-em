@@ -35,12 +35,12 @@ The website aims to offer users a:
 - keep track of how many games I have played, so that I can decide if I should stop or continue,
 - turn on or off the sound, so that I can decide which I prefer more,
 - be able to quit or restart the game, so I have control over the game without needing to leave the website,
-- find links to social media, so that I can find out more about the game and other games by the same makers.
+- find links to social media, so that I can find out more about the game and find other games by the same makers.
 
-#### As a site owner, I want to provide:
+#### As a site owner, I want to offer visitors a:
 
-- users with a fun and addictive game, to get a steady user base and gain traffic to my website,
-- links to my social media, so that users can follow me there.
+- fun and addictive game, so that I can get a steady user base and gain traffic to my website,
+- way to easily find me on social media, so that I can gain followers there.
 
 #### Tasks to achieve user stories
 
