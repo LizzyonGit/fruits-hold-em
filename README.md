@@ -25,33 +25,22 @@ The website aims to offer users a:
 
 ### User stories
 
-#### As any user of this website, I want to:
-
-- be able to navigate to all pages on any device and experience a user-friendly website.
-
 #### As a gamer, I want to:
 
+- be able to navigate to all pages on any device and experience a user-friendly website,
 - find information on how the game works, so that I can play the game,
+- have the possibilty to hold certain fruits, so that I can increase the chance of winning,
 - keep track of how many spins I have left, so that I can adapt my tactic,
 - keep track of my credit, so that I can see how lucky I am,
 - keep track of how many games I have played, so that I can decide if I should stop or continue,
-- be able to quit or restart the game, so I have control over the game without needing to leave the website.
+- turn on or off the sound, so that I can decide which I prefer more,
+- be able to quit or restart the game, so I have control over the game without needing to leave the website,
+- find links to social media, so that I can find out more about the game and other games by the same makers.
 
-#### As a potential client, I want to:
+#### As a site owner, I want to provide:
 
-- find information about what Sotis can offer me, how much it would cost and where it would be, so that I can decide if I want to book an appointment with him.
-- be able to contact Sotis, so that I can ask questions about anything unclear, so that I can decide if I still want to book an appointment with him.
-- read reviews from previous clients, to decide if I also want to book an appointment with Sotis.
-- find a way to book an appointment, so that I can do this easily on the website.
-
-#### As a confirmed client, I want to:
-
-- find contact information, so that I can contact Sotis about any matter regarding my appointment.
-
-#### As a site owner, I want to:
-
-- get word around about a special cat offering life coach services, so that I build brand awareness.
-- get visitors to book an appointment, so that I grow my business and help clients.
+- users with a fun and addictive game, to get a steady user base and gain traffic to my website,
+- links to my social media, so that users can follow me there.
 
 #### Tasks to achieve user stories
 
