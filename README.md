@@ -1,8 +1,8 @@
-# Sotis life coach
+# Lucky fruits
 
 [Live link to website](https://lizzyongit.github.io/sotis-lifecoach/index.html)
 
-Sotis is a life coach, and this is his website. The website targets people interested in getting a life coach. The website shows who Sotis is, how he works and what he offers. Visitors can read what sessions entail and how much they cost, the images give more context and they can read about what previous clients think of their sessions with Sotis. The contact information and social media links give the visitor the possibility to ask questions or look for more information about Sotis beyond his website. The visitor can book an appointment via a form on the website.
+Lucky fruits is a slot machine game purely based on luck. The images will line up randomly each spin. Three spins is one game where you can earn credits or lose them. You can hold some fruits so that you can increase your chance to win. You start with some credit by default and you can play until your credit is finished or when you click one of the buttons to reset or quit to the home page. You can keep track of your credit, how many spins you have left the current game, and how many games you have played. At any time, you can trigger a module with the rules about how to play and how you win. In the footer, there are links to social media if you want to know more or follow the game creators.
 
 ![Screenshot webpages on different devices](docs/screenshots/responsive-website.png)
 
@@ -72,9 +72,9 @@ Create a:
 - button to quit the game,
 - navigation bar with navigation to **Home** and **Rules**,
 - modal with information when:
- - the game ends due to insufficient credit, with an appropriate text,
- - you click **Quit**, with an appropriate text,
- - you click **New game**, with an appropriate text.
+  - the game ends due to insufficient credit, with an appropriate text,
+  - you click **Quit**, with an appropriate text,
+  - you click **New game**, with an appropriate text.
 - footer with social media links.
 
 ### Design
