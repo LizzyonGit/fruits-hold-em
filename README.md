@@ -44,13 +44,38 @@ The website aims to offer users a:
 
 #### Tasks to achieve user stories
 
-- Create informative sections with background information about Sotis and according to which philosophy he works, with an image from his work environment.
-- Create informative cards about the different sessions Sotis can offer the client and what these cost, how long they take and what they entail, with a suitable image, and a button to book them.
-- Create a form where a client can choose a session and a date and time to book this session, along with filling in name, email, phone and a message.
-- Create a testimonials section that contains a few reviews from other clients.
-- Create a navigation bar with navigation to **Home**, **About**, **Philosophy**, **Testimonials**, **What I offer** and **Book**.
-- Create a footer with contact information, address, and social media links.
-- Create a header on the home page with a quote over a hero image.
+Create a:
+- home page with a link to play and to the rules,
+- **Rules** modal with information on how to play, which combinations make you win, and how the game ends,
+- sound on/off button,
+- responsive slot machine like box with:
+  - three columns with fruits,
+  - logic to :
+    - increase the credit with a winning combination, 
+    - decrease the credit when no winning combination,
+    - decrease spins left per game and reset it at start of a game,
+    - increase games played,
+    - display visual effect when there is a winning combination,
+    - play sound effects when spinning,
+    - play winning sound effect when there is a winning combination,
+  - **Hold** buttons under each column, with logic to:
+    - hold a column so it does not spin when you click **Go**,
+    - change to **Held** when clicked,
+    - you can not hold three columns,
+    - reset when there is a winning combination or at the end of the game.
+  - a **Go** button to spin the machine,
+  - information on how: 
+    - much credit left,
+    - many spins left,
+    - many games played.
+- button to start a new game,
+- button to quit the game,
+- navigation bar with navigation to **Home** and **Rules**,
+- modal with information when:
+ - the game ends due to insufficient credit, with an appropriate text,
+ - you click **Quit**, with an appropriate text,
+ - you click **New game**, with an appropriate text.
+- footer with social media links.
 
 ### Design
 
