@@ -2,7 +2,11 @@
 
 [Live link to website](https://lizzyongit.github.io/sotis-lifecoach/index.html)
 
-**Fruits hold 'em** is a slot machine game purely based on luck. The fruit images will line up randomly each spin. Three spins is one game where you can earn credits or lose them. You can hold some fruits so that you can increase your chance to win. You start with some credit by default and you can play until your credit is finished or when you click one of the buttons to reset or quit to the home page. You can keep track of your credit, how many spins you have left the current game, and how many games you have played. At any time, you can trigger a module with the rules about how to play and how you win. In the footer, there are links to social media if you want to know more or follow the game creators.
+**Fruits hold 'em** is a slot machine game purely based on luck, for gamers and people who just want to see how lucky they are today. 
+
+The fruit images will line up randomly each spin. Three spins is one game where you can earn credits or lose them. You can hold some fruits so that you can increase your chance to win. You start with some credit by default and you can play until your credit is finished or when you click one of the buttons to reset or quit to the home page. You can keep track of your credit, how many spins you have left the current game, and how many games you have played. At any time, you can trigger a module with the rules about how to play and how you win. 
+
+In the footer, there are links to social media if you want to know more or follow the game creators.
 
 ![Screenshot webpages on different devices](docs/screenshots/responsive-website.png)
 
@@ -76,7 +80,8 @@ Create a:
   - you click **Quit**, with an appropriate text,
   - you click **New game**, with an appropriate text.
 - footer with social media links,
-- suiting background image for the pages.
+- suiting background image for the pages,
+- favicon (adds to user-friendly website experience).
 
 ### Design
 
