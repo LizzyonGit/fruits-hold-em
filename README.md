@@ -138,13 +138,10 @@ https://www.myperfectcolor.com/paint/101581-true-value-3496-casino-green#:~:text
 
 #### Fonts
 
-Searching for fonts on [Google Fonts](https://fonts.google.com/), when I filtered on a *Calm* feeling, *Poiret One* really stood out to me. The calm feeling that I lack because I don't use blue in my colours (which the colour websites stated), can be compensated with this font. So I like it for my informative texts, and credit and game information.
+Searching for fonts on [Google Fonts](https://fonts.google.com/), when I filtered on a *Calm* feeling, *Poiret One* really stood out to me. The calm feeling that I lack because I don't use blue in my colours (which the colour websites stated), can be compensated with this font. So I like it for my headings, but it is not good for informative texts. I found this article https://www.creatopy.com/blog/google-font-pairings/#21, and decided to pair it with *Didact Gothic* for my main body text.
 
 
 When I filtered on a *Shaded* appearance and *Color* technology, I found *Nabla*, which I liked for my logo, because of the tilted look and the orange colour makes a good match with my fruity theme, although I could change the colour later ofcourse. 
-
-
-Removing the *Color* technology filter, *Rampart One* looked nice for my other headings, as it is neutral but still has the shadow which gives an added dimension, as well as it is readable. 
 
 #### Logos and images
 
