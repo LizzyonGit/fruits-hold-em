@@ -2,7 +2,7 @@
 
 [Live link to website](https://lizzyongit.github.io/sotis-lifecoach/index.html)
 
-**Fruits hold 'em** is a slot machine game purely based on luck, for gamers and people who just want to see how lucky they are today. 
+**Fruits hold 'em** is a slot machine game purely based on luck, for gamers and people who want to see how lucky they are today, or just enjoy playing this kind of games, without losing money.
 
 The fruit images will line up randomly each spin. Three spins is one game where you can earn credits or lose them. You can hold some fruits so that you can increase your chance to win. You start with some credit by default and you can play until your credit is finished or when you click one of the buttons to reset or quit to the home page. You can keep track of your credit, how many spins you have left the current game, and how many games you have played. At any time, you can trigger a module with the rules about how to play and how you win. 
 
@@ -23,7 +23,7 @@ In the footer, there are links to social media if you want to know more or follo
 ### Site goals
 
 The website aims to offer users a:
-- fun and simple game to quickly and easily test their luck, 
+- fun and simple game to just enjoy and/or to quickly and easily test their luck, 
 - responsive website across all screen sizes,
 - user-friendly, simple navigation across the website. 
 
@@ -115,27 +115,46 @@ Below are my initial wireframes per page for mobile, tablet and laptop screen si
 
 #### Color schemes
 
-I searched the internet for life coach websites and my mentor also instantly said I would probably use a lot of blue because it conveys calmness. I found this website that I liked: https://themewagon.github.io/Pilates/, and picked two colors from it (#55CBD2 and #C5FFF1). I entered them in [Coolors.co](https://coolors.co/) and asked for two more colors. Keeping in mind the mainly blue theme, I went with these two complementary darker colors: #173753 and #1B4353.
+ A lot has been written about colours in casino's and slot machines in particular, and not all give the same reason for using particular colors. Basically all websites I found say red is the main colour in casino's, because it symbolises excitement, and it attracts attention. Red in combination with gold represents success and winning, and gold ofcourse symbolises luxury. I based my choices on this article https://www.newwavemagazine.com/single-post/the-psychology-of-color-in-casinos-how-design-choices-influence-the-player-s-mood, which says gold and red simulates a real life casino feel in online games. Purple and black conveys exclusiveness and class and I have seen a purple background a lot in images of slot machines, so I use this as well. Bright colours for call to action buttons and several sources say orange is a much used colour on spin/go buttons. I use dark green as a background for credit info, to similise the green tables in casinos.
+
+ For winning combinations, I add some extra color to the background of the fruits, and some extra effects with these colours.
 
 
-My main background is white, as I don't want to overdo it with a blue background. 
+ I would like to add some extra shiny effects or bling in my game, if it is possible. To match a more flashy casino style machine.
 
+ I chose a lot of colours, as I also wanted to use a bright green and yellow, even though gold and yellow are much alike. Because bright colours match my fruity theme. I also use black as an added contrast colour. This is my pallete: https://coolors.co/4c004c-ff0000-ffd700-ffff00-00ff00-28775b-ffa500
 
-On the hero image, I used a neutral transparent black background with white text to not intervene with the image. 
+ These are my sources:
 
+ https://colorfulconsole.com/the-art-of-slot-machine-design-using-colors-to-enhance-gameplay/
+11:05
+https://www.globalbrandsmagazine.com/color-schemes-popular-among-online-gambling-brands/
+https://fashionisers.com/2020/06/22/color-psychology-in-online-casino-games-design/
+https://hickmandesign.co.uk/blog/other/psychology-of-casino-game-design/?srsltid=AfmBOoqN_NQjVzYCdMEXdxkKP7hirVuOcc1yR1pRNuj2DlTwndNwtmi-
+https://www.globalbrandsmagazine.com/casino-colors-psychology-lucky-gambling-colors/
 
-For color contrast, the used text color-background combinations get a score of 6.36 and up according to [Coolors.co](https://coolors.co/).
+https://www.myperfectcolor.com/paint/101581-true-value-3496-casino-green#:~:text=The%20RGB%20values%20for%20True,light%20that%20a%20color%20reflects.
+
 
 #### Fonts
 
-I went on [Google Fonts](https://fonts.google.com/) and set the filter to 'Calm'. Browsing through the results, *Montserrat Alternates* stuck out to me. I liked the 'E' being different than the other fonts. For a pairing font, I couldn't find anything on some of the font pairing sites, but when I just googled for font pairs with 'Montserrat Alternates', this blog came up (https://approval.studio/blog/how-to-combine-fonts/), where they argued for the pair *Montserrat Alternates* and *Raleway*, so I decided to go with that.
+Searching for fonts on [Google Fonts](https://fonts.google.com/), when I filtered on a *Calm* feeling, *Poiret One* really stood out to me. The calm feeling that I lack because I don't use blue in my colours (which the colour websites stated), can be compensated with this font. So I like it for my informative texts, and credit and game information.
+
+
+When I filtered on a *Shaded* appearance and *Color* technology, I found *Nabla*, which I liked for my logo, because of the tilted look and the orange colour makes a good match with my fruity theme, although I could change the colour later ofcourse. 
+
+
+Removing the *Color* technology filter, *Rampart One* looked nice for my other headings, as it is neutral but still has the shadow which gives an added dimension, as well as it is readable. 
 
 #### Logos and images
 
-The logo with a cat and a book is from [Canva](https://www.canva.com/), from which I removed the text. In [Lunapic](https://www3.lunapic.com/editor/) I created a transparent background and changed the color to create a logo in #55CBD2 or the navigation bar, and in #173753 for the favicon. To create the favicon files, I used [RealFaviconGenerator](https://realfavicongenerator.net/).
+For my fruit images, I use HTML symbols. I chose fruits that look distinctive to enhance accessibility, and another advantage of HTML symbols, is that it does not impact my performance as much as images would do.
 
 
-All used images are my own.
+The favicon is an image from the HTML symbol. To create the favicon files, I used [RealFaviconGenerator](https://realfavicongenerator.net/).
+
+
+The logo is the game name written in font *Nabla*.
 
 ## Features 
 
