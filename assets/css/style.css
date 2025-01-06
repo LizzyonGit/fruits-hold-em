@@ -15,3 +15,22 @@
     --primary-button-color: #FFA500; /* orange */
     --secondary-button-color: #00FF00; /* light green */
 }
+
+/*Global styles*/
+
+body {
+    font-family: var(--primary-font);
+}
+
+/*Logo styles*/
+
+h1 {
+    font-family: var(--logo-font);
+}
+
+
+/*Heading styles*/
+
+h2, h3 {
+    font-family: var(--secondary-font);
+}
