@@ -25,7 +25,10 @@ function resetArray(){
 // selectFruitFunction called by GO button
 function selectFruitFunction() {
 
-   // Call resetFunction to empty array
+   
+   //THIS WHOLE SECTION NEEDS TO BE REPEATED, HOW TO DO THIS
+   
+    // Call resetFunction to empty array
    resetArray();
 
    // Loop through main fruitArray to get 3 random fruits and push them to empty fruitColumnTwo
