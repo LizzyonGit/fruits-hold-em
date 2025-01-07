@@ -25,21 +25,21 @@ function resetArray(){
 // selectFruitFunction called by GO button
 function selectFruitFunction() {
 
-    // Call resetFunction to empty array
-    resetArray();
+   // Call resetFunction to empty array
+   resetArray();
 
-// Loop through main fruitArray to get 3 random fruits and push them to empty fruitColumnTwo
+   // Loop through main fruitArray to get 3 random fruits and push them to empty fruitColumnTwo
 
-for (let i=0; i < 3; i++){
-    let randomFruit = fruitArray[Math.floor((Math.random()*fruitArray.length))];
+   for (let i=0; i < 3; i++){
+       let randomFruit = fruitArray[Math.floor((Math.random()*fruitArray.length))];
 
-    fruitColumnTwo.push(randomFruit);
+       fruitColumnTwo.push(randomFruit);
 
-   }
+      }
 
-// Populate second fruit column with three random fruits from fruitColumnTwo array
+   // Populate second fruit column with three random fruits from fruitColumnTwo array
 
-document.getElementById('second-column-top').innerHTML = fruitColumnTwo[0];
-document.getElementById('second-column-middle').innerHTML = fruitColumnTwo[1];
-document.getElementById('second-column-bottom').innerHTML = fruitColumnTwo[2];
+   document.getElementById('second-column-top').innerHTML = fruitColumnTwo[0];
+   document.getElementById('second-column-middle').innerHTML = fruitColumnTwo[1];
+   document.getElementById('second-column-bottom').innerHTML = fruitColumnTwo[2];
 }
