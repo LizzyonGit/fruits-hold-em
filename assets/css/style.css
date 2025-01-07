@@ -22,6 +22,11 @@ body {
     font-family: var(--primary-font);
 }
 
+/*Checking boxes REMOVE LATER*/
+section * {
+    border: solid 1px;
+}
+
 /*Logo styles*/
 
 h1 {

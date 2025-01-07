@@ -12,7 +12,7 @@
     <!--CSS stylesheet-->
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
-<!--"d-flex" means display flex, "flex column" sets column instead of row, "min-vh-100" pushes footer down together with ms-auto class on footer, this code comes from the CI Boardwalk games walkthrough project-->
+<!--"d-flex" means display flex, "flex column" sets column direction instead of row, "min-vh-100" pushes footer down together with ms-auto class on footer, this code comes from the CI Boardwalk games walkthrough project-->
 <body class="d-flex flex-column min-vh-100">
     <!--navigation-->
 
@@ -20,11 +20,45 @@
     <h1>Fruits hold 'em</h1>
 
     <!--Main with game, credit info-->
-    <h2>Credit</h2>
-   
-    <h3>Games played</h3>
+    <main>
+        <!--Game and credit info section-->
+        <section class="container">
+            <div class="row">
+              <!--Game section-->
+              <section class="col-md-7">
+                Box with game
+                <div class="row justify-content-center">
+                    <p>Box holding 3 columns with fruits</p>
+                    <div class="col-3">Column with fruits</div>
+                    <div class="col-3">Column with fruits</div>
+                    <div class="col-3">Column with fruits</div>
+                </div>
 
-    <p>Testing the font</p>
+                <div class="row justify-content-center">
+                    <p>Box holding 3 Hold buttons</p>
+                    <div class="col-3">HOLD</div>
+                    <div class="col-3">HOLD</div>
+                    <div class="col-3">HOLD</div>
+                </div>
+
+                <div class="row justify-content-center">
+                    <p>Box with GO button</p>
+                    <div class="col-4">GO</div>
+                </div>
+
+              </section>
+
+              <!--Credit info section-->
+              <section class="col-md-5">
+                  <h2>Credit</h2>
+   
+                  <h3>Games played</h3>
+        
+                  <p>Testing the font</p>
+              </section>
+           </div>
+        </section>
+    </main>
 
     <!--Footer with class="mt-auto" to push footer down. Footer contains social media links.-->
     <footer class="mt-auto"></footer>
