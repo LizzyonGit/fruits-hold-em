@@ -18,17 +18,15 @@
 
 /*Global styles*/
 
+
+
 body {
     font-family: var(--primary-font);
 }
 
-/*Remove any default margins and padding*/
-* {
-    padding: 0;
-    margin: 0;
-}
 
-/*Checking boxes REMOVE LATER*/
+
+/*Testing boxes with borders REMOVE LATER*/
 section * {
     border: solid 1px;
 }
