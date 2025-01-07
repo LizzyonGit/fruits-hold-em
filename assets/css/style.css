@@ -22,6 +22,12 @@ body {
     font-family: var(--primary-font);
 }
 
+/*Remove any default margins and padding*/
+* {
+    padding: 0;
+    margin: 0;
+}
+
 /*Checking boxes REMOVE LATER*/
 section * {
     border: solid 1px;
