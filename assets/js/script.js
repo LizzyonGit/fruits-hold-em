@@ -37,9 +37,6 @@ function selectNineFruits(){
 // selectFruitFunction called by GO button
 function selectFruitFunction() {
 
-   
-   //THIS WHOLE SECTION NEEDS TO BE REPEATED, HOW TO DO THIS
-   
     // Call resetFunction to empty array (needs to be changed when implementing Hold)
    resetArray();
 
@@ -60,3 +57,16 @@ function selectFruitFunction() {
    document.getElementById('third-column-middle').innerHTML = allFruits[7];
    document.getElementById('third-column-bottom').innerHTML = allFruits[8];
 }
+
+// Code to fix credit, spins left and games played
+
+let startCredit = 10;
+
+function creditAdjustment(){
+    document.getElementById('credit').innerText = startCredit;
+}
+
+
+
+// Need to fix hold function
+// Need to fix winning combination
