@@ -61,10 +61,16 @@ function selectFruitFunction() {
 // Code to fix credit, spins left and games played
 
 let startCredit = 10;
+let startSpinsLeft = 3;
+let startGamesPlayed = 0;
 
-function creditAdjustment(){
+function resetGame(){
     document.getElementById('credit').innerText = startCredit;
+    document.getElementById('spins-left').innerText = startSpinsLeft;
+    document.getElementById('games-played').innerText = startGamesPlayed;
 }
+
+
 
 
 
