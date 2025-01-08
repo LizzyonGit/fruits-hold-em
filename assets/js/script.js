@@ -78,7 +78,7 @@ let startCredit = 10;
 let startSpinsLeft = 3;
 let startGamesPlayed = 0;
 
-let credit = document.getElementById('credit').innerText;
+let credit = document.getElementById('credit-amount').innerText;
 let spinsLeft = document.getElementById('spins-left').innerText;
 let gamesPlayed = document.getElementById('games-played').innerText;
 
