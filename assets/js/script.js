@@ -56,6 +56,14 @@ function selectFruitFunction() {
    document.getElementById('third-column-top').innerHTML = allFruits[6];
    document.getElementById('third-column-middle').innerHTML = allFruits[7];
    document.getElementById('third-column-bottom').innerHTML = allFruits[8];
+
+   //If no winning combination
+   if (allFruits[1] !== allFruits[4] && allFruits[1] !== allFruits[7]){
+      spinDecrease();
+
+      //If no spins left
+      if ()
+   }
 }
 
 // Code to fix credit, spins left and games played
@@ -66,10 +74,14 @@ let startCredit = 10;
 let startSpinsLeft = 3;
 let startGamesPlayed = 0;
 
+let credit = document.getElementById('credit').innerText;
+let spinsLeft = document.getElementById('spins-left').innerText;
+let gamesPlayed = document.getElementById('games-played').innerText;
+
 function resetGame(){
-    document.getElementById('credit').innerText = startCredit;
-    document.getElementById('spins-left').innerText = startSpinsLeft;
-    document.getElementById('games-played').innerText = startGamesPlayed;
+    credit = startCredit;
+    spinsLeft = startSpinsLeft;
+    gamesPlayed = startGamesPlayed;
 }
 
 // Click event added to button, calls function resetGame
@@ -78,15 +90,20 @@ document.getElementById('button-restart').addEventListener('click', resetGame);
 // From resetGame, each time you click Go:
 // - Spins left -1
 
+function spinDecrease(){
+    spinsLeft -= 1;
+
+}
+
 //After third time you clicked Go:
 // - Spins left back to 3,
 // - Games played +1,
 // - Credit -5
 
 function gameDone(){
-    document.getElementById('credit').innerText -= 5;
-    document.getElementById('spins-left').innerText = startSpinsLeft;
-    document.getElementById('games-played').innerText += 1;
+    credit -= 5;
+    spinsLeft = startSpinsLeft;
+    gamesPlayed += 1;
 }
 
 //If there is a winning combination in one of the 3 spins
