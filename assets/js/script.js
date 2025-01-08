@@ -61,8 +61,12 @@ function selectFruitFunction() {
    if (allFruits[1] !== allFruits[4] && allFruits[1] !== allFruits[7]){
       spinDecrease();
 
-      //If no spins left
-      if ()
+      //If no spins left one game is done
+      if (spinsLeft === 0){
+        gameDone();
+      } else {
+           // what here? You should just click again...
+      }
    }
 }
 
