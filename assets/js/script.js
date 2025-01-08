@@ -75,7 +75,24 @@ function resetGame(){
 // Click event added to button, calls function resetGame
 document.getElementById('button-restart').addEventListener('click', resetGame);
 
+// From resetGame, each time you click Go:
+// - Spins left -1
 
+//After third time you clicked Go:
+// - Spins left back to 3,
+// - Games played +1,
+// - Credit -5
+
+function gameDone(){
+    document.getElementById('credit').innerText -= 5;
+    document.getElementById('spins-left').innerText = startSpinsLeft;
+    document.getElementById('games-played').innerText += 1;
+}
+
+//If there is a winning combination in one of the 3 spins
+// - Spins left back to 3,
+// - Games played +1,
+// - Credit +5
 
 
 // Need to fix hold function
