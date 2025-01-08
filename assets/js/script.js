@@ -60,6 +60,8 @@ function selectFruitFunction() {
 
 // Code to fix credit, spins left and games played
 
+// Restart game Code
+
 let startCredit = 10;
 let startSpinsLeft = 3;
 let startGamesPlayed = 0;
@@ -70,6 +72,8 @@ function resetGame(){
     document.getElementById('games-played').innerText = startGamesPlayed;
 }
 
+// Click event added to button, calls function resetGame
+document.getElementById('button-restart').addEventListener('click', resetGame);
 
 
 
