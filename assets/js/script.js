@@ -13,13 +13,25 @@ const fruitArray = [grapes, lemon, pineapple, cherries, kiwi];
 // Click event added to button, calls function selectFruitFunction
 document.getElementById('button-go').addEventListener('click', selectFruitFunction);
 
-// Introduce empty array for second fruit column, changable variable
-let fruitColumnTwo = [];
+// Introduce empty array for all fruits, changable variable
+let allFruits = [];
 
 // resetArray function to empty array
 function resetArray(){
-    fruitColumnTwo = [];
+    allFruits = [];
 
+}
+
+function selectNineFruits(){
+    // Loop through main fruitArray to get 9 random fruits and push them to empty array allFruits
+
+    for (let i=0; i < 9; i++){
+        let randomFruit = fruitArray[Math.floor((Math.random()*fruitArray.length))];
+ 
+        allFruits.push(randomFruit);
+ 
+       }
+ 
 }
 
 // selectFruitFunction called by GO button
@@ -28,21 +40,23 @@ function selectFruitFunction() {
    
    //THIS WHOLE SECTION NEEDS TO BE REPEATED, HOW TO DO THIS
    
-    // Call resetFunction to empty array
+    // Call resetFunction to empty array (needs to be changed when implementing Hold)
    resetArray();
 
-   // Loop through main fruitArray to get 3 random fruits and push them to empty fruitColumnTwo
+   // Call function to get 9 random fruits
+   selectNineFruits();
 
-   for (let i=0; i < 3; i++){
-       let randomFruit = fruitArray[Math.floor((Math.random()*fruitArray.length))];
+   // Populate all fruit columns with nine random fruits from allFruits array
 
-       fruitColumnTwo.push(randomFruit);
+   document.getElementById('first-column-top').innerHTML = allFruits[0];
+   document.getElementById('first-column-middle').innerHTML = allFruits[1];
+   document.getElementById('first-column-bottom').innerHTML = allFruits[2];
 
-      }
+   document.getElementById('second-column-top').innerHTML = allFruits[3];
+   document.getElementById('second-column-middle').innerHTML = allFruits[4];
+   document.getElementById('second-column-bottom').innerHTML = allFruits[5];
 
-   // Populate second fruit column with three random fruits from fruitColumnTwo array
-
-   document.getElementById('second-column-top').innerHTML = fruitColumnTwo[0];
-   document.getElementById('second-column-middle').innerHTML = fruitColumnTwo[1];
-   document.getElementById('second-column-bottom').innerHTML = fruitColumnTwo[2];
+   document.getElementById('third-column-top').innerHTML = allFruits[6];
+   document.getElementById('third-column-middle').innerHTML = allFruits[7];
+   document.getElementById('third-column-bottom').innerHTML = allFruits[8];
 }
