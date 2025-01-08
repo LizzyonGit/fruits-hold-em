@@ -124,8 +124,10 @@ function gameDone(){
 // - Games played +1,
 // - Credit +5
 
+
 function winGame(){
-    credit.innerText += 10;
+    
+    credit.innerText += 10; //10 is not added by calculation but just at the end
     spinsLeft.innerText = start.spinsLeft;
     gamesPlayed.innerText ++;
 }
