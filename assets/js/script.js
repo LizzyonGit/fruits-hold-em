@@ -74,22 +74,26 @@ function selectFruitFunction() {
 
 // Restart game Code
 
-let startCredit = 10;
-let startSpinsLeft = 3;
-let startGamesPlayed = 0;
+let start= {
+    credit: 10,
+    spinsLeft: 3,
+    gamesPlayed: 0,
+};
 
 let credit = document.getElementById('credit-amount').innerText;
 let spinsLeft = document.getElementById('spins-left').innerText;
 let gamesPlayed = document.getElementById('games-played').innerText;
 
-function resetGame(){
-    credit = startCredit;
-    spinsLeft = startSpinsLeft;
-    gamesPlayed = startGamesPlayed;
-}
+
 
 // Click event added to button, calls function resetGame
 document.getElementById('button-restart').addEventListener('click', resetGame);
+
+function resetGame(){
+    credit = start.credit;
+    spinsLeft = start.spinsLeft;
+    gamesPlayed = start.gamesPlayed;
+}
 
 // From resetGame, each time you click Go:
 // - Spins left -1
@@ -106,7 +110,7 @@ function spinDecrease(){
 
 function gameDone(){
     credit -= 5;
-    spinsLeft = startSpinsLeft;
+    spinsLeft = start.spinsLeft;
     gamesPlayed += 1;
 }
 
