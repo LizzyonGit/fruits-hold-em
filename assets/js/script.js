@@ -57,16 +57,12 @@ function selectFruitFunction() {
    document.getElementById('third-column-middle').innerHTML = allFruits[7];
    document.getElementById('third-column-bottom').innerHTML = allFruits[8];
 
-   //If no winning combination
-   if (allFruits[1] !== allFruits[4] && allFruits[1] !== allFruits[7]){
+   //If no winning combination call spinDecrease function
+   if (!(allFruits[1] === allFruits[4] && allFruits[1] === allFruits[7])){
       spinDecrease();
-
-      //If no spins left one game is done
-      if (spinsLeft === 0){
-        gameDone();
-      } else {
-           // what here? You should just click again...
-      }
+   } else {
+    //winning combination call winGame function
+      winGame();
    }
 }
 
@@ -86,6 +82,7 @@ let gamesPlayed = document.getElementById('games-played');
 
 
 
+
 // Click event added to button, calls function resetGame
 document.getElementById('button-restart').addEventListener('click', resetGame);
 
@@ -100,7 +97,14 @@ function resetGame(){
 // - Spins left -1
 
 function spinDecrease(){
-    spinsLeft -= 1;
+
+    spinsLeft.innerText --;
+
+    if (spinsLeft.innerText == 0){
+        gameDone();
+    }
+    
+
 
 }
 
@@ -110,9 +114,9 @@ function spinDecrease(){
 // - Credit -5
 
 function gameDone(){
-    credit -= 5;
-    spinsLeft = start.spinsLeft;
-    gamesPlayed += 1;
+    credit.innerText -= 5;
+    spinsLeft.innerText = start.spinsLeft;
+    gamesPlayed.innerText ++;
 }
 
 //If there is a winning combination in one of the 3 spins
@@ -120,6 +124,11 @@ function gameDone(){
 // - Games played +1,
 // - Credit +5
 
+function winGame(){
+    credit.innerText += 10;
+    spinsLeft.innerText = start.spinsLeft;
+    gamesPlayed.innerText ++;
+}
 
 // Need to fix hold function
 // Need to fix winning combination
