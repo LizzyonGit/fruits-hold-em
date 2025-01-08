@@ -80,9 +80,9 @@ let start= {
     gamesPlayed: 0,
 };
 
-let credit = document.getElementById('credit-amount').innerText;
-let spinsLeft = document.getElementById('spins-left').innerText;
-let gamesPlayed = document.getElementById('games-played').innerText;
+let credit = document.getElementById('credit-amount');
+let spinsLeft = document.getElementById('spins-left');
+let gamesPlayed = document.getElementById('games-played');
 
 
 
@@ -90,9 +90,10 @@ let gamesPlayed = document.getElementById('games-played').innerText;
 document.getElementById('button-restart').addEventListener('click', resetGame);
 
 function resetGame(){
-    credit = start.credit;
-    spinsLeft = start.spinsLeft;
-    gamesPlayed = start.gamesPlayed;
+    credit.innerText = start.credit;
+    spinsLeft.innerText = start.spinsLeft;
+    gamesPlayed.innerText = start.gamesPlayed;
+    
 }
 
 // From resetGame, each time you click Go:
