@@ -68,19 +68,22 @@ function selectFruitFunction() {
 
 // Code to fix credit, spins left and games played
 
+// Function to show the credit, spins and game info
 function showCreditInfo(){
     document.getElementById('credit-amount').innerText = game.credit;
     document.getElementById('spins-left').innerText = game.spinsLeft;
     document.getElementById('games-played').innerText = game.gamesPlayed;
 }
-// Restart game Code
 
+
+//default values for credit, spins left and games played
 let game={
     credit: 10,
     spinsLeft: 3,
     gamesPlayed: 0,
 };
 
+//variable for start value spins left
 let startSpinsLeft = 3;
 
 
@@ -88,6 +91,8 @@ let startSpinsLeft = 3;
 document.getElementById('button-restart').addEventListener('click', resetGame);
 
 function resetGame(){
+    //shows default values
+    //here I would need parameters, have to fix the functions. Now this is not working
     showCreditInfo();
     
 }
@@ -140,3 +145,4 @@ function winGame(){
 
 // Need to fix hold function
 // Need to fix winning combination
+// space key event for go button?
