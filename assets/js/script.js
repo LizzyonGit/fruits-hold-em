@@ -68,17 +68,18 @@ function selectFruitFunction() {
 
 // Code to fix credit, spins left and games played
 
+function showCreditInfo(){
+    document.getElementById('credit-amount').innerText = game.credit;
+    document.getElementById('spins-left').innerText = game.spinsLeft;
+    document.getElementById('games-played').innerText = game.gamesPlayed;
+}
 // Restart game Code
 
-let start= {
+let game={
     credit: 10,
     spinsLeft: 3,
     gamesPlayed: 0,
 };
-
-let credit = document.getElementById('credit-amount');
-let spinsLeft = document.getElementById('spins-left');
-let gamesPlayed = document.getElementById('games-played');
 
 
 
@@ -87,9 +88,7 @@ let gamesPlayed = document.getElementById('games-played');
 document.getElementById('button-restart').addEventListener('click', resetGame);
 
 function resetGame(){
-    credit.innerText = start.credit;
-    spinsLeft.innerText = start.spinsLeft;
-    gamesPlayed.innerText = start.gamesPlayed;
+    showCreditInfo();
     
 }
 
@@ -98,9 +97,10 @@ function resetGame(){
 
 function spinDecrease(){
 
-    spinsLeft.innerText --;
+    game.spinsLeft --;
+    showCreditInfo();
 
-    if (spinsLeft.innerText == 0){
+    if (game.spinsLeft === 0){
         gameDone();
     }
     
@@ -114,9 +114,13 @@ function spinDecrease(){
 // - Credit -5
 
 function gameDone(){
-    credit.innerText -= 5;
-    spinsLeft.innerText = start.spinsLeft;
-    gamesPlayed.innerText ++;
+    game.credit -= 5;
+    game.spinsLeft = 3;
+    game.gamesPlayed ++;
+    
+    showCreditInfo();
+    
+
 }
 
 //If there is a winning combination in one of the 3 spins
@@ -127,9 +131,10 @@ function gameDone(){
 
 function winGame(){
     
-    credit.innerText += 10; //10 is not added by calculation but just at the end
-    spinsLeft.innerText = start.spinsLeft;
-    gamesPlayed.innerText ++;
+    game.credit += 10; //10 is not added by calculation but just at the end   
+    game.gamesPlayed ++;
+    
+    showCreditInfo();
 }
 
 // Need to fix hold function
