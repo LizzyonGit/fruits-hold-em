@@ -81,7 +81,7 @@ let game={
     gamesPlayed: 0,
 };
 
-
+let startSpinsLeft = 3;
 
 
 // Click event added to button, calls function resetGame
@@ -115,7 +115,7 @@ function spinDecrease(){
 
 function gameDone(){
     game.credit -= 5;
-    game.spinsLeft = 3;
+    game.spinsLeft = startSpinsLeft;
     game.gamesPlayed ++;
     
     showCreditInfo();
@@ -132,6 +132,7 @@ function gameDone(){
 function winGame(){
     
     game.credit += 10; //10 is not added by calculation but just at the end   
+    game.spinsLeft = startSpinsLeft;
     game.gamesPlayed ++;
     
     showCreditInfo();
