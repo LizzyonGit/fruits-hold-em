@@ -18,7 +18,12 @@
 
 /*Global styles*/
 
+/*Remove default padding and margins*/
 
+* {
+    margin: 0;
+    padding: 0;
+    }
 
 body {
     font-family: var(--primary-font);
@@ -73,6 +78,7 @@ h2, h3 {
     font-family: var(--secondary-font);
     font-weight: 600;
     text-align: center;
+    height: 2em;
 }
 
 
