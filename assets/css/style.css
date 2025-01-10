@@ -78,7 +78,8 @@ h2, h3 {
     font-family: var(--secondary-font);
     font-weight: 600;
     text-align: center;
-    height: 1.5em;
+    height: 1.5em; /*fits height font*/
+    
 }
 
 
