@@ -58,14 +58,34 @@ function selectFruitFunction() {
    document.getElementById('third-column-middle').innerHTML = allFruits[7];
    document.getElementById('third-column-bottom').innerHTML = allFruits[8];
 
-   //If no winning combination call spinDecrease function
-   if (!(allFruits[1] === allFruits[4] && allFruits[1] === allFruits[7])){
-      spinDecrease();
-   } else {
-    //winning combination call winGame function
-      winGame();
-   }
+   //set row variable to manipulate in coming if else statement
+   let winningRow = document.querySelectorAll('.winning-row');
 
+   //If winning combination call winGame function
+   if (allFruits[1] === allFruits[4] && allFruits[1] === allFruits[7]){
+      
+      winGame();
+
+      // add background color with class
+      
+
+      for (column of winningRow){
+        column.classList.toggle('winning-combination');
+      
+   }} else {
+   //If no winning combination call spinDecrease function
+
+        spinDecrease();
+      
+        //remove .winning-combination if it is there from previous win
+        for (column of winningRow){
+        column.classList.remove('winning-combination');
+
+
+
+
+    }}
+   
    
 }
 
@@ -134,9 +154,10 @@ function gameDone(){
     game.gamesPlayed ++;
     
     showCreditInfo();
-    
-    //If credit is below 0, quit the game
-   if (game.credit <= 0){
+
+    //If credit is below 0, quit the game. Needs ot be below because you still have 3 spins when you get to 0 credit. 
+    //YOU CAN SEE -5 BEFORE IT QUITS, NEED OT FIX!!
+   if (game.credit < 0){
     quitGame();
    }
     
