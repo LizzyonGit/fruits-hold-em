@@ -51,6 +51,15 @@ h2, h3 {
 
 
 /*Button styles*/
+/*this class is added when clicking a HOLD button, changes colour and border*/
+.held-button{
+    background-color: var(--primary-color);
+    border: var(--primary-color);
+}
+/*Changes default hover effect to clicked colour, so you can see it is still red and it gets red directly when clicking, instead of when moving away from button*/
+.held-button:hover {
+    background-color: var(--primary-color);
+}
 
 /*Game styles*/
 

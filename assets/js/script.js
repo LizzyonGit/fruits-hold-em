@@ -34,6 +34,21 @@ function selectNineFruits(){
  
 }
 
+//Hold function implementation
+// targets all hold buttons, calls function holdColumn
+let holdButtons = document.querySelectorAll('.hold-button');
+
+//Click event added to all hold buttons 
+for (holdButton of holdButtons){
+   holdButton.addEventListener('click', holdColumn);}
+
+   
+//function to add toggle class when clicked on a button (class changes colour)
+
+function holdColumn(e){
+   this.classList.toggle('held-button');
+}
+
 // selectFruitFunction called by GO button
 function selectFruitFunction() {
 
