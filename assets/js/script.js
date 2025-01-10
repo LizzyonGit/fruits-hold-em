@@ -135,6 +135,7 @@ function spinDecrease(){
     showCreditInfo();
 
     if (game.spinsLeft === 0){
+        
         gameDone();
     }
     
@@ -149,18 +150,25 @@ function spinDecrease(){
 // - Credit -5
 
 function gameDone(){
+    
+    //If credit is 0 when spins left is 0, quit the game. 
+    //THERE IS A GLITCH BEFORE IT QUITS, NEED TO FIX?!!
+    if (game.credit === 0){
+        quitGame();
+        
+       } else {
+
+
     game.credit -= 5;
     game.spinsLeft = startSpinsLeft;
     game.gamesPlayed ++;
+
     
+
     showCreditInfo();
 
-    //If credit is below 0, quit the game. Needs ot be below because you still have 3 spins when you get to 0 credit. 
-    //YOU CAN SEE -5 BEFORE IT QUITS, NEED OT FIX!!
-   if (game.credit < 0){
-    quitGame();
-   }
-    
+}
+   
 
 }
 
