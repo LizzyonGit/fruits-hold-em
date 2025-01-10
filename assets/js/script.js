@@ -61,10 +61,17 @@ function selectFruitFunction() {
    //set row variable to manipulate in coming if else statement
    let winningRow = document.querySelectorAll('.winning-row');
 
+   //set #winning-text variable
+   let winningText = document.getElementById('winning-text');
+
    //If winning combination call winGame function
    if (allFruits[1] === allFruits[4] && allFruits[1] === allFruits[7]){
       
       winGame();
+
+      // change winning text
+
+      winningText.innerText = 'WINNER!!';
 
       // add background color with class
       
@@ -76,6 +83,9 @@ function selectFruitFunction() {
    //If no winning combination call spinDecrease function
 
         spinDecrease();
+
+        //remove winning text
+        winningText.innerText = '';
       
         //remove .winning-combination if it is there from previous win
         for (column of winningRow){

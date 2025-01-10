@@ -67,4 +67,12 @@ h2, h3 {
     background-color: var(--background-color-light);
 }
 
+/*Styles winning text in game*/
+
+#winning-text {
+    font-family: var(--secondary-font);
+    font-weight: 600;
+    text-align: center;
+}
+
 
