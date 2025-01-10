@@ -208,5 +208,5 @@ function quitGame(){
 }
 
 // Need to fix hold function
-// Need to fix winning combination
+// Need to fix winning combination flash effect? See https://www.tutorialspoint.com/how-to-create-a-blinking-effect-with-css3-animations
 // space key event for go button?
