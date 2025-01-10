@@ -37,6 +37,7 @@ function selectNineFruits(){
 // selectFruitFunction called by GO button
 function selectFruitFunction() {
 
+
     // Call resetFunction to empty array (needs to be changed when implementing Hold)
    resetArray();
 
@@ -64,6 +65,8 @@ function selectFruitFunction() {
     //winning combination call winGame function
       winGame();
    }
+
+   
 }
 
 // Code to fix credit, spins left and games played
@@ -76,7 +79,8 @@ function showCreditInfo(){
 }
 
 
-//default values for credit, spins left and games played
+//default values for credit, spins left and games played.
+//IS THIS NEEDED NOW THAT IT IS IN FUNCTION RESTARTGAME?
 let game={
     credit: 10,
     spinsLeft: 3,
@@ -91,8 +95,13 @@ let startSpinsLeft = 3;
 document.getElementById('button-restart').addEventListener('click', resetGame);
 
 function resetGame(){
-    //shows default values
-    //here I would need parameters, have to fix the functions. Now this is not working
+    //sets and shows default values
+    game={
+        credit: 10,
+        spinsLeft: 3,
+        gamesPlayed: 0,
+    };
+
     showCreditInfo();
     
 }
@@ -108,6 +117,7 @@ function spinDecrease(){
     if (game.spinsLeft === 0){
         gameDone();
     }
+    
     
 
 
@@ -125,6 +135,11 @@ function gameDone(){
     
     showCreditInfo();
     
+    //If credit is below 0, quit the game
+   if (game.credit <= 0){
+    quitGame();
+   }
+    
 
 }
 
@@ -136,11 +151,21 @@ function gameDone(){
 
 function winGame(){
     
-    game.credit += 10; //10 is not added by calculation but just at the end   
+    game.credit += 10;   
     game.spinsLeft = startSpinsLeft;
     game.gamesPlayed ++;
     
     showCreditInfo();
+}
+
+// Quit game funtion
+
+// Click event added to button, calls function quitGame
+document.getElementById('button-quit').addEventListener('click', quitGame);
+
+function quitGame(){
+    //Code to redirect to other page, from https://www.tutorialspoint.com/how-to-redirect-to-another-webpage-using-javascript
+    location.href = "index.html";
 }
 
 // Need to fix hold function

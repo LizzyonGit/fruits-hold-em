@@ -532,6 +532,9 @@ The live link can be found here - https://lizzyongit.github.io/sotis-lifecoach/i
 
 ### Resources
 
+
+- Redirect to other page [tutorialspoint](https://www.tutorialspoint.com/how-to-redirect-to-another-webpage-using-javascript).
+
 - Bootstrap documentation [Bootstrap](https://getbootstrap.com/docs/5.3/getting-started/introduction/).
 - [W3schools](https://www.w3schools.com/) for looking up semantic html.
 - [Stackoverflow](https://stackoverflow.com/) for general code questions.
