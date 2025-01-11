@@ -252,7 +252,7 @@ function quitGame(){
 }
 
 
-// Function to remove held buttons at end of game
+// Function to remove held buttons at end of a game (needs to be referred to in several scenarios)
 function resetHold(){
     for (holdButton of holdButtons){
         holdButton.classList.remove('held-button');
