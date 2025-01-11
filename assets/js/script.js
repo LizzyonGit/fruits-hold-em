@@ -49,6 +49,13 @@ function holdColumn(e){
    this.classList.toggle('held-button');
 }
 
+
+// Variable for winning each middle fruit to compare if there is a winning combination
+let middleFruitOne = document.getElementById('first-column-middle');
+let middleFruitTwo = document.getElementById('second-column-middle');
+let middleFruitThree = document.getElementById('third-column-middle');
+
+
 // selectFruitFunction called by GO button
 function selectFruitFunction() {
 
@@ -59,19 +66,37 @@ function selectFruitFunction() {
    // Call function to get 9 random fruits
    selectNineFruits();
 
-   // Populate all fruit columns with nine random fruits from allFruits array
+   // Populate all fruit columns with nine random fruits from allFruits array, or not, depending on Hold button
+
+   // Variables for individual Hold buttons
+
+   const holdColumnOne = document.getElementById('hold-column-one');
+   const holdColumnTwo = document.getElementById('hold-column-two');
+   const holdColumnThree = document.getElementById('hold-column-three');
+
+
+   // If button corresponding to column is held (contains .held-button), do not add new fruits
+
+   if (!(holdColumnOne.classList.contains('held-button'))){
 
    document.getElementById('first-column-top').innerHTML = allFruits[0];
-   document.getElementById('first-column-middle').innerHTML = allFruits[1];
+   middleFruitOne.innerHTML = allFruits[1];
    document.getElementById('first-column-bottom').innerHTML = allFruits[2];
+   }
+
+   if (!(holdColumnTwo.classList.contains('held-button'))){
 
    document.getElementById('second-column-top').innerHTML = allFruits[3];
-   document.getElementById('second-column-middle').innerHTML = allFruits[4];
+   middleFruitTwo.innerHTML = allFruits[4];
    document.getElementById('second-column-bottom').innerHTML = allFruits[5];
+   }
+
+   if (!(holdColumnThree.classList.contains('held-button'))){
 
    document.getElementById('third-column-top').innerHTML = allFruits[6];
-   document.getElementById('third-column-middle').innerHTML = allFruits[7];
+   middleFruitThree.innerHTML = allFruits[7];
    document.getElementById('third-column-bottom').innerHTML = allFruits[8];
+   }
 
    //set row variable to manipulate in coming if else statement
    const winningRow = document.querySelectorAll('.winning-row');
@@ -80,7 +105,7 @@ function selectFruitFunction() {
    let winningText = document.getElementById('winning-text');
 
    //If winning combination call winGame function
-   if (allFruits[1] === allFruits[4] && allFruits[1] === allFruits[7]){
+   if (middleFruitOne.innerHTML === middleFruitTwo.innerHTML && middleFruitOne.innerHTML === middleFruitThree.innerHTML){
       
       winGame();
 
