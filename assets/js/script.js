@@ -113,7 +113,7 @@ function selectFruitFunction() {
 
       winningText.innerText = 'WINNER!!';
 
-      // add background color with class (should not be toggle in case two winning combinations in row")
+      // add background color with class (should not be toggle in case two winning combinations in row)
       
 
       for (column of winningRow){
