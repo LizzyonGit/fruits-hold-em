@@ -165,6 +165,7 @@ const startSpinsLeft = 3;
 document.getElementById('button-restart').addEventListener('click', resetGame);
 
 function resetGame(){
+    resetHold();
     //sets and shows default values
     game={
         credit: 10,
@@ -186,6 +187,7 @@ function spinDecrease(){
 
     if (game.spinsLeft === 0){
         
+        
         gameDone();
     }
     
@@ -201,6 +203,7 @@ function spinDecrease(){
 
 function gameDone(){
     
+    resetHold();
     //If credit is 0 when spins left is 0, quit the game. 
     //THERE IS A GLITCH BEFORE IT QUITS, NEED TO FIX?!!
     if (game.credit === 0){
@@ -234,6 +237,7 @@ function winGame(){
     game.spinsLeft = startSpinsLeft;
     game.gamesPlayed ++;
     
+    resetHold();
     showCreditInfo();
 }
 
@@ -247,6 +251,18 @@ function quitGame(){
     location.href = "index.html";
 }
 
+
+// Function to remove held buttons at end of game
+function resetHold(){
+    for (holdButton of holdButtons){
+        holdButton.classList.remove('held-button');
+    }
+}
+
+
+
+
 // Need to fix hold function
 // Need to fix winning combination flash effect? See https://www.tutorialspoint.com/how-to-create-a-blinking-effect-with-css3-animations
 // space key event for go button?
+// Check spinsLeft as it does not work optimally
