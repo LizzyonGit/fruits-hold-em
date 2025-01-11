@@ -35,11 +35,11 @@ function selectNineFruits(){
 }
 
 //Hold function implementation
-// targets all hold buttons, calls function holdColumn
-let holdButtons = document.querySelectorAll('.hold-button');
+// targets all hold buttons
+const holdButtons = document.querySelectorAll('.hold-button');
 
-//Click event added to all hold buttons 
-for (holdButton of holdButtons){
+//Click event added to all hold buttons, calls function holdColumn
+for (let holdButton of holdButtons){
    holdButton.addEventListener('click', holdColumn);}
 
    
@@ -74,7 +74,7 @@ function selectFruitFunction() {
    document.getElementById('third-column-bottom').innerHTML = allFruits[8];
 
    //set row variable to manipulate in coming if else statement
-   let winningRow = document.querySelectorAll('.winning-row');
+   const winningRow = document.querySelectorAll('.winning-row');
 
    //set #winning-text variable
    let winningText = document.getElementById('winning-text');
@@ -133,7 +133,7 @@ let game={
 };
 
 //variable for start value spins left
-let startSpinsLeft = 3;
+const startSpinsLeft = 3;
 
 
 // Click event added to button, calls function resetGame
