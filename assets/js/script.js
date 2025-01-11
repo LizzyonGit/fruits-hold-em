@@ -113,11 +113,11 @@ function selectFruitFunction() {
 
       winningText.innerText = 'WINNER!!';
 
-      // add background color with class
+      // add background color with class (should not be toggle in case two winning combinations in row")
       
 
       for (column of winningRow){
-        column.classList.toggle('winning-combination');
+        column.classList.add('winning-combination');
       
    }} else {
    //If no winning combination call spinDecrease function
