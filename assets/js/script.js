@@ -59,6 +59,22 @@ function holdColumn(e){
    if (holdColumnTwo.classList.contains('held-button') && holdColumnThree.classList.contains('held-button')){
     holdColumnOne.classList.toggle('disabled');
    }
+
+   // Statements to remove disbled when only one Hold button is clicked
+
+   if (holdColumnOne.classList.contains('held-button') && !(holdColumnTwo.classList.contains('held-button') || holdColumnThree.classList.contains('held-button'))){
+    holdColumnTwo.classList.remove('disabled');
+    holdColumnThree.classList.remove('disabled');
+   }
+   if (holdColumnTwo.classList.contains('held-button') && !(holdColumnOne.classList.contains('held-button') || holdColumnThree.classList.contains('held-button'))){
+    holdColumnOne.classList.remove('disabled');
+    holdColumnThree.classList.remove('disabled');
+   }
+   if (holdColumnThree.classList.contains('held-button') && !(holdColumnOne.classList.contains('held-button') || holdColumnTwo.classList.contains('held-button'))){
+    holdColumnOne.classList.remove('disabled');
+    holdColumnTwo.classList.remove('disabled');
+   }
+
 }
 
 
