@@ -43,11 +43,32 @@ for (let holdButton of holdButtons){
    holdButton.addEventListener('click', holdColumn);}
 
    
-//function to add toggle class when clicked on a button (class changes colour)
+//Function to add toggle class when clicked on a button (class changes colour)
 
 function holdColumn(e){
    this.classList.toggle('held-button');
+
+   // Statements to prevent 3 clicked Hold buttons
+
+   if (holdColumnOne.classList.contains('held-button') && holdColumnTwo.classList.contains('held-button')){
+    holdColumnThree.classList.toggle('disabled');
+   }
+   if (holdColumnOne.classList.contains('held-button') && holdColumnThree.classList.contains('held-button')){
+    holdColumnTwo.classList.toggle('disabled');
+   }
+   if (holdColumnTwo.classList.contains('held-button') && holdColumnThree.classList.contains('held-button')){
+    holdColumnOne.classList.toggle('disabled');
+   }
 }
+
+
+// Variables for individual Hold buttons
+
+const holdColumnOne = document.getElementById('hold-column-one');
+const holdColumnTwo = document.getElementById('hold-column-two');
+const holdColumnThree = document.getElementById('hold-column-three');
+
+
 
 
 // Variable for winning each middle fruit to compare if there is a winning combination
@@ -68,12 +89,7 @@ function selectFruitFunction() {
 
    // Populate all fruit columns with nine random fruits from allFruits array, or not, depending on Hold button
 
-   // Variables for individual Hold buttons
-
-   const holdColumnOne = document.getElementById('hold-column-one');
-   const holdColumnTwo = document.getElementById('hold-column-two');
-   const holdColumnThree = document.getElementById('hold-column-three');
-
+   
 
    // If button corresponding to column is held (contains .held-button), do not add new fruits
 
@@ -255,7 +271,7 @@ function quitGame(){
 // Function to remove held buttons at end of a game (needs to be referred to in several scenarios)
 function resetHold(){
     for (holdButton of holdButtons){
-        holdButton.classList.remove('held-button');
+        holdButton.classList.remove('held-button', 'disabled');
     }
 }
 
