@@ -38,12 +38,15 @@ function selectNineFruits(){
 // targets all hold buttons
 const holdButtons = document.querySelectorAll('.hold-button');
 
-//Click event added to all hold buttons, calls function holdColumn
+//Click event added to all hold buttons, calls function holdColumn and changeText
 for (let holdButton of holdButtons){
-   holdButton.addEventListener('click', holdColumn);}
+   holdButton.addEventListener('click', holdColumn);
+   holdButton.addEventListener('click', changeText);
+
+}
 
    
-//Function to add toggle class when clicked on a button (class changes colour)
+//Function to toggle class .held-button when clicked on a button (class changes colour) 
 
 function holdColumn(e){
    this.classList.toggle('held-button');
@@ -52,15 +55,18 @@ function holdColumn(e){
 
    if (holdColumnOne.classList.contains('held-button') && holdColumnTwo.classList.contains('held-button')){
     holdColumnThree.classList.toggle('disabled');
+    
    }
    if (holdColumnOne.classList.contains('held-button') && holdColumnThree.classList.contains('held-button')){
     holdColumnTwo.classList.toggle('disabled');
+    
    }
    if (holdColumnTwo.classList.contains('held-button') && holdColumnThree.classList.contains('held-button')){
     holdColumnOne.classList.toggle('disabled');
+    
    }
 
-   // Statements to remove disbled when only one Hold button is clicked
+   // Statements to remove .disabled when only one Hold button is clicked (checks if one of the other buttons is clicked, if it is not, .disabled is removed)
 
    if (holdColumnOne.classList.contains('held-button') && !(holdColumnTwo.classList.contains('held-button') || holdColumnThree.classList.contains('held-button'))){
     holdColumnTwo.classList.remove('disabled');
@@ -75,9 +81,22 @@ function holdColumn(e){
     holdColumnTwo.classList.remove('disabled');
    }
 
+   
+
+   
 }
 
+// Function to change text
+// If button containes held-button class, change inner text, otherwise change back to HOLD
+function changeText(e){
+if (this.classList.contains('held-button')){
+    this.innerText = 'HELD';}
+    else{
+        this.innerText = 'HOLD';
 
+    }
+
+}
 // Variables for individual Hold buttons
 
 const holdColumnOne = document.getElementById('hold-column-one');
@@ -288,6 +307,8 @@ function quitGame(){
 function resetHold(){
     for (holdButton of holdButtons){
         holdButton.classList.remove('held-button', 'disabled');
+        // change button text back to HOLD
+        holdButton.innerText = 'HOLD';
     }
 }
 
