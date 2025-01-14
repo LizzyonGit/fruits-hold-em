@@ -15,6 +15,9 @@
 <!--"d-flex" means display flex, "flex column" sets column direction instead of row, "min-vh-100" pushes footer down together with ms-auto class on footer, this code comes from the CI Boardwalk games walkthrough project-->
 <body class="d-flex flex-column min-vh-100">
     <!--navigation-->
+    <nav>
+        <button type="button" data-bs-toggle="modal" data-bs-target="#how-play-modal">How to play</button>
+    </nav>
 
     <!--Header with small intro text, sound toggle, rules?-->
     <h1>Fruits hold 'em</h1>
@@ -127,6 +130,28 @@
     <footer class="mt-auto"></footer>
 
     <!--modals-->
+
+    <div id="how-play-modal" class="modal" aria-labelledby="How to play" aria-describedby="How much credit you can win and how the HOLD buttons work" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title">How to play</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>Fruits hold 'em is a fruit machine to test your luck. Get 3 similar fruits in the middle row, and you win credit. See how far you can get!</p>
+                <h2>Start</h2>
+                <p>You start with 10 credit. Click GO to start spinning. Each game consists of 3 spins, and costs 5 credit. If you get 3 similar fruits in the middle row, you getb 10 credit. After 3 spins, a new game starts. When you have no more credit for a new game, the play restarts.</p>
+                <h2>Hold</h2>
+                <p>Each column has a HOLD button under it. Click the HOLD button to save the fruit and prevent spinning of the held column. You can hold up to 2 columns each spin.</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              
+            </div>
+          </div>
+        </div>
+    </div>
 
 
     
