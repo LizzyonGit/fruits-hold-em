@@ -27,9 +27,19 @@
 
 body {
     font-family: var(--primary-font);
+    background-color: var(--background-color);
+}
+
+/*All text white*/
+body * {
+    color: #FFFFFF;
 }
 
 
+/*Modal styles, background colour needs to be set fit white text*/
+.modal-content {
+    background-color: var(--background-color-light);
+}
 
 /*Testing boxes with borders REMOVE LATER*/
 section * {
@@ -59,8 +69,26 @@ h2, h3 {
     border: 1px solid var(--primary-color);
 }
 
+/*Buttons Restart and Quit changed to black background, with black border to override Bootstrap button colours*/
+#credit-section button {
+    background-color: #000000;
+    border: 1px solid #000000;
+}
+
 
 /*Game styles*/
+
+
+#game-section {
+    background-color: #000000;
+    border: 5px solid var(--secondary-color);
+}
+
+#credit-section {
+    background-color: var(--background-color-light);
+    border: 5px solid #000000;
+}
+
 
 /*Fruit styles*/
 .fruit {
@@ -71,7 +99,7 @@ h2, h3 {
 
 .fruit-column{
     height: 186px; /*based on height for fruit which is 62px, 3 times that to show three fruits*/
-    overflow: hidden; /*to hide other fruits*/
+    overflow: hidden; /*NOT NEEDED IF WE DON'T MAKE SPIN EFFECT*/
 }
 
 .winning-combination {
