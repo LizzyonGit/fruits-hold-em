@@ -61,18 +61,50 @@ h2, h3 {
 
 
 /*Button styles*/
-/*this class is added when clicking a HOLD button, changes colour and border*/
-/*Changes default hover effect to clicked colour, so you can see it is still red and it gets red directly when clicking, instead of when moving away from button*/
 
-.held-button, .held-button:hover {
+#how-play-button, .hold-button {
+    background-color: var(--background-color-light);
+    color:#FFFFFF;
+}
+
+#how-play-button:hover {
+    background-color: #000000;
+    color: var(--secondary-color);
+    border: 1px solid var(--secondary-color);
+}
+
+
+/*held-button class is added when clicking a HOLD button, changes colour and border*/
+/*Changes default hover effect to clicked colour, so you can see it is still red and it gets red directly when clicking, instead of when moving away from button*/
+/*Hovered colour of not clicked hold-button is the same*/
+
+.held-button, .held-button:hover, .hold-button:hover {
     background-color: var(--primary-color);
     border: 1px solid var(--primary-color);
+}
+
+/*GO button styles*/
+#button-go {
+    background-color: var(--primary-button-color);
+    border: 1px solid var(--primary-button-color);
+}
+
+#button-go:hover {
+    background-color: var(--secondary-color);
+    border: 1px solid #000000;
+    color:#000000;
 }
 
 /*Buttons Restart and Quit changed to black background, with black border to override Bootstrap button colours*/
 #credit-section button {
     background-color: #000000;
     border: 1px solid #000000;
+}
+
+/*Buttons Restart and Quit on hover background colour changed to red*/
+#credit-section button:hover {
+    background-color: var(--primary-color);
+    border: 1px solid var(--primary-color);
 }
 
 
@@ -88,6 +120,7 @@ h2, h3 {
     background-color: var(--background-color-light);
     border: 5px solid #000000;
 }
+
 
 
 /*Fruit styles*/
