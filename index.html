@@ -113,7 +113,7 @@
                                  <div class="col-4">
                                      <div class="row justify-content-center">
                                           <div class="row justify-content-center">
-                                             <button type="button" id="button-quit" class="btn btn-primary">Quit</button>
+                                             <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#quit-modal">Quit</button>
                                           </div>
                                      </div>
                                  </div>
@@ -130,6 +130,8 @@
     <footer class="mt-auto"></footer>
 
     <!--modals-->
+
+    <!--How to play modal, open when clicking How to play button-->
 
     <div id="how-play-modal" class="modal" aria-labelledby="How to play" aria-describedby="How much credit you can win and how the HOLD buttons work" tabindex="-1">
         <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
@@ -152,6 +154,29 @@
           </div>
         </div>
     </div>
+
+    <!--Quit modal, opens when clicking Quit button-->
+
+    <div id="quit-modal" class="modal" aria-labelledby="Confirm quit game" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title">Quit game?</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <h2>Do you want to quit?</h2>
+                <p>Are you sure you want to quit?</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Stay</button>
+              <button type="button" class="btn btn-secondary" id="button-quit">Quit</button>
+            </div>
+          </div>
+        </div>
+    </div>
+
+
 
 
     
