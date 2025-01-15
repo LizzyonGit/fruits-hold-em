@@ -97,6 +97,7 @@ h2, h3 {
 #button-go {
     background-color: var(--primary-button-color);
     border: 1px solid var(--primary-button-color);
+    color: #000000; /*needs to be black for accessibility*/
 }
 
 #button-go:hover {
