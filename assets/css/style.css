@@ -171,3 +171,10 @@ h2, h3 {
 main > section.pb-5 {
    padding-bottom: 4rem !important;
 }}
+
+/*For screens until 369 the x-padding needs to be 1rem to not distort buttons and still fit in background image*/
+@media screen and (max-width: 369px) {
+    main > section.pb-5 {
+       padding-right: 1rem !important;
+       padding-left: 1rem !important;
+    }}
