@@ -126,6 +126,7 @@ h2, h3 {
 #credit-section button:hover, #button-quit:hover {
     background-color: var(--primary-color);
     border: 1px solid var(--primary-color);
+    color: #000000; /*Black on red is better for contrast*/
 }
 
 
