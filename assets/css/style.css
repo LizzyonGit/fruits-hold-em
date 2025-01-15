@@ -91,6 +91,7 @@ h2, h3 {
 .held-button, .held-button:hover, .hold-button:hover {
     background-color: var(--primary-color);
     border: 1px solid var(--primary-color);
+    color: #000000; /*Needs to be black for accessibility, higher contrast*/
 }
 
 /*GO button styles*/
