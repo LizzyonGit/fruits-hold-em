@@ -106,17 +106,28 @@ h2, h3 {
     color:#000000;
 }
 
-/*Buttons Restart and Quit changed to black background, with black border to override Bootstrap button colours*/
-#credit-section button {
+/*Buttons inside modals (quit-button gets later style)*/
+.modal-footer button {
+    background-color: #000000;
+}
+
+.modal-footer button:hover {
+    background-color: var(--background-color);
+}
+
+/*Buttons Restart and Quit (including in modal) changed to black background, with black border to override Bootstrap button colours*/
+#credit-section button, #button-quit {
     background-color: #000000;
     border: 1px solid #000000;
 }
 
-/*Buttons Restart and Quit on hover background colour changed to red*/
-#credit-section button:hover {
+/*Buttons Restart and Quit (incl modal) on hover background colour changed to red*/
+#credit-section button:hover, #button-quit:hover {
     background-color: var(--primary-color);
     border: 1px solid var(--primary-color);
 }
+
+
 
 
 /*Game styles*/
