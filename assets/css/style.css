@@ -126,6 +126,7 @@ h2, h3 {
 /*Fruit styles*/
 .fruit {
     font-size: 40px;
+    text-align: center;
 }
 
 /*Fruit column styles*/
