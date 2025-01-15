@@ -30,8 +30,7 @@ body {
     background-color: var(--background-color);
     background-image: url(../images/background.webp);
     background-repeat: no-repeat;
-    background-size: 100vw 100vh;
-    
+    background-size: 100vw 100vh;    
 }
 
 /*All text white*/
