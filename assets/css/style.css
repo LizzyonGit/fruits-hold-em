@@ -11,7 +11,6 @@
     --highlight-light-color: #FFFF00; /* yellow */
     --primary-color: #FF0000; /* red */
     --secondary-color: #FFD700; /* gold */
-    --contrast-color: #000000; /* black */
     --primary-button-color: #FFA500; /* orange */
     --secondary-button-color: #00FF00; /* light green */
 }
@@ -30,7 +29,7 @@ body {
     font-family: var(--primary-font);
     justify-content: center;
     background-image: url(../images/background.webp);
-    background-color: var(--background-color);
+    background-color: var(--background-color); /*In case image does not load*/
     background-repeat: no-repeat;
     background-size: 100% 100%;
     object-fit: fill; /*From https://developer.mozilla.org/en-US/docs/Web/CSS/object-fit*/
