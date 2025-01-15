@@ -12,14 +12,16 @@
     <!--CSS stylesheet-->
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
-<!--"d-flex" means display flex, "flex column" sets column direction instead of row, "min-vh-100" pushes footer down together with ms-auto class on footer, this code comes from the CI Boardwalk games walkthrough project-->
+<!--"d-flex" means display flex, "flex column" sets column direction instead of row, "min-vh-100" pushes footer down together with ms-auto class on footer, this code comes from the CI Boardwalk games walkthrough project. I noticed even without a footer this is needed when there is not much content to fill a screen-->
 <body class="d-flex flex-column min-vh-100">
     <!--No navigation or nav tag needed because only one page-->
     
     <!--Header with small intro text, sound toggle, rules?-->
-    <header class="container">
-        <!--Same column sizes as in game, added margin to main div, and removed margin from p for larger than md screens-->
-       <div class="row align-items-end my-3"> 
+    <!-- margin and padding to fit inside background image, slightly less than bottom margin-->
+    <header class="container mt-4 pt-5 mt-md-5 pt-md-5">
+        <!--Same column sizes as in game, added margin to main div, and removed margin from p for larger than md screens
+        centered text and button for small screens, above md size it goes back to default-->
+       <div class="row align-items-end my-3 text-center text-md-start"> 
           <div class="col-md-7">
              <h1>Fruits hold 'em</h1>
              <p class="m-md-0">Test your luck today!</p>
@@ -33,7 +35,8 @@
     <!--Main with game, credit info-->
     <main>
         <!--Game and credit info section-->
-        <section class="container">
+        <!-- margin and padding to fit inside background image-->
+        <section class="container mb-5 pb-5">
             <!--Since default margin for screens up to sm bootstrap class is -12 for this element and caused it to be too wide, I changed it to 0. 
             For larger screens this is also better for alignment with header-->
             <div class="row mx-0">
@@ -136,9 +139,10 @@
         </section>
     </main>
 
-    <!--Footer with class="mt-auto" to push footer down. Footer contains social media links.-->
-    <footer class="mt-auto"></footer>
-
+    <!--WILL REMOVE FOOTER FOR NOW
+    Footer with class="mt-auto" to push footer down. Footer contains social media links.-->
+    <!--
+    <footer class="mt-auto"></footer>-->
     <!--modals-->
 
     <!--How to play modal, open when clicking How to play button-->
