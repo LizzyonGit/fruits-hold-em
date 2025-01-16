@@ -104,17 +104,22 @@
               </section>
 
               <!--Credit info section-->
-              <section id="credit-section" class="col-md-5 py-3">
-
+              <!--The classes d-flex flex-column justify-content-between make the credit info appear up, and the buttons down, for larger screens-->
+              <section id="credit-section" class="col-md-5 py-3 d-flex flex-column justify-content-between">
+                
+                
                  <div class="row justify-content-center">
-                    
-                    <div class="col">
-                        <div class="row justify-content-center">
                                <h2>Spins left: <span id="spins-left"></span></h2>
                   
-                               <h2>Credit: <span id="credit-amount"></span></2>
+                               <h2>Credit: <span id="credit-amount"></span></h2>
    
                                <h2>Games played: <span id="games-played"></span></h2>
+                    </div>
+                
+           
+               
+                <div class="row justify-content-center">
+                    
                                <!--The different col sizes per breakpoint makes sure text stays in the buttons Restart and Quit-->
                                  <div class="col-5 col-sm-4 col-md-5 col-lg-4">
                                   <div class="row justify-content-center">
@@ -131,9 +136,9 @@
                                      </div>
                                  </div>
                         </div>
-                    </div>
-                </div>
-                  
+                    
+                
+                
               </section>
            </div>
         </section>
