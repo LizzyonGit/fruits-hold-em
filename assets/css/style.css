@@ -12,7 +12,7 @@
     --primary-color: #FF0000; /* red */
     --secondary-color: #FFD700; /* gold */
     --primary-button-color: #FFA500; /* orange */
-    --secondary-button-color: #00FF00; /* light green */
+    --secondary-button-color: #105837; /*slightly darker green than casino green, mimics disabled green*/
 }
 
 /*Global styles*/
@@ -72,27 +72,41 @@ h2, h3 {
 
 /*Button styles*/
 
-#how-play-button, .hold-button {
+.hold-button {
     background-color: var(--background-color-light);
     color:#FFFFFF;
 }
 
-#how-play-button:hover {
+#how-play-button {
     background-color: #000000;
+    border: 1px solid var(--background-color-light);
+    color: #FFFFFF;
+
+}
+
+#how-play-button:hover {
     color: var(--secondary-color);
-    border: 1px solid var(--secondary-color);
+    border-color: var(--secondary-color);
+}
+
+/*Hovered over Hold button slightly darker green, mimics disabled green. This needs to be up so held-button:hover overrides this one.*/
+.hold-button:hover {
+    background-color: var(--secondary-button-color);
+    border-color: var(--secondary-button-color);
 }
 
 
 /*held-button class is added when clicking a HOLD button, changes colour and border*/
 /*Changes default hover effect to clicked colour, so you can see it is still red and it gets red directly when clicking, instead of when moving away from button*/
-/*Hovered colour of not clicked hold-button is the same*/
 
-.held-button, .held-button:hover, .hold-button:hover {
+
+.held-button, .held-button:hover {
     background-color: var(--primary-color);
     border: 1px solid var(--primary-color);
     color: #000000; /*Needs to be black for accessibility, higher contrast*/
 }
+
+
 
 /*GO button styles*/
 #button-go {
@@ -110,10 +124,12 @@ h2, h3 {
 /*Buttons inside modals (quit-button gets later style)*/
 .modal-footer button {
     background-color: #000000;
+    border-color:#000000;
 }
 
 .modal-footer button:hover {
     background-color: var(--background-color);
+    border-color: var(--background-color);
 }
 
 /*Buttons Restart and Quit (including in modal) changed to black background, with black border to override Bootstrap button colours*/
