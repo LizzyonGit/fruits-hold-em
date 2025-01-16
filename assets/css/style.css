@@ -171,12 +171,20 @@ h2, h3 {
 
 /*Fruit column styles*/
 
-.fruit-column{
+.fruit-column {
     height: 186px; /*based on height for fruit which is 62px, 3 times that to show three fruits*/
     overflow: hidden; /*NOT NEEDED IF WE DON'T MAKE SPIN EFFECT*/
     border: 1px solid var(--secondary-color);
     padding-left: 0; /*Remove unnecessary padding between columns*/
     padding-right: 0;
+}
+
+/*To highlight the row what it's all about when there is no winning combination*/
+.winning-row {
+    background-color: rgba(255, 00, 00, 0.3);
+    border: 1px solid rgba(255, 00, 00, 0.3);
+    border-left: none; /*No border left and right as it adds to column borders*/
+    border-right: none;
 }
 
 .winning-combination {
