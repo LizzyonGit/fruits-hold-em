@@ -46,15 +46,15 @@ body * {
 
 
 
-/*Modal styles, background colour needs to be set fit white text*/
+/*Modal styles, background colour needs to be set to fit white text*/
 .modal-content {
     background-color: var(--background-color-light);
 }
 
 /*Testing boxes with borders REMOVE LATER*/
-section * {
+/*section * {
     border: solid 1px;
-}
+} 
 
 /*Logo styles*/
 
@@ -174,12 +174,17 @@ h2, h3 {
 .fruit-column{
     height: 186px; /*based on height for fruit which is 62px, 3 times that to show three fruits*/
     overflow: hidden; /*NOT NEEDED IF WE DON'T MAKE SPIN EFFECT*/
+    border: 1px solid var(--secondary-color);
+    padding-left: 0; /*Remove unnecessary padding between columns*/
+    padding-right: 0;
 }
 
 .winning-combination {
     /*background color and border for winning combination, tested that all fruits are visible with this color*/
-    border: 2px solid var(--secondary-color);
+    border: 1px solid var(--secondary-color);
     background-color: var(--background-color-light);
+    border-left: none; /*No border left and right as it adds to column borders*/
+    border-right: none;
 }
 
 /*Styles winning text in game*/
