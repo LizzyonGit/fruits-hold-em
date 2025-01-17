@@ -231,19 +231,19 @@ function resetGame(){
 // From resetGame, each time you click Go:
 // - Spins left -1
 
+
 function spinDecrease(){
 
     game.spinsLeft --;
     showCreditInfo();
 
+    //Added method to wait 1 sec before calling gameDone, so the credit shows with 0 spins left before moving on
     if (game.spinsLeft === 0){
-        
-        
+        //showCreditInfo();
+        setTimeout(() => {
         gameDone();
+        }, 1000);
     }
-    
-    
-
 
 }
 
