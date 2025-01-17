@@ -296,13 +296,27 @@ function gameDone(){
 
 
 function winGame(){
-    
+    // A winning row increases the credit and leaves the rest as it was for a little while, before the gameDone function is called
     game.credit += 10;   
-    game.spinsLeft = startSpinsLeft;
-    game.gamesPlayed ++;
     
-    resetHold();
+    
     showCreditInfo();
+
+    //This code disables GO and HOLD buttons while the winning combination is displayed and waiting to execute gameDone
+    for (holdButton of holdButtons){
+        holdButton.classList.add('disabled');
+     }
+
+     buttonGo.classList.add('disabled');
+
+     //Added method to wait 1 sec before calling gameDone, so the new credit and winning combination displays before moving on
+
+
+     setTimeout(() => {
+     gameDone();
+     }, 1000);
+
+
 }
 
 // Quit game funtion
