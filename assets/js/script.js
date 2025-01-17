@@ -10,8 +10,9 @@ const kiwi = '&#129373;';
 const fruitArray = [grapes, lemon, pineapple, cherries, kiwi];
 
 
-// Click event added to button, calls function selectFruitFunction
-document.getElementById('button-go').addEventListener('click', selectFruitFunction);
+// Click event added to GO button, calls function selectFruitFunction
+const buttonGo = document.getElementById('button-go');
+buttonGo.addEventListener('click', selectFruitFunction);
 
 // Introduce empty array for all fruits, changable variable
 let allFruits = [];
@@ -237,9 +238,18 @@ function spinDecrease(){
     game.spinsLeft --;
     showCreditInfo();
 
-    //Added method to wait 1 sec before calling gameDone, so the credit shows with 0 spins left before moving on
     if (game.spinsLeft === 0){
-        //showCreditInfo();
+        
+        //This code disables GO and HOLD buttons while Spins left is on 0 and waiting to execute gameDone
+        for (holdButton of holdButtons){
+           holdButton.classList.add('disabled');
+        }
+
+        buttonGo.classList.add('disabled');
+
+        //Added method to wait 1 sec before calling gameDone, so the credit shows with 0 spins left before moving on
+
+
         setTimeout(() => {
         gameDone();
         }, 1000);
@@ -253,7 +263,10 @@ function spinDecrease(){
 // - Credit -5
 
 function gameDone(){
-    
+    //Remove disabled state from GO
+    buttonGo.classList.remove('disabled');
+
+
     resetHold();
     //If credit is 0 when spins left is 0, quit the game. 
     //THERE IS A GLITCH BEFORE IT QUITS, NEED TO FIX?!!
