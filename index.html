@@ -37,11 +37,15 @@
         <!--Game and credit info section-->
         <!-- margin and padding to fit inside background image-->
         <section class="container mb-5 pb-5 px-4 px-sm-2">
+           <!--This h2 is needed as I nested two sections inside a section, but html validator requests a heading for the wrapper section-->
+           <h2 class="visually-hidden">Game and credit info sections</h2>
             <!--Since default margin for screens up to sm bootstrap class is -12 for this element and caused it to be too wide, I changed it to 0. 
             For larger screens this is also better for alignment with header-->
             <div class="row mx-0">
               <!--Game section-->
               <section id="game-section" class="col-md-7 py-3">
+                <!--Hidden heading, requested by html validator-->
+                <h3 class="visually-hidden">Game</h2>
                 Box with game
                 <div class="row justify-content-center">
                     <p id="winning-text">Box holding 3 columns with fruits</p>
@@ -106,7 +110,8 @@
               <!--Credit info section-->
               <!--The classes d-flex flex-column justify-content-between make the credit info appear up, and the buttons down, for larger screens-->
               <section id="credit-section" class="col-md-5 py-3 d-flex flex-column justify-content-between">
-                
+                <!--Hidden heading, requested by html validator-->
+                <h3 class="visually-hidden">Credit info</h2> 
                 
                  <div class="row justify-content-center">
                                <h2>Spins left: <span id="spins-left"></span></h2>
