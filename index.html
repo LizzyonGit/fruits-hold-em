@@ -45,7 +45,7 @@
               <!--Game section-->
               <section id="game-section" class="col-md-7 py-3">
                 <!--Hidden heading, requested by html validator-->
-                <h3 class="visually-hidden">Game</h2>
+                <h3 class="visually-hidden">Game</h3>
                 Box with game
                 <div class="row justify-content-center">
                     <p id="winning-text">Box holding 3 columns with fruits</p>
@@ -111,7 +111,7 @@
               <!--The classes d-flex flex-column justify-content-between make the credit info appear up, and the buttons down, for larger screens-->
               <section id="credit-section" class="col-md-5 py-3 d-flex flex-column justify-content-between">
                 <!--Hidden heading, requested by html validator-->
-                <h3 class="visually-hidden">Credit info</h2> 
+                <h3 class="visually-hidden">Credit info</h3> 
                 
                  <div class="row justify-content-center">
                                <h2>Spins left: <span id="spins-left"></span></h2>
@@ -157,14 +157,14 @@
 
     <!--How to play modal, open when clicking How to play button-->
 
-    <div id="how-play-modal" class="modal" aria-labelledby="how-play-title" aria-describedby="How much credit you can win and how the HOLD buttons work" tabindex="-1">
+    <div id="how-play-modal" class="modal" aria-labelledby="how-play-title" aria-describedby="how-play-body" tabindex="-1">
         <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
           <div class="modal-content">
             <div class="modal-header">
               <h1 id="how-play-title" class="modal-title">How to play</h1>
               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
-            <div class="modal-body">
+            <div id="how-play-body"class="modal-body">
                 <p>Fruits hold 'em is a fruit machine to test your luck. Get 3 similar fruits in the middle row, and you win credit. See how far you can get!</p>
                 <h2>Start</h2>
                 <p>You start with 10 credit. Click GO to start spinning. Each game consists of 3 spins, and costs 5 credit. If you get 3 similar fruits in the middle row, you get 10 credit. After 3 spins, a new game starts. When you have no more credit for a new game, the play restarts.</p>
@@ -184,14 +184,14 @@
 
     <!--Quit modal, opens when clicking Quit button-->
 
-    <div id="quit-modal" class="modal" aria-labelledby="quit-modal-title" aria-describedby="Confirm if you want to quit the game" tabindex="-1">
+    <div id="quit-modal" class="modal" aria-labelledby="quit-modal-title" aria-describedby="quit-modal-body" tabindex="-1">
         <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
           <div class="modal-content">
             <div class="modal-header">
               <h1 id="quit-modal-title" class="modal-title">Quit game?</h1>
               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
-            <div class="modal-body">
+            <div id="quit-modal-body" class="modal-body">
                 <h2>Do you want to quit?</h2>
                 <p>Are you sure you want to quit?</p>
             </div>
