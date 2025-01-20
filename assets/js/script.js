@@ -163,25 +163,15 @@ function selectFruitFunction() {
       
       winGame();
 
-      // change winning text
-
-      winningText.innerText = 'WINNER!!';
-
-      // add background color with class (should not be toggle in case two winning combinations in row)
-      
-
-      for (column of winningRow){
-        column.classList.add('winning-combination');
-      
-   }} else {
+} else {
    //If no winning combination call spinDecrease function
 
         spinDecrease();
 
-        //remove winning text
+        //remove winning text (CAN BE REMOVED IF GAME STARTS NEW AFTER WINNING, OR MOVED TO gameDone function?)
         winningText.innerText = '';
       
-        //remove .winning-combination if it is there from previous win
+        //remove .winning-combination if it is there from previous win (CAN BE REMOVED IF GAME STARTS NEW AFTER WINNING or moved to gameDone function?)
         for (column of winningRow){
         column.classList.remove('winning-combination');
 
@@ -301,7 +291,15 @@ function winGame(){
     // A winning row increases the credit and leaves the rest as it was for a little while, before the gameDone function is called
     game.credit += 10;   
     
-    
+    // Change winning text
+    winningText.innerText = 'WINNER!!';
+
+    // Add background color with class (should not be toggle in case two winning combinations in row)   
+
+    for (column of winningRow){
+        column.classList.add('winning-combination');
+    }
+
     showCreditInfo();
 
     //This code disables GO and HOLD buttons while the winning combination is displayed and waiting to execute gameDone
