@@ -113,21 +113,21 @@ function populateFruits(){
         document.getElementById('first-column-top').innerHTML = allFruits[0];
         middleFruitOne.innerHTML = allFruits[1];
         document.getElementById('first-column-bottom').innerHTML = allFruits[2];
-        }
+    }
      
     if (!(holdColumnTwo.classList.contains('held-button'))){
      
         document.getElementById('second-column-top').innerHTML = allFruits[3];
         middleFruitTwo.innerHTML = allFruits[4];
         document.getElementById('second-column-bottom').innerHTML = allFruits[5];
-        }
+    }
      
     if (!(holdColumnThree.classList.contains('held-button'))){
      
         document.getElementById('third-column-top').innerHTML = allFruits[6];
         middleFruitThree.innerHTML = allFruits[7];
         document.getElementById('third-column-bottom').innerHTML = allFruits[8];
-        }
+    }
 }
 
 //Needed for winning game functionality
@@ -161,10 +161,10 @@ function selectFruitFunction() {
       
       winGame();
 
-} else {
-   //If no winning combination call spinDecrease function
+   } else {
+       //If no winning combination call spinDecrease function
 
-        spinDecrease();
+       spinDecrease();
 
     }
    
@@ -210,21 +210,20 @@ function resetGame(){
     //This part from the selectFruitFunction can be reused here (NO spinDecrease function)
 
     // Call resetFunction to empty array 
-   resetArray();
+    resetArray();
 
-   // Call function to get 9 random fruits
-   selectNineFruits();
+    // Call function to get 9 random fruits
+    selectNineFruits();
 
-   // Call function to populate fruit columns (depending in Hold)
-   populateFruits();
+    // Call function to populate fruit columns (depending in Hold)
+    populateFruits();
 
-   //If winning combination call winGame function
-   //if statement needs to be inside this function as it should check this condition after populateFruits, also spinDecrease is not needed for newGame
-   if (middleFruitOne.innerHTML === middleFruitTwo.innerHTML && middleFruitOne.innerHTML === middleFruitThree.innerHTML){
+    //If winning combination call winGame function
+    //if statement needs to be inside this function as it should check this condition after populateFruits, also spinDecrease is not needed for newGame
+    if (middleFruitOne.innerHTML === middleFruitTwo.innerHTML && middleFruitOne.innerHTML === middleFruitThree.innerHTML){
       
       winGame();
-
-} 
+    } 
 }
 
 // From resetGame, each time you click Go:
@@ -277,35 +276,30 @@ function gameDone(){
         
        } else {
 
+       game.credit -= 5;
+       game.spinsLeft = startSpinsLeft;
+       game.gamesPlayed ++;
 
-    game.credit -= 5;
-    game.spinsLeft = startSpinsLeft;
-    game.gamesPlayed ++;
+       showCreditInfo();
 
-    
+       //This part from the selectFruitFunction can be reused here (NO spinDecrease function)
 
-    showCreditInfo();
+       // Call resetFunction to empty array 
+       resetArray();
 
-     //This part from the selectFruitFunction can be reused here (NO spinDecrease function)
+       // Call function to get 9 random fruits
+       selectNineFruits();
 
-    // Call resetFunction to empty array 
-   resetArray();
+       // Call function to populate fruit columns (depending in Hold)
+       populateFruits();
 
-   // Call function to get 9 random fruits
-   selectNineFruits();
-
-   // Call function to populate fruit columns (depending in Hold)
-   populateFruits();
-
-   //If winning combination call winGame function
-   //if statement needs to be inside this function as it should check this condition after populateFruits, also spinDecrease is not needed for newGame
-   if (middleFruitOne.innerHTML === middleFruitTwo.innerHTML && middleFruitOne.innerHTML === middleFruitThree.innerHTML){
+       //If winning combination call winGame function
+       //if statement needs to be inside this function as it should check this condition after populateFruits, also spinDecrease is not needed for newGame
+       if (middleFruitOne.innerHTML === middleFruitTwo.innerHTML && middleFruitOne.innerHTML === middleFruitThree.innerHTML){
       
-      winGame();
-
-} 
-
-}
+           winGame();
+        } 
+    }
    
 
 }
@@ -334,16 +328,15 @@ function winGame(){
     //This code disables GO and HOLD buttons while the winning combination is displayed and waiting to execute gameDone
     for (holdButton of holdButtons){
         holdButton.classList.add('disabled');
-     }
+    }
 
-     buttonGo.classList.add('disabled');
+    buttonGo.classList.add('disabled');
 
-     //Added method to wait 1 sec before calling gameDone, so the new credit and winning combination displays before moving on
+    //Added method to wait 1 sec before calling gameDone, so the new credit and winning combination displays before moving on
 
-
-     setTimeout(() => {
-     gameDone();
-     }, 1000);
+    setTimeout(() => {
+    gameDone();
+    }, 1000);
 
 
 }
