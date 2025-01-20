@@ -130,6 +130,13 @@ function populateFruits(){
         }
 }
 
+//Needed for winning game functionality
+//Variable for winning row
+const winningRow = document.querySelectorAll('.winning-row');
+
+//Variable for #winning-text
+let winningText = document.getElementById('winning-text');
+
 // Variable for winning each middle fruit to compare if there is a winning combination
 let middleFruitOne = document.getElementById('first-column-middle');
 let middleFruitTwo = document.getElementById('second-column-middle');
@@ -150,12 +157,7 @@ function selectFruitFunction() {
    // Call function to populate fruit columns (depending in Hold)
    populateFruits();
 
-   //set row variable to manipulate in coming if else statement
-   const winningRow = document.querySelectorAll('.winning-row');
-
-   //set #winning-text variable
-   let winningText = document.getElementById('winning-text');
-
+   
    //If winning combination call winGame function
    if (middleFruitOne.innerHTML === middleFruitTwo.innerHTML && middleFruitOne.innerHTML === middleFruitThree.innerHTML){
       
