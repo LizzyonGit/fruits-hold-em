@@ -166,13 +166,6 @@ function selectFruitFunction() {
 
         spinDecrease();
 
-        //remove winning text (CAN BE REMOVED IF GAME STARTS NEW AFTER WINNING, OR MOVED TO gameDone function?)
-        winningText.innerText = '';
-      
-        //remove .winning-combination if it is there from previous win (CAN BE REMOVED IF GAME STARTS NEW AFTER WINNING or moved to gameDone function?)
-        for (column of winningRow){
-        column.classList.remove('winning-combination');
-        }
     }
    
    
@@ -214,6 +207,24 @@ function resetGame(){
 
     showCreditInfo();
     
+    //This part from the selectFruitFunction can be reused here (NO spinDecrease function)
+
+    // Call resetFunction to empty array 
+   resetArray();
+
+   // Call function to get 9 random fruits
+   selectNineFruits();
+
+   // Call function to populate fruit columns (depending in Hold)
+   populateFruits();
+
+   //If winning combination call winGame function
+   //if statement needs to be inside this function as it should check this condition after populateFruits, also spinDecrease is not needed for newGame
+   if (middleFruitOne.innerHTML === middleFruitTwo.innerHTML && middleFruitOne.innerHTML === middleFruitThree.innerHTML){
+      
+      winGame();
+
+} 
 }
 
 // From resetGame, each time you click Go:
@@ -255,6 +266,10 @@ function gameDone(){
 
 
     resetHold();
+
+    //Reset winning combination from old game, but after repopulating the fruits it checks for a winning combination, see below in this function
+    resetWin();
+
     //If credit is 0 when spins left is 0, quit the game. 
     //THERE IS A GLITCH BEFORE IT QUITS, NEED TO FIX?!!
     if (game.credit === 0){
@@ -270,6 +285,25 @@ function gameDone(){
     
 
     showCreditInfo();
+
+     //This part from the selectFruitFunction can be reused here (NO spinDecrease function)
+
+    // Call resetFunction to empty array 
+   resetArray();
+
+   // Call function to get 9 random fruits
+   selectNineFruits();
+
+   // Call function to populate fruit columns (depending in Hold)
+   populateFruits();
+
+   //If winning combination call winGame function
+   //if statement needs to be inside this function as it should check this condition after populateFruits, also spinDecrease is not needed for newGame
+   if (middleFruitOne.innerHTML === middleFruitTwo.innerHTML && middleFruitOne.innerHTML === middleFruitThree.innerHTML){
+      
+      winGame();
+
+} 
 
 }
    
@@ -334,7 +368,16 @@ function resetHold(){
     }
 }
 
-
+// Function to remove winning combination indicators
+function resetWin(){
+    //remove winning text
+    winningText.innerText = '';
+      
+    //remove .winning-combination if it is there from previous win 
+    for (column of winningRow){
+    column.classList.remove('winning-combination');
+    }
+}
 
 
 // Need to fix hold function
