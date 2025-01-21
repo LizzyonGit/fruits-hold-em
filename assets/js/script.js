@@ -45,19 +45,41 @@ for (let holdButton of holdButtons){
    holdButton.addEventListener('click', holdColumn);
    holdButton.addEventListener('click', changeText);
 
+   //Make HOLD disabled in the start when there are no fruits, only read on page load so no else statement. Later functions reset HOLD. 
+   if (allFruits.length === 0){
+    holdButton.classList.add('disabled');
+   } 
+
 }
 
-//Make HOLD disabled in the start when there are no fruits, and make it available otherwise (overwritten by later functions for specific cases where they should be disabled)
-for (holdButton of holdButtons){
-    if (allFruits.length === 0){
-        holdButton.classList.add('disabled');
-    } else {
-        holdButton.classList.remove('disabled');
 
-    }
+//Remove default behavior of disabled buttons, works for Hold buttons on page load, BUT LATER ALSO ON NOT DISABLED HOLD, NEED TO FIX!!!
+
+const allButtons = document.querySelectorAll('button');
+
+// Call preventKey function for disabled buttons
+for (let anyButton of allButtons){
+    if (anyButton.classList.contains('disabled')){
+    
+        anyButton.addEventListener('keydown', preventKey);
+    }  
 }
 
+
+// The function to preven default behaviour when you use Enter or Space
+function preventKey(e){
+    
+   const preventKeys = ['Enter', ' '];
+   if (preventKeys.includes(e.key)){
+            e.preventDefault();
+    } 
+}
    
+/********************************************************************************************/
+
+
+
+
 //Function to toggle class .held-button when clicked on a button (class changes colour) 
 
 function holdColumn(e){
@@ -345,6 +367,7 @@ function winGame(){
     }
 
     buttonGo.classList.add('disabled');
+    
 
     //Added method to wait 1 sec before calling gameDone, so the new credit and winning combination displays before moving on
 
@@ -391,3 +414,5 @@ function resetWin(){
 // Need to fix winning combination flash effect? See https://www.tutorialspoint.com/how-to-create-a-blinking-effect-with-css3-animations
 // space key event for go button?
 // Check spinsLeft as it does not work optimally
+
+
