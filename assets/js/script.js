@@ -52,7 +52,7 @@ for (let holdButton of holdButtons){
 
 }
 
-
+/************************************ */
 //Remove default behavior of disabled buttons, works for Hold buttons on page load, BUT LATER ALSO ON NOT DISABLED HOLD, NEED TO FIX!!!
 
 const allButtons = document.querySelectorAll('button');
@@ -71,10 +71,25 @@ function preventKey(e){
     
    const preventKeys = ['Enter', ' '];
    if (preventKeys.includes(e.key)){
-            e.preventDefault();
+        e.preventDefault();
     } 
 }
-   
+ 
+//THERE NEEDS TO BE A FUNCTION THAT GETS CALLED AND FIXES THIS DURING THE GAME
+// Where to call this? It prevents default on all Hold buttons now...Or it's the old one not being overridden..
+
+function preventKeyLater(){
+        const holdAndGo = [holdColumnOne, holdColumnTwo, holdColumnThree, buttonGo];
+        console.log(holdAndGo);
+        holdAndGo.forEach((holdOrGo) => {
+           if (holdOrGo.classList.contains('disabled')){    
+              holdOrGo.addEventListener('keydown', preventKey);
+              console.log('I should not be read');
+            };  
+        });
+    
+}
+
 /********************************************************************************************/
 
 
@@ -242,6 +257,7 @@ function resetGame(){
     };
 
     showCreditInfo();
+
     
     //This part from the selectFruitFunction can be reused here (NO spinDecrease function)
 
