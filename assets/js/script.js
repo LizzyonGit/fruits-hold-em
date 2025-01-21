@@ -47,6 +47,16 @@ for (let holdButton of holdButtons){
 
 }
 
+//Make HOLD disabled in the start when there are no fruits, and make it available otherwise (overwritten by later functions for specific cases where they should be disabled)
+for (holdButton of holdButtons){
+    if (allFruits.length === 0){
+        holdButton.classList.add('disabled');
+    } else {
+        holdButton.classList.remove('disabled');
+
+    }
+}
+
    
 //Function to toggle class .held-button when clicked on a button (class changes colour) 
 
