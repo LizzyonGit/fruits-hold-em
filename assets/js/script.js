@@ -153,29 +153,26 @@ function selectFruitFunction() {
     } else {
         
 
-    // Call resetFunction to empty array 
-   resetArray();
+      // Call resetFunction to empty array 
+      resetArray();
 
-   // Call function to get 9 random fruits
-   selectNineFruits();
+      // Call function to get 9 random fruits
+      selectNineFruits();
 
-   // Call function to populate fruit columns (depending in Hold)
-   populateFruits();
+      // Call function to populate fruit columns (depending in Hold)
+      populateFruits();
 
-   //If winning combination call winGame function
-   //if statement needs to be inside this function as it should check this condition after populateFruits, also spinDecrease is not needed for newGame
-   if (middleFruitOne.innerHTML === middleFruitTwo.innerHTML && middleFruitOne.innerHTML === middleFruitThree.innerHTML){
+      //If winning combination call winGame function
+      //if statement needs to be inside this function as it should check this condition after populateFruits, also spinDecrease is not needed for newGame
+      if (middleFruitOne.innerHTML === middleFruitTwo.innerHTML && middleFruitOne.innerHTML === middleFruitThree.innerHTML){
       
-      winGame();
-
-   } else {
-       //If no winning combination call spinDecrease function
-
-       spinDecrease();
-
-    }
-   
-}
+         winGame();
+        
+        } else {
+          //If no winning combination call spinDecrease function
+          spinDecrease();
+         }
+   }
 }
 
 // Code to fix credit, spins left and games played
