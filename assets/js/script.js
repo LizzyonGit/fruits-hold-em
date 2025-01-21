@@ -17,6 +17,7 @@ buttonGo.addEventListener('click', selectFruitFunction);
 // Introduce empty array for all fruits, changable variable
 let allFruits = [];
 
+
 // resetArray function to empty array
 function resetArray(){
     allFruits = [];
@@ -145,6 +146,12 @@ let middleFruitThree = document.getElementById('third-column-middle');
 
 // selectFruitFunction called by GO button
 function selectFruitFunction() {
+//At the start, when there are no fruits, GO will behave like the Restart button so it will not count down the spins on the first click. After that, it will count down the spins left
+    if (allFruits.length === 0){
+        resetGame();
+
+    } else {
+        
 
     // Call resetFunction to empty array 
    resetArray();
@@ -168,7 +175,7 @@ function selectFruitFunction() {
 
     }
    
-   
+}
 }
 
 // Code to fix credit, spins left and games played
