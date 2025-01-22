@@ -47,12 +47,12 @@ for (let holdButton of holdButtons){
 
    //Make HOLD disabled in the start when there are no fruits, only read on page load so no else statement. Later functions reset HOLD. 
    if (allFruits.length === 0){
-    holdButton.classList.add('disabled');
+    holdButton.setAttribute('disabled', true);
    } 
 
 }
 
-/************************************ */
+/************************************ 
 //Remove default behavior of disabled buttons, works for Hold buttons on page load, BUT LATER ALSO ON NOT DISABLED HOLD, NEED TO FIX!!!
 
 const allButtons = document.querySelectorAll('button');
@@ -103,31 +103,31 @@ function holdColumn(e){
    // Statements to prevent 3 clicked Hold buttons
 
    if (holdColumnOne.classList.contains('held-button') && holdColumnTwo.classList.contains('held-button')){
-    holdColumnThree.classList.toggle('disabled');
+    holdColumnThree.toggleAttribute('disabled');
     
    }
    if (holdColumnOne.classList.contains('held-button') && holdColumnThree.classList.contains('held-button')){
-    holdColumnTwo.classList.toggle('disabled');
+    holdColumnTwo.toggleAttribute('disabled');
     
    }
    if (holdColumnTwo.classList.contains('held-button') && holdColumnThree.classList.contains('held-button')){
-    holdColumnOne.classList.toggle('disabled');
+    holdColumnOne.toggleAttribute('disabled');
     
    }
 
    // Statements to remove .disabled when only one Hold button is clicked (checks if one of the other buttons is clicked, if it is not, .disabled is removed)
 
    if (holdColumnOne.classList.contains('held-button') && !(holdColumnTwo.classList.contains('held-button') || holdColumnThree.classList.contains('held-button'))){
-    holdColumnTwo.classList.remove('disabled');
-    holdColumnThree.classList.remove('disabled');
+    holdColumnTwo.removeAttribute('disabled');
+    holdColumnThree.removeAttribute('disabled');
    }
    if (holdColumnTwo.classList.contains('held-button') && !(holdColumnOne.classList.contains('held-button') || holdColumnThree.classList.contains('held-button'))){
-    holdColumnOne.classList.remove('disabled');
-    holdColumnThree.classList.remove('disabled');
+    holdColumnOne.removeAttribute('disabled');
+    holdColumnThree.removeAttribute('disabled');
    }
    if (holdColumnThree.classList.contains('held-button') && !(holdColumnOne.classList.contains('held-button') || holdColumnTwo.classList.contains('held-button'))){
-    holdColumnOne.classList.remove('disabled');
-    holdColumnTwo.classList.remove('disabled');
+    holdColumnOne.removeAttribute('disabled');
+    holdColumnTwo.removeAttribute('disabled');
    }
 
    
@@ -291,10 +291,10 @@ function spinDecrease(){
         
         //This code disables GO and HOLD buttons while Spins left is on 0 and waiting to execute gameDone
         for (holdButton of holdButtons){
-           holdButton.classList.add('disabled');
+           holdButton.setAttribute('disabled', true);
         }
 
-        buttonGo.classList.add('disabled');
+        buttonGo.setAttribute('disabled', true);
 
         //Added method to wait 1 sec before calling gameDone, so the credit shows with 0 spins left before moving on
 
@@ -313,7 +313,7 @@ function spinDecrease(){
 
 function gameDone(){
     //Remove disabled state from GO
-    buttonGo.classList.remove('disabled');
+    buttonGo.removeAttribute('disabled');
 
 
     resetHold();
@@ -379,10 +379,10 @@ function winGame(){
 
     //This code disables GO and HOLD buttons while the winning combination is displayed and waiting to execute gameDone
     for (holdButton of holdButtons){
-        holdButton.classList.add('disabled');
+        holdButton.setAttribute('disabled', true);
     }
 
-    buttonGo.classList.add('disabled');
+    buttonGo.setAttribute('disabled', true);
     
 
     //Added method to wait 1 sec before calling gameDone, so the new credit and winning combination displays before moving on
@@ -405,10 +405,11 @@ function quitGame(){
 }
 
 
-// Function to remove held buttons at end of a game (needs to be referred to in several scenarios)
+// Function to remove held buttons and remove disabled attribute at end of a game (needs to be referred to in several scenarios)
 function resetHold(){
     for (holdButton of holdButtons){
-        holdButton.classList.remove('held-button', 'disabled');
+        holdButton.classList.remove('held-button');
+        holdButton.removeAttribute('disabled');
         // change button text back to HOLD
         holdButton.innerText = 'HOLD';
     }
