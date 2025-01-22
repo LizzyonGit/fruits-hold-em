@@ -140,8 +140,9 @@ h2, h3 {
 }
 
 /*Buttons Restart and Quit (incl modal) on hover and focus background colour changed to red*/
+/*focus-visible prevents the red colour after clicking while still in focus, as this is not needed and can be obtrusive according to https://developer.mozilla.org/en-US/docs/Web/CSS/:focus-visible*/
 #credit-section button:hover, #button-quit:hover,
-#credit-section button:focus, #button-quit:focus {
+#credit-section button:focus-visible, #button-quit:focus-visible {
     background-color: var(--primary-color);
     border: 1px solid var(--primary-color);
     color: #000000; /*Black on red is better for contrast*/
