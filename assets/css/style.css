@@ -84,13 +84,13 @@ h2, h3 {
 
 }
 
-#how-play-button:hover {
+#how-play-button:hover, #how-play-button:focus {
     color: var(--secondary-color);
     border-color: var(--secondary-color);
 }
 
 /*Hovered over Hold button slightly darker green, mimics disabled green. This needs to be up so held-button:hover overrides this one.*/
-.hold-button:hover {
+.hold-button:hover, .hold-button:focus {
     background-color: var(--secondary-button-color);
     border-color: var(--secondary-button-color);
 }
@@ -100,7 +100,7 @@ h2, h3 {
 /*Changes default hover effect to clicked colour, so you can see it is still red and it gets red directly when clicking, instead of when moving away from button*/
 
 
-.held-button, .held-button:hover {
+.held-button, .held-button:hover, .held-button:focus {
     background-color: var(--primary-color);
     border: 1px solid var(--primary-color);
     color: #000000; /*Needs to be black for accessibility, higher contrast*/
@@ -115,7 +115,7 @@ h2, h3 {
     color: #000000; /*needs to be black for accessibility*/
 }
 
-#button-go:hover {
+#button-go:hover, #button-go:focus {
     background-color: var(--secondary-color);
     border: 1px solid #000000;
     color:#000000;
@@ -127,7 +127,7 @@ h2, h3 {
     border-color:#000000;
 }
 
-.modal-footer button:hover {
+.modal-footer button:hover, .modal-footer button:focus {
     background-color: var(--background-color);
     border-color: var(--background-color);
 }
@@ -139,7 +139,8 @@ h2, h3 {
 }
 
 /*Buttons Restart and Quit (incl modal) on hover background colour changed to red*/
-#credit-section button:hover, #button-quit:hover {
+#credit-section button:hover, #button-quit:hover,
+#credit-section button:focus, #button-quit:focus {
     background-color: var(--primary-color);
     border: 1px solid var(--primary-color);
     color: #000000; /*Black on red is better for contrast*/
