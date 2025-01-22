@@ -98,6 +98,7 @@ h2, h3 {
 
 /*held-button class is added when clicking a HOLD button, changes colour and border*/
 /*Changes default hover effect to clicked colour, so you can see it is still red and it gets red directly when clicking, instead of when moving away from button*/
+/*Focused important to be red as well, otherwise held buttons are green when focused*/
 
 
 .held-button, .held-button:hover, .held-button:focus {
@@ -138,7 +139,7 @@ h2, h3 {
     border: 1px solid #000000;
 }
 
-/*Buttons Restart and Quit (incl modal) on hover background colour changed to red*/
+/*Buttons Restart and Quit (incl modal) on hover and focus background colour changed to red*/
 #credit-section button:hover, #button-quit:hover,
 #credit-section button:focus, #button-quit:focus {
     background-color: var(--primary-color);
