@@ -52,48 +52,6 @@ for (let holdButton of holdButtons){
 
 }
 
-/************************************ 
-//Remove default behavior of disabled buttons, works for Hold buttons on page load, BUT LATER ALSO ON NOT DISABLED HOLD, NEED TO FIX!!!
-
-const allButtons = document.querySelectorAll('button');
-
-// Call preventKey function for disabled buttons
-for (let anyButton of allButtons){
-    if (anyButton.classList.contains('disabled')){
-    
-        anyButton.addEventListener('keydown', preventKey);
-    }  
-}
-
-
-// The function to preven default behaviour when you use Enter or Space
-function preventKey(e){
-    
-   const preventKeys = ['Enter', ' '];
-   if (preventKeys.includes(e.key)){
-        e.preventDefault();
-    } 
-}
- 
-//THERE NEEDS TO BE A FUNCTION THAT GETS CALLED AND FIXES THIS DURING THE GAME
-// Where to call this? It prevents default on all Hold buttons now...Or it's the old one not being overridden..
-
-function preventKeyLater(){
-        const holdAndGo = [holdColumnOne, holdColumnTwo, holdColumnThree, buttonGo];
-        console.log(holdAndGo);
-        holdAndGo.forEach((holdOrGo) => {
-           if (holdOrGo.classList.contains('disabled')){    
-              holdOrGo.addEventListener('keydown', preventKey);
-              console.log('I should not be read');
-            };  
-        });
-    
-}
-
-/********************************************************************************************/
-
-
-
 
 //Function to toggle class .held-button when clicked on a button (class changes colour) 
 
@@ -115,7 +73,7 @@ function holdColumn(e){
     
    }
 
-   // Statements to remove .disabled when only one Hold button is clicked (checks if one of the other buttons is clicked, if it is not, .disabled is removed)
+   // Statements to remove disabled attribute when only one Hold button is clicked (checks if one of the other 2 buttons is clicked, if it is not, disabled is removed)
 
    if (holdColumnOne.classList.contains('held-button') && !(holdColumnTwo.classList.contains('held-button') || holdColumnThree.classList.contains('held-button'))){
     holdColumnTwo.removeAttribute('disabled');
