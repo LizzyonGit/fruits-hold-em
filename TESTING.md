@@ -15,6 +15,7 @@ I have been testing throughout developing, fixing issues as I went.
 * [Manual testing](#manual-testing)
   * [Testing User Stories](#testing-user-stories)
   * Issues
+    * [Calculations](#calculations)
     * [Accessibility](#accessibility)
     * [Responsiveness](#responsiveness)
   * [Full Testing](#full-testing)
@@ -22,8 +23,26 @@ I have been testing throughout developing, fixing issues as I went.
 
 - - -
 
-#### Responsiveness
+#### Accessibility
 
+The game uses a lot of colour to check the contrast for. The Chrome developer tools show the contrast which prompted me to change some button text colours. 
+
+
+I also had to change my colour background for a winning combination from gold to green, since gold did not work with a winning combination of lemons. I wanted to keep the lemons, so changed the background to work together with all fruits. I tested this by just adding it to all the columns first, so I could see it with all the fruits after a few spins. I added a gold border for the background, since gold does convey that winning feeling. 
+
+
+I focuses a lot on using this game with the keyboard. I think clicking GO all the time is not user friendly, it is easier to press Enter or Space. I found this myself when I was testing the game. I did not have to do antyhing to get Space and Enter to work for clicking the button. But I did encounter other problems.
+
+Disabled buttons
+
+For the game flow, some buttons are disabled in some situations. You can not hold three columns, so when two HOLD buttons are clicked, the third HOLD button becomes disabled. But I noticed you could still press the key on it to hold it. Also, after a round with three spins or a winning combination, the game pauses a short time to see the result before starting a new round with three spins. During this time, all HOLD buttons and the GO button are disabled. But I noticed you could still press the Space or Enter key on the GO button, which caused the spins to go negative during this short time. So I needed to find out a way to prevent this from happening, as you should not be able to do anything with disabled buttons.
+
+I spend some time finding a solution for this, as I looked specifically for a way to prevent the default behaviour of Enter and Space for disabled buttons. I added a function with the *preventDefault()* method which worked for before the game starts, when there are no fruits and the HOLD buttons are disabled, to prevent holding empty columns. But the function prevented normal key behaviour also for not disabled HOLD buttons, and it did not work when the GO buttons was disabled. I also tried the function with the *blur()* method that I found, but this did not work as it should either. So I thought I should call the function in each of the rounds and specifically for each button, which seemed to get complicated. I thought it should be easier. I thought that maybe I should give the specific bootstrap *disabled* class this particular function I made, rather than the button itself, but that didn't get me anywhere when I googled for it. 
+
+Then I googled for Bootstrap classes and what to do to prevent key events on disabled buttons. In the Bootstrap documentation, I went to the root of the problem by looking into how to change the disabled class in bootstrap, then I found the confirmation that the *disabled* class does not prevent key events [here](https://getbootstrap.com/docs/5.3/forms/overview/#disabled-forms), only pointer-events. It says you need to add *tabindex -1* to prevent focus. So it turns out it is better to add the *disabled* attribute instead of the class, because the attribute already prevents focus. When I was creating these disabled buttons initially, I went for the *disabled* class because it seemed easier, and I remembered the exact Javascript code for accessing them. I did not think of this crucial difference for key events. So I freshed up my memory about working with attributes instead of classes, and rewrote the code. Attributes are mentioned in the LMS, but I used external sources for more code like *toggleAttribute* from [here](https://developer.mozilla.org/en-US/docs/Web/API/Element/toggleAttribute). It was fairly easy to change this and I did not need any more functions to make it work like it should.
+
+
+#### Responsiveness
 
 I used Chrome developer tools to keep track of responsiveness, placement of buttons and how the content and background image behaved together on different sreen sizes. 
 
