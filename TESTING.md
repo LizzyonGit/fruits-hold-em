@@ -23,6 +23,11 @@ I have been testing throughout developing, fixing issues as I went.
 
 - - -
 
+#### Calculations
+
+
+
+
 #### Accessibility
 
 The game uses a lot of colour to check the contrast for. The Chrome developer tools show the contrast which prompted me to change some button text colours. 
@@ -45,7 +50,7 @@ Focused buttons
 
 When I was testing the keys with the different buttons, I noticed a difference between hovering with a mouse or focusing with a key. I had added some *:hover* pseudo-classes in my css, but not any *:focus* pseudo-classes. I added this to immitate the hovered effect, and while I read more about *:focus*, I found out about *:focus-visible* [here](https://developer.mozilla.org/en-US/docs/Web/CSS/:focus-visible) and how this can be more user friendly. This was applicable for my *Quit* and *Restart* buttons, since when you focus on it and then clicked with the mouse, after moving the mouse, the focus background colour was still there, which was very unnecessary. Using *:focus-visible*, this background colour is removed when you move the mouse away.
 
-I also noticed that all buttons had a border around them when focused, making it clear which button you are on since they appear larger, together with the different background colour of the button. Except for the button **How to play**, which only changed colour and did not have this extra border around it. I could not find out why this was, as it was a Bootstrap button like the others, with custom styled colours. I found [a post](https://github.com/twbs/bootstrap/issues/38903) that this can happen, so I decided to focus on just adding it in my css for the button. I learned about *outline* and found that in Chrome developer tools, I can force a button in certain state. So I did that for the buttons that worked normally, to find out which code I needed to add for the button that did not work. That's how I added *outline: 0* and *box-shadow: 0 0 0 0.25rem* with a yellow colour to the **How to play** button, and now it works.
+I also noticed that all buttons had a border around them when focused, making it clear which button you are on since they appear larger, together with the different background colour of the button. Except for the button **How to play**, which only changed colour and did not have this extra border around it. I could not find out why this was, as it was a Bootstrap button like the others, with custom styled colours. I found [a post](https://github.com/twbs/bootstrap/issues/38903) that this can happen, so I decided to focus on just adding it in my css for the button. I learned about *outline* and found that in Chrome developer tools, I can force a button in certain state. So I did that for the buttons that worked normally, to find out which code I needed to add for the button that did not work. That's how I added *outline: 0*, and *box-shadow: 0 0 0 0.25rem* with a yellow colour, to the **How to play** button, and now it works.
 
 #### Responsiveness
 
