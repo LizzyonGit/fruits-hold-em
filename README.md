@@ -237,6 +237,8 @@ The logo is the game name written in font *Nabla*.
 
 ## Testing 
 
+See ![TESTNG.MD](TESTING.md).
+
 ### User story testing
 
 |   User story                                                            | How it is achieved    |
