@@ -90,20 +90,18 @@ Create a:
 Below are my initial wireframes per page for mobile, tablet and laptop screen sizes. I used [Figma](https://www.figma.com/) to create them.
 
 <details>
-    <summary>Page 1 - Home</summary>
+    <summary>Start page (not used)</summary>
 
-  ![Page 1 wireframe for mobile, tablet and laptop](docs/wireframes/wireframe-home.png)
+    I decided to not have this separate start page as it just increases the amount of clicks and does not give any value, since the buttons can be on the game page.
+
+  ![Startpage wireframe for mobile, tablet and laptop](docs/wireframes/wireframe-start.png)
 </details>
 <details>
-    <summary>Page 2 - What I offer</summary>
+    <summary>Game page</summary>
 
-  ![Page 2 wireframe for mobile, tablet and laptop](docs/wireframes/wireframe-what-i-offer.png)
+    This is how I saw the page with the game itself.
 
-</details>
-<details>
-    <summary>Page 3 - Book</summary>
-
-  ![Page 3 wireframe for mobile, tablet and laptop](docs/wireframes/wireframe-book.png)
+  ![Game page wireframe for mobile, tablet and laptop](docs/wireframes/wireframe-game.png)
 
 </details>
 <details>
