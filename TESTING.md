@@ -25,7 +25,13 @@ I have been testing throughout developing, fixing issues as I went.
 
 #### Calculations
 
+As I started out writing the logic with increasing and decreasing credit, increasing game count, decreasing spins, I stumbled on some minor issues like displaying the correct credit information. I started out calculating with the string value from the UI, which caused problems with additions since the number would just concatenate at the end of the other number, instead of adding up. I thought about converting the string value to a number, which caused an error in the console. So I realised I needed to first calculate and then display it in the UI, like in CIs walkthrough project *Simon says*. I copied the way the *showScore* function works in that project, making the calculations first and then calling the function *showCreditInfo* to show the outcome each time.
 
+
+The **GO** button was working in a way that the **Spins left** would decrease with 1 each time you click, but this was not good for when you start the game by clicking **GO** when there are no fruits yet, because then you would start out with only two spins left, instead of three. As I believe it is most user friendly to enable the **GO** button as a way to start the game, even if the **Restart** button also starts a new game, I did not want to disable it in the start and force users to use the other button. So I rewrote my code so that, when there are no fruits and the game has not started yet, the **GO** button calls the same function as the **Restart** button, and when there are fruits, it runs the original code with the decreasing spin count. So to start the game, you can click either button, and during the game when you start over, you click **Restart**.
+
+
+Initially, when the spin count was 1 and you would click **GO**, or when a winning combination would come up, a new round started right away; the spin count went to 3 directly with the new credit and games played count. So I wanted to display this final spin's result, even though you should not be able to do anything since you would have 0 spins left, or the round ended by a winning combination. Inspired by CI's example *Simon says*, I added a *setTimeout* method to display this final result for the user, before starting the new round. During this timeout, you can not click **HOLD** or **GO**, and it will automatically start a new round, you do not have to click anything. This way it also clear how the counting works, as the inbetween step is not missing, and you can for example see that you gain 10 credit with a winning combination, but you loose 5 at the start of the new round. 
 
 
 #### Accessibility
