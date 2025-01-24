@@ -92,7 +92,7 @@ h2, h3 {
 /*When focused, there is an indicator around the buttons so it's clear that the button is in focus*/
 #how-play-button:focus-visible {
    outline: 0;
-   box-shadow: 0 0 0 0.25rem var(--highlight-light-color);
+   box-shadow: 0 0 0 0.25rem var(--secondary-color);
 }
 
 /*Hovered over Hold button slightly darker green, mimics disabled green. This needs to be up so held-button:hover overrides this one.*/

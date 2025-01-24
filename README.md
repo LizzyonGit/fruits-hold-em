@@ -113,14 +113,15 @@ Below are my initial wireframes per page for mobile, tablet and laptop screen si
 
 #### Color schemes
 
- A lot has been written about colours in casino's and slot machines in particular, and not all give the same reason for using particular colors. Basically all websites I found say red is the main colour in casino's, because it symbolises excitement, and it attracts attention. Red in combination with gold represents success and winning, and gold ofcourse symbolises luxury. I based my choices on this article https://www.newwavemagazine.com/single-post/the-psychology-of-color-in-casinos-how-design-choices-influence-the-player-s-mood, which says gold and red simulates a real life casino feel in online games. Purple and black conveys exclusiveness and class and I have seen a purple background a lot in images of slot machines, so I use this as well. Bright colours for call to action buttons and several sources say orange is a much used colour on spin/go buttons. I use dark green as a background for credit info, to similise the green tables in casinos.
+ A lot has been written about colours in casino's and slot machines in particular, and not all give the same reason for using particular colors. Basically all websites I found say red is the main colour in casino's, because it symbolises excitement, and it attracts attention. Red in combination with gold represents success and winning, and gold ofcourse symbolises luxury. I based my choices on this article https://www.newwavemagazine.com/single-post/the-psychology-of-color-in-casinos-how-design-choices-influence-the-player-s-mood, which says gold and red simulates a real life casino feel in online games. Purple and black conveys exclusiveness and class and I have seen a purple background a lot in images of slot machines, so I use this as well. Bright colours for call to action buttons and several sources say orange is a much used colour on spin/go buttons. I use dark green as a background for credit info, to mimic the green tables in casinos.
 
- For winning combinations, I add some extra color to the background of the fruits, and some extra effects with these colours.
+ As I went on, I used black more than I initially intended, for some buttons and the background for the fruits. I think it enhances the luxury feeling on the website.
 
 
  I would like to add some extra shiny effects or bling in my game, if it is possible. To match a more flashy casino style machine.
 
- I chose a lot of colours, as I also wanted to use a bright green and yellow, even though gold and yellow are much alike. Because bright colours match my fruity theme. I also use black as an added contrast colour. This is my pallete: https://coolors.co/4c004c-ff0000-ffd700-ffff00-00ff00-28775b-ffa500
+ 
+ This is my pallete: https://coolors.co/4c004c-ff0000-ffd700-105837-28775b-000000-ffa500.
 
  These are my sources:
 
@@ -144,6 +145,9 @@ When I filtered on a *Shaded* appearance and *Color* technology, I found *Nabla*
 #### Logos and images
 
 For my fruit images, I use HTML symbols. I chose fruits that look distinctive to enhance accessibility, and another advantage of HTML symbols, is that it does not impact my performance as much as images would do. Later, I saw that my old computer displays the symbols differently than my new computer. This would not be with images, but I think for the game functionality, performance is more important. The different symbols do not impact the game functionality. I realise it is not good for consistency and for example marketing, that's why I did not reuse these symbols as images elsewhere on the website, like the favicon, because than it can get messy with different designs on the same page, for some devices. 
+
+
+The background image is from [Canva](https://www.canva.com/). Originally a black background with gold decoration, I changed the background to purple and kept the gold decorations.
 
 
 The favicon is an image of the **'em** in the logo. To create the favicon files, I used [RealFaviconGenerator](https://realfavicongenerator.net/).
