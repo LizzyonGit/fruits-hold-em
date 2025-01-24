@@ -23,7 +23,7 @@ I have been testing throughout developing, fixing issues as I went.
 
 - - -
 
-#### Calculations
+#### Logic
 
 As I started out writing the logic with increasing and decreasing credit, increasing game count, decreasing spins, I stumbled on some minor issues like displaying the correct credit information. I started out calculating with the string value from the UI, which caused problems with additions since the number would just concatenate at the end of the other number, instead of adding up. I thought about converting the string value to a number, which caused an error in the console. So I realised I needed to first calculate and then display it in the UI, like in CIs walkthrough project *Simon says*. I copied the way the *showScore* function works in that project, making the calculations first and then calling the function *showCreditInfo* to show the outcome each time.
 
@@ -33,6 +33,8 @@ The **GO** button was working in a way that the **Spins left** would decrease wi
 
 Initially, when the spin count was 1 and you would click **GO**, or when a winning combination would come up, a new round started right away; the spin count went to 3 directly with the new credit and games played count. So I wanted to display this final spin's result, even though you should not be able to do anything since you would have 0 spins left, or the round ended by a winning combination. Inspired by CI's example *Simon says*, I added a *setTimeout* method to display this final result for the user, before starting the new round. During this timeout, you can not click **HOLD** or **GO**, and it will automatically start a new round, you do not have to click anything. This way it also clear how the counting works, as the inbetween step is not missing, and you can for example see that you gain 10 credit with a winning combination, but you loose 5 at the start of the new round. 
 
+
+After implementing the hold functionality and testing it, I noticed that I needed to change my code for determining the winning combination, as I got winning combinations when the 3 fruits in the middle row were not the same. My code for determining the winning combination looked at the fruits stored in the array at the three indexes used for the middle row, not the fruits actually on the screen in the middle row. My hold functionality updates the array from which the fruit are picked each spin, but it simply does not pick the fruit for held columns. This means that the array stores new fruits every time you spin, while the screen can hold certain columns to keep the same fruits. This discrepancy was easy to fix by making the winning combination function check what is on the screen instead of the array. I am aware that it is not an ideal solution, it would be better to not change certain array indexes at all if a column is held, so the computer does not need to choose random fruits when it is not needed. It would clean up the code, and in a larger program it would benefit the performance to not run unnecessary code.
 
 #### Accessibility
 
@@ -64,3 +66,7 @@ I used Chrome developer tools to keep track of responsiveness, placement and siz
 
 The background image was a challenge, as it's a frame that needs to be around the content at all time. I started with vh100 and vw100 which seems ok, but then when you tilt your smartphone, the game and credit info sections overlapped the frame. So I needed some different css properties. I tried adding the background to another div above the content, but this did not work, and I tried different size values for the background. But then I found *object-fit: fill* [here](https://developer.mozilla.org/en-US/docs/Web/CSS/object-fit), and tried it out. This worked. It was mainly luck to finally solve it. Now I just had to adjust padding and margin for different screens sizes so the content would fit inside the frame.
 
+
+
+Different computers
+The fruit symbols on my newer computer look different than on my older computer. I had to test if the background colour for a winning combination worked for both computers. 

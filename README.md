@@ -143,10 +143,10 @@ When I filtered on a *Shaded* appearance and *Color* technology, I found *Nabla*
 
 #### Logos and images
 
-For my fruit images, I use HTML symbols. I chose fruits that look distinctive to enhance accessibility, and another advantage of HTML symbols, is that it does not impact my performance as much as images would do.
+For my fruit images, I use HTML symbols. I chose fruits that look distinctive to enhance accessibility, and another advantage of HTML symbols, is that it does not impact my performance as much as images would do. Later, I saw that my old computer displays the symbols differently than my new computer. This would not be with images, but I think for the game functionality, performance is more important. The different symbols do not impact the game functionality. I realise it is not good for consistency and for example marketing, that's why I did not reuse these symbols as images elsewhere on the website, like the favicon, because than it can get messy with different designs on the same page, for some devices. 
 
 
-The favicon is an image from the HTML symbol. To create the favicon files, I used [RealFaviconGenerator](https://realfavicongenerator.net/).
+The favicon is an image of the **'em** in the logo. To create the favicon files, I used [RealFaviconGenerator](https://realfavicongenerator.net/).
 
 
 The logo is the game name written in font *Nabla*.
