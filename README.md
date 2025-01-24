@@ -113,9 +113,19 @@ Below are my initial wireframes per page for mobile, tablet and laptop screen si
 
 #### Color schemes
 
- A lot has been written about colours in casino's and slot machines in particular, and not all give the same reason for using particular colors. Basically all websites I found say red is the main colour in casino's, because it symbolises excitement, and it attracts attention. Red in combination with gold represents success and winning, and gold ofcourse symbolises luxury. I based my choices on this article https://www.newwavemagazine.com/single-post/the-psychology-of-color-in-casinos-how-design-choices-influence-the-player-s-mood, which says gold and red simulates a real life casino feel in online games. Purple and black convey exclusiveness and class and I have seen a purple background a lot in images of slot machines, so I use this as well. Several sources say orange is a much used colour for spin/go buttons, so I use it for my **GO** button. I use dark green as a background for credit info, to mimic the green tables in casinos. I also use this for my **HOLD** buttons. I use a darker variation of this green as well as a hover colour, based on how disabled **HOLD** buttons appear on the screen.
+ A lot has been written about colours in casino's and slot machines in particular, and not all give the same reason for using particular colors. Basically all websites I found say red is the main colour in casino's, because it symbolises excitement, and it attracts attention. Red in combination with gold represents success and winning, and gold ofcourse symbolises luxury. I based my choices on this article https://www.newwavemagazine.com/single-post/the-psychology-of-color-in-casinos-how-design-choices-influence-the-player-s-mood, which says gold and red simulates a real life casino feel in online games.
+ 
+ 
+ Purple and black convey exclusiveness and class and I have seen a purple background a lot in images of slot machines, so I use this as well. 
+ 
+ 
+ Several sources say orange is a much used colour for spin/go buttons, so I use it for my **GO** button. 
+ 
+ 
+ I use dark green as a background for credit info, to mimic the green tables in casinos. I also use this for my **HOLD** buttons. I use a darker variation of this green as well as a hover colour, based on how disabled **HOLD** buttons appear on the screen.
 
- As I went on, I used black more than I initially intended, for some buttons and the background for the fruits. I think it enhances the luxury feeling on the website.
+ 
+ As I went on, I used black more than I initially intended, for some buttons and the background for the fruits. I think it adds to the luxury feel of the website and works well with purple, green and gold.
 
 
  I would like to add some extra shiny effects or bling in my game, if it is possible. To match a more flashy casino style machine.
@@ -126,7 +136,6 @@ Below are my initial wireframes per page for mobile, tablet and laptop screen si
  These are my sources:
 
  https://colorfulconsole.com/the-art-of-slot-machine-design-using-colors-to-enhance-gameplay/
-11:05
 https://www.globalbrandsmagazine.com/color-schemes-popular-among-online-gambling-brands/
 https://fashionisers.com/2020/06/22/color-psychology-in-online-casino-games-design/
 https://hickmandesign.co.uk/blog/other/psychology-of-casino-game-design/?srsltid=AfmBOoqN_NQjVzYCdMEXdxkKP7hirVuOcc1yR1pRNuj2DlTwndNwtmi-
@@ -147,7 +156,7 @@ When I filtered on a *Shaded* appearance and *Color* technology, I found *Nabla*
 For my fruit images, I use HTML symbols. I chose fruits that look distinctive to enhance accessibility, and another advantage of HTML symbols, is that it does not impact my performance as much as images would do. Later, I saw that my old computer displays the symbols differently than my new computer. This would not be with images, but I think for the game functionality, performance is more important. The different symbols do not impact the game functionality. I realise it is not good for consistency and for example marketing, that's why I did not reuse these symbols as images elsewhere on the website, like the favicon, because than it can get messy with different designs on the same page, for some devices. 
 
 
-The background image is from [Canva](https://www.canva.com/). Originally a black background with gold decoration, I changed the background to purple and kept the gold decorations.
+The background image is from [Canva](https://www.canva.com/). Originally a black background with gold decoration, I changed the background to purple and kept the gold decoration. I think the image enhances the luxury feeling I want to convey.
 
 
 The favicon is an image of the **'em** in the logo. To create the favicon files, I used [RealFaviconGenerator](https://realfavicongenerator.net/).
