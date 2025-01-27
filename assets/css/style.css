@@ -114,14 +114,15 @@ h2, h3 {
 
 
 
-/*GO button styles*/
-#button-go {
+/*GO button and 404 page button styles*/
+#button-go, #error-button {
     background-color: var(--primary-button-color);
     border: 1px solid var(--primary-button-color);
     color: #000000; /*needs to be black for accessibility*/
 }
 
-#button-go:hover, #button-go:focus {
+#button-go:hover, #button-go:focus,
+#error-button:hover, #error-button:focus {
     background-color: var(--secondary-color);
     border: 1px solid #000000;
     color:#000000;
