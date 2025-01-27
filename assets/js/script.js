@@ -282,7 +282,7 @@ function gameDone(){
     //If credit is 0 when spins left is 0, quit the game. 
     //THERE IS A GLITCH BEFORE IT QUITS, NEED TO FIX?!!
     if (game.credit === 0){
-        //quitGame();
+        
         showResultModal();
         
        } else {
@@ -404,6 +404,7 @@ function showResultModal() {
     // Code to give option to restart like the button in the credit info section
     const resultModalRestart = document.getElementById('result-modal-restart');
     resultModalRestart.addEventListener('click', resetGame);
+    
 
 }
 
