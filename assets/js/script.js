@@ -272,6 +272,8 @@ function spinDecrease(){
 function gameDone(){
     //Remove disabled state from GO
     buttonGo.removeAttribute('disabled');
+    //Focuses on GO so you can continue with key press, from https://laracasts.com/index.php/discuss/channels/vue/how-to-focus-on-an-input-after-disabling
+    buttonGo.focus();
 
 
     resetHold();
