@@ -209,6 +209,28 @@
         </div>
     </div>
 
+    <!--Result modal, opens when credit run out-->
+
+    <div id="result-modal" class="modal" aria-labelledby="result-modal-title" aria-describedby="result-modal-body" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 id="result-modal-title" class="modal-title">Game over</h1>
+              <button type="button" class="btn-close result-modal-quit" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div id="result-modal-body" class="modal-body">
+                <h2>You have no credit left</h2>
+                <p>Well done! You managed to play <span id="games-played-modal"></span> games!</p>
+                
+            </div>
+            <div class="modal-footer">
+              <button type="button" id="result-modal-restart" class="btn btn-primary" data-bs-dismiss="modal">Restart</button><!--data-bs-dismiss="modal" closes the modal-->
+              <button type="button" class="btn btn-secondary result-modal-quit">Quit</button>
+            </div>
+          </div>
+        </div>
+    </div>
+
 
 
 

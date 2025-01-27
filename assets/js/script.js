@@ -282,7 +282,8 @@ function gameDone(){
     //If credit is 0 when spins left is 0, quit the game. 
     //THERE IS A GLITCH BEFORE IT QUITS, NEED TO FIX?!!
     if (game.credit === 0){
-        quitGame();
+        //quitGame();
+        showResultModal();
         
        } else {
 
@@ -384,6 +385,27 @@ function resetWin(){
     }
 }
 
+//Variable for result modal, from https://stackoverflow.com/questions/11404711/how-can-i-trigger-a-bootstrap-modal-programmatically
+let resultModal =  new bootstrap.Modal(document.querySelector('#result-modal'));
+
+// Function to get modal after game ends because credit has run out
+function showResultModal() {
+    //Show the modal, from https://stackoverflow.com/questions/11404711/how-can-i-trigger-a-bootstrap-modal-programmatically
+    resultModal.show();
+    let gamesPlayedModal = document.getElementById('games-played-modal');
+    //the last game played is not added in the credit info section when credit is 0, so it needs to add this last game played first, then the correct nr of played games is displayed in the mdoal
+    game.gamesPlayed ++;
+    gamesPlayedModal.innerHTML = game.gamesPlayed;
+    // Code to make sure the quitGame function is called for buth quit buttons in modal
+    const quitResultButtons = document.querySelectorAll('.result-modal-quit');
+    for (const quitResultButton of quitResultButtons){
+        quitResultButton.addEventListener('click', quitGame);
+    }
+    // Code to give option to restart like the button in the credit info section
+    const resultModalRestart = document.getElementById('result-modal-restart');
+    resultModalRestart.addEventListener('click', resetGame);
+
+}
 
 // Need to fix hold function
 // Need to fix winning combination flash effect? See https://www.tutorialspoint.com/how-to-create-a-blinking-effect-with-css3-animations
