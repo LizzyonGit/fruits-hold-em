@@ -119,34 +119,34 @@
                 <!--Hidden heading, requested by html validator-->
                 <h3 class="visually-hidden">Credit info</h3> 
                 
-                 <div class="row justify-content-center">
-                               <h2>Spins left: <span id="spins-left"></span></h2>
+                <div class="row justify-content-center">
+                    <h2>Spins left: <span id="spins-left"></span></h2>
                   
-                               <h2>Credit: <span id="credit-amount"></span></h2>
+                    <h2>Credit: <span id="credit-amount"></span></h2>
    
-                               <h2>Games played: <span id="games-played"></span></h2>
-                    </div>
+                    <h2>Rounds played: <span id="games-played"></span></h2>
+                </div>
                 
            
                
                 <div class="row justify-content-center">
                     
-                               <!--The different col sizes per breakpoint makes sure text stays in the buttons Restart and Quit-->
-                                 <div class="col-5 col-sm-4 col-md-5 col-lg-4">
-                                  <div class="row justify-content-center">
-                                       <div class="row justify-content-center">
-                                          <button type="button" id="button-restart" class="btn btn-primary">Restart</button>
-                                       </div>
-                                   </div>
-                                 </div>
-                                 <div class="col-5 col-sm-4 col-md-5 col-lg-4">
-                                     <div class="row justify-content-center">
-                                          <div class="row justify-content-center">
-                                             <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#quit-modal">Quit</button>
-                                          </div>
-                                     </div>
-                                 </div>
+                  <!--The different col sizes per breakpoint makes sure text stays in the buttons Restart and Quit-->
+                  <div class="col-5 col-sm-4 col-md-5 col-lg-4">
+                  <div class="row justify-content-center">
+                        <div class="row justify-content-center">
+                          <button type="button" id="button-restart" class="btn btn-primary">New game</button>
                         </div>
+                    </div>
+                  </div>
+                  <div class="col-5 col-sm-4 col-md-5 col-lg-4">
+                      <div class="row justify-content-center">
+                          <div class="row justify-content-center">
+                              <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#quit-modal">Quit</button>
+                          </div>
+                      </div>
+                  </div>
+                </div>
                     
                 
                 
@@ -171,14 +171,14 @@
               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div id="how-play-body" class="modal-body">
-                <p>Fruits hold 'em is a fruit machine to test your luck. Get 3 similar fruits in the middle row, and you win credit. See how far you can get!</p>
+                <p>Fruits hold 'em is a fruit machine to test your luck. Get 3 of the same fruit in the middle row, and you win credit. See how far you can get!</p>
                 <h2>Start</h2>
-                <p>You start with 10 credit. Click GO to start spinning. Each game consists of 3 spins, and costs 5 credit. If you get 3 similar fruits in the middle row, you get 10 credit and you start a new game. After 3 spins, a new game starts. When you have no more credit for a new game, the play restarts.</p>
+                <p>You start with 10 credit. Click <strong>GO</strong> or <strong>New game</strong> to start spinning. Each round consists of 3 spins, and costs 5 credit. If you get 3 of the same fruit in the middle row, you get 10 credit and you start a new round automatically. After 3 spins without a winning middle row, a new round starts. When you have no more credit for a new round, it is game over.</p>
                 <h2>Hold</h2>
-                <p>Each column has a HOLD button under it. Click the HOLD button to save the fruit and prevent spinning of the held column. You can hold up to 2 columns each spin. The third HOLD button will be disabled.</p>
-                <p>When a button is in the HELD status, you can click it to include the column again for spinning. Applicable disabled HOLD buttons will be available again.</p>
-                <h2>Restart</h2>
-                <p>If you feel you're not doing too well, click RESTART to try a new game.</p>
+                <p>Each column has a <strong>HOLD</strong> button under it. Click the <strong>HOLD</strong> button to save the fruit and prevent spinning of the held column. You can hold up to 2 columns each spin. The third <strong>HOLD</strong> button will be disabled.</p>
+                <p>When a button is in the <strong>HELD</strong> status, you can click it to include the column again for spinning. Any disabled <strong>HOLD</strong> buttons will be available again.</p>
+                <h2>New game</h2>
+                <p>If you feel you're not doing too well, click <strong>New game</strong> to quit the current game and start over.</p>
             </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
@@ -220,11 +220,12 @@
             </div>
             <div id="result-modal-body" class="modal-body">
                 <h2>You have no credit left</h2>
-                <p>Well done! You managed to play <span id="games-played-modal"></span> games!</p>
+                <p>Well done! You managed to play <span id="games-played-modal"></span> rounds!</p>
+                <p>Do you want to play again?</p>
                 
             </div>
             <div class="modal-footer">
-              <button type="button" id="result-modal-restart" class="btn btn-primary" data-bs-dismiss="modal">Restart</button><!--data-bs-dismiss="modal" closes the modal-->
+              <button type="button" id="result-modal-restart" class="btn btn-primary" data-bs-dismiss="modal">Play again</button><!--data-bs-dismiss="modal" closes the modal-->
               <button type="button" id= "result-modal-quit-button" class="btn btn-primary result-modal-quit" data-bs-dismiss="modal">Quit</button>
             </div>
           </div>
