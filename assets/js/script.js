@@ -248,7 +248,7 @@ function spinDecrease(){
     if (game.spinsLeft === 0){
         
         //This code disables GO and HOLD buttons while Spins left is on 0 and waiting to execute gameDone
-        for (holdButton of holdButtons){
+        for (let holdButton of holdButtons){
            holdButton.setAttribute('disabled', true);
         }
 
@@ -332,14 +332,14 @@ function winGame(){
 
     // Add background color with class (should not be toggle in case two winning combinations in row)   
 
-    for (column of winningRow){
+    for (let column of winningRow){
         column.classList.add('winning-combination');
     }
 
     showCreditInfo();
 
     //This code disables GO and HOLD buttons while the winning combination is displayed and waiting to execute gameDone
-    for (holdButton of holdButtons){
+    for (let holdButton of holdButtons){
         holdButton.setAttribute('disabled', true);
     }
 
@@ -368,7 +368,7 @@ function quitGame(){
 
 // Function to remove held buttons and remove disabled attribute at end of a game (needs to be referred to in several scenarios)
 function resetHold(){
-    for (holdButton of holdButtons){
+    for (let holdButton of holdButtons){
         holdButton.classList.remove('held-button');
         holdButton.removeAttribute('disabled');
         // change button text back to HOLD
@@ -382,7 +382,7 @@ function resetWin(){
     winningText.innerText = '';
       
     //remove .winning-combination if it is there from previous win 
-    for (column of winningRow){
+    for (let column of winningRow){
     column.classList.remove('winning-combination');
     }
 }
