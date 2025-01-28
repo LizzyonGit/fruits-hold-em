@@ -9,8 +9,9 @@ I have been testing throughout developing, fixing issues as I went.
 ## Contents
 
 * [Automated testing](#automated-testing)
-  * [W3C Validator](#w3c-validator)
-  * [JavaScript Validator](#javascript-validator)
+  * [HTML validator](#html-validator)
+  * [W3C validator](#w3c-validator)
+  * [JavaScript validator](#javascript-validator)
   * [Lighthouse](#lighthouse)
 * [Manual testing](#manual-testing)
   * [Testing User Stories](#testing-user-stories)
@@ -20,9 +21,22 @@ I have been testing throughout developing, fixing issues as I went.
     * [Responsiveness](#responsiveness)
   * [Full Testing](#full-testing)
 
+### HTML validator
+
+No issues for index.html and 404.html.
+
+
+### W3C validator
+
+For style.css, there are no errors. There are some warnings related to the imported Google Fonts and used variables, that can be ignored. There are also warnings about setting the same colours for backgrounds and borders onbuttons and the middle row when there is no winning combination, which I did on purpose to override the boostrap button and border colours, and for the middle row, the border is the same colour but it is distinctive from the background colour, to highlight the middle row is the row the whole game is about.
+
+
 ### Javascript validator
 
 I used [JSHint](https://jshint.com/) to validate my script.js file. With the setting ES6, the code passes, part from one error: **One undefined variable: bootstrap**. This has to do with **let resultModal =  new bootstrap.Modal(document.querySelector('#result-modal'));**. Apart from the Stackoverflow post that I took this from, the code is also in the [Bootstrap documentation](https://getbootstrap.com/docs/5.3/components/modal/#via-javascript). So I did not think I needed to change the code, I suspected this had to with the Bootstrap JavaScript file not being read because it is external. I went to look for this error and if I needed to do anything, and I found [this post](https://code-institute-room.slack.com/archives/C026PTF46F5/p1718936785177029) on Slack with the same issue, saying I can indeed ignore this. 
+
+### Lighthouse
+
 
 - - -
 
