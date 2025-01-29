@@ -182,7 +182,6 @@ h2, h3 {
 
 .fruit-column {
     height: 186px; /*based on height for fruit which is 62px, 3 times that to show three fruits*/
-    overflow: hidden; /*NOT NEEDED IF WE DON'T MAKE SPIN EFFECT*/
     border: 1px solid var(--secondary-color);
     padding-left: 0; /*Remove unnecessary padding between columns*/
     padding-right: 0;
