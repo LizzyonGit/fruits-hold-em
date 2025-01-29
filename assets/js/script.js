@@ -191,8 +191,8 @@ function showCreditInfo(){
 
 
 //default values for credit, spins left and games played.
-//Without this I get an error in JSHint, even if the functions works because game is read in resetGame funtion, which is always run//
-let game={
+//Without this I get an error in JSHint, even if the functions work because game is read in resetGame funtion, which is always run//
+let game = {
     credit: 10,
     spinsLeft: 3,
     gamesPlayed: 0,
