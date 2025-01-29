@@ -186,7 +186,7 @@ function selectFruitFunction() {
 function showCreditInfo(){
     document.getElementById('credit-amount').innerText = game.credit;
     document.getElementById('spins-left').innerText = game.spinsLeft;
-    document.getElementById('games-played').innerText = game.gamesPlayed;
+    document.getElementById('games-played').innerText = game.roundsPlayed;
 }
 
 
@@ -195,7 +195,7 @@ function showCreditInfo(){
 let game = {
     credit: 10,
     spinsLeft: 3,
-    gamesPlayed: 0,
+    roundsPlayed: 0,
 };
 
 //variable for start value spins left
@@ -211,7 +211,7 @@ function resetGame(){
     game = {
         credit: 10,
         spinsLeft: 3,
-        gamesPlayed: 0,
+        roundsPlayed: 0,
     };
 
     showCreditInfo();
@@ -291,7 +291,7 @@ function gameDone(){
 
        game.credit -= 5;
        game.spinsLeft = startSpinsLeft;
-       game.gamesPlayed ++;
+       game.roundsPlayed ++;
 
        showCreditInfo();
 
@@ -396,8 +396,8 @@ function showResultModal() {
     resultModal.show();
     let roundsPlayedModal = document.getElementById('rounds-played-modal');
     //the last game played is not added in the credit info section when credit is 0, so it needs to add this last game played first, then the correct nr of played games is displayed in the mdoal
-    game.gamesPlayed ++;
-    roundsPlayedModal.innerHTML = game.gamesPlayed;
+    game.roundsPlayed ++;
+    roundsPlayedModal.innerHTML = game.roundsPlayed;
     // Code to make sure the quitGame function is called for buth quit buttons in modal
     const quitResultButtons = document.querySelectorAll('.result-modal-quit');
     for (const quitResultButton of quitResultButtons){
