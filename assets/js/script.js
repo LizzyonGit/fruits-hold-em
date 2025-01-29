@@ -394,10 +394,10 @@ let resultModal =  new bootstrap.Modal(document.querySelector('#result-modal'));
 function showResultModal() {
     //Show the modal, from https://stackoverflow.com/questions/11404711/how-can-i-trigger-a-bootstrap-modal-programmatically
     resultModal.show();
-    let gamesPlayedModal = document.getElementById('games-played-modal');
+    let roundsPlayedModal = document.getElementById('rounds-played-modal');
     //the last game played is not added in the credit info section when credit is 0, so it needs to add this last game played first, then the correct nr of played games is displayed in the mdoal
     game.gamesPlayed ++;
-    gamesPlayedModal.innerHTML = game.gamesPlayed;
+    roundsPlayedModal.innerHTML = game.gamesPlayed;
     // Code to make sure the quitGame function is called for buth quit buttons in modal
     const quitResultButtons = document.querySelectorAll('.result-modal-quit');
     for (const quitResultButton of quitResultButtons){
