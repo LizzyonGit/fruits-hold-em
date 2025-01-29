@@ -191,7 +191,7 @@ function showCreditInfo(){
 
 
 //default values for credit, spins left and games played.
-//IS THIS NEEDED NOW THAT IT IS IN FUNCTION RESTARTGAME?
+//Without this I get an error in JSHint, even if the functions works because game is read in resetGame funtion, which is always run//
 let game={
     credit: 10,
     spinsLeft: 3,
@@ -208,7 +208,7 @@ document.getElementById('button-restart').addEventListener('click', resetGame);
 function resetGame(){
     resetHold();
     //sets and shows default values
-    game={
+    game = {
         credit: 10,
         spinsLeft: 3,
         gamesPlayed: 0,
