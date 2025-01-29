@@ -171,7 +171,7 @@ function selectFruitFunction() {
       //if statement needs to be inside this function as it should check this condition after populateFruits, also spinDecrease is not needed for newGame
       if (middleFruitOne.innerHTML === middleFruitTwo.innerHTML && middleFruitOne.innerHTML === middleFruitThree.innerHTML){
       
-         winGame();
+         winRound();
         
         } else {
           //If no winning combination call spinDecrease function
@@ -232,7 +232,7 @@ function resetGame(){
     //if statement needs to be inside this function as it should check this condition after populateFruits, also spinDecrease is not needed for newGame
     if (middleFruitOne.innerHTML === middleFruitTwo.innerHTML && middleFruitOne.innerHTML === middleFruitThree.innerHTML){
       
-      winGame();
+      winRound();
     } 
 }
 
@@ -258,7 +258,7 @@ function spinDecrease(){
 
 
         setTimeout(() => {
-        gameDone();
+        roundDone();
         }, 1000);
     }
 
@@ -269,7 +269,7 @@ function spinDecrease(){
 // - Games played +1,
 // - Credit -5
 
-function gameDone(){
+function roundDone(){
     //Remove disabled state from GO
     buttonGo.removeAttribute('disabled');
     //Focuses on GO so you can continue with key press, from https://laracasts.com/index.php/discuss/channels/vue/how-to-focus-on-an-input-after-disabling
@@ -310,7 +310,7 @@ function gameDone(){
        //if statement needs to be inside this function as it should check this condition after populateFruits, also spinDecrease is not needed for newGame
        if (middleFruitOne.innerHTML === middleFruitTwo.innerHTML && middleFruitOne.innerHTML === middleFruitThree.innerHTML){
       
-           winGame();
+           winRound();
         } 
     }
    
@@ -323,7 +323,7 @@ function gameDone(){
 // - Credit +5
 
 
-function winGame(){
+function winRound(){
     // A winning row increases the credit and leaves the rest as it was for a little while, before the gameDone function is called
     game.credit += 10;   
     
@@ -349,7 +349,7 @@ function winGame(){
     //Added method to wait 1 sec before calling gameDone, so the new credit and winning combination displays before moving on
 
     setTimeout(() => {
-    gameDone();
+    roundDone();
     }, 1000);
 
 
