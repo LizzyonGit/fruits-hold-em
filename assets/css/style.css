@@ -31,7 +31,7 @@ body {
     background-color: var(--background-color); /*In case image does not load*/
     background-repeat: no-repeat;
     background-size: 100% 100%;
-    object-fit: fill; /*From https://developer.mozilla.org/en-US/docs/Web/CSS/object-fit*/
+    
 }
 
 
