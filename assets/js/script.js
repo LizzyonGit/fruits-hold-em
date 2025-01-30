@@ -94,7 +94,7 @@ function holdColumn(e){
 }
 
 // Function to change text
-// If button containes held-button class, change inner text, otherwise change back to HOLD
+// If button contains held-button class, change inner text, otherwise change back to HOLD
 function changeText(e){
 if (this.classList.contains('held-button')){
     this.innerText = 'HELD';}
@@ -136,7 +136,7 @@ function populateFruits(){
     }
 }
 
-//Needed for winning game functionality
+//Needed for winning functionality
 //Variable for winning row
 const winningRow = document.querySelectorAll('.winning-row');
 
@@ -167,8 +167,8 @@ function selectFruitFunction() {
       // Call function to populate fruit columns (depending in Hold)
       populateFruits();
 
-      //If winning combination call winGame function
-      //if statement needs to be inside this function as it should check this condition after populateFruits, also spinDecrease is not needed for newGame
+      //If winning combination call winRound function
+      //if statement needs to be inside this function as it should check this condition after populateFruits
       if (middleFruitOne.innerHTML === middleFruitTwo.innerHTML && middleFruitOne.innerHTML === middleFruitThree.innerHTML){
       
          winRound();
@@ -180,9 +180,9 @@ function selectFruitFunction() {
    }
 }
 
-// Code to fix credit, spins left and games played
+// Code to fix credit, spins left and rounds played
 
-// Function to show the credit, spins and game info
+// Function to show the credit, spins and round info
 function showCreditInfo(){
     document.getElementById('credit-amount').innerText = game.credit;
     document.getElementById('spins-left').innerText = game.spinsLeft;
@@ -190,15 +190,15 @@ function showCreditInfo(){
 }
 
 
-//default values for credit, spins left and games played.
-//Without this I get an error in JSHint, even if the functions work because game is read in resetGame funtion, which is always run//
+//Default values for credit, spins left and rounds played.
+//Without this I get an error in JSHint, even if the functions work because game is read in resetGame funtion, which is always run
 let game = {
     credit: 10,
     spinsLeft: 3,
     roundsPlayed: 0,
 };
 
-//variable for start value spins left
+//Variable for start value spins left
 const startSpinsLeft = 3;
 
 
@@ -207,7 +207,7 @@ document.getElementById('button-restart').addEventListener('click', resetGame);
 
 function resetGame(){
     resetHold();
-    //sets and shows default values
+    //Sets and shows default values
     game = {
         credit: 10,
         spinsLeft: 3,
@@ -217,7 +217,7 @@ function resetGame(){
     showCreditInfo();
 
     
-    //This part from the selectFruitFunction can be reused here (NO spinDecrease function)
+    //Following part is reused from the selectFruitFunction (NO spinDecrease function)
 
     // Call resetFunction to empty array 
     resetArray();
@@ -228,17 +228,17 @@ function resetGame(){
     // Call function to populate fruit columns (depending in Hold)
     populateFruits();
 
-    //If winning combination call winGame function
-    //if statement needs to be inside this function as it should check this condition after populateFruits, also spinDecrease is not needed for newGame
+    //If winning combination call winRound function
+    //if statement needs to be inside this function as it should check this condition after populateFruits
     if (middleFruitOne.innerHTML === middleFruitTwo.innerHTML && middleFruitOne.innerHTML === middleFruitThree.innerHTML){
       
       winRound();
     } 
 }
 
+
 // From resetGame, each time you click Go:
 // - Spins left -1
-
 
 function spinDecrease(){
 
@@ -247,14 +247,14 @@ function spinDecrease(){
 
     if (game.spinsLeft === 0){
         
-        //This code disables GO and HOLD buttons while Spins left is on 0 and waiting to execute gameDone
+        //This code disables GO and HOLD buttons while Spins left is on 0 and waiting to execute roundDone
         for (let holdButton of holdButtons){
            holdButton.setAttribute('disabled', true);
         }
 
         buttonGo.setAttribute('disabled', true);
 
-        //Added method to wait 1 sec before calling gameDone, so the credit shows with 0 spins left before moving on
+        //Added method to wait 1 sec before calling roundDone, so the credit shows with 0 spins left before moving on
 
 
         setTimeout(() => {
@@ -266,23 +266,25 @@ function spinDecrease(){
 
 //After third time you clicked Go:
 // - Spins left back to 3,
-// - Games played +1,
+// - Rounds played +1,
 // - Credit -5
 
+// Function called when spins left = 0 and after won round
 function roundDone(){
     //Remove disabled state from GO
     buttonGo.removeAttribute('disabled');
+
     //Focuses on GO so you can continue with key press, from https://laracasts.com/index.php/discuss/channels/vue/how-to-focus-on-an-input-after-disabling
     buttonGo.focus();
 
 
     resetHold();
 
-    //Reset winning combination from old game, but after repopulating the fruits it checks for a winning combination, see below in this function
+    //Reset winning combination colour and text from old round, after repopulating the fruits it checks for a winning combination again, see below in this function
     resetWin();
 
-    //If credit is 0 when spins left is 0, quit the game. 
-    //THERE IS A GLITCH BEFORE IT QUITS, NEED TO FIX?!!
+    //If credit is 0, show the final modal. If not, start new round. (After won round credit can never be 0)
+    
     if (game.credit === 0){
         
         showResultModal();
@@ -295,7 +297,7 @@ function roundDone(){
 
        showCreditInfo();
 
-       //This part from the selectFruitFunction can be reused here (NO spinDecrease function)
+       //This part is reused from the selectFruitFunction (NO spinDecrease function because it is the start of the round)
 
        // Call resetFunction to empty array 
        resetArray();
@@ -306,8 +308,8 @@ function roundDone(){
        // Call function to populate fruit columns (depending in Hold)
        populateFruits();
 
-       //If winning combination call winGame function
-       //if statement needs to be inside this function as it should check this condition after populateFruits, also spinDecrease is not needed for newGame
+       //If winning combination call winRound function
+       //if statement needs to be inside this function as it should check this condition after populateFruits
        if (middleFruitOne.innerHTML === middleFruitTwo.innerHTML && middleFruitOne.innerHTML === middleFruitThree.innerHTML){
       
            winRound();
@@ -318,13 +320,11 @@ function roundDone(){
 }
 
 //If there is a winning combination in one of the 3 spins
-// - Spins left back to 3,
-// - Games played +1,
-// - Credit +5
+// - Credit +10
 
 
 function winRound(){
-    // A winning row increases the credit and leaves the rest as it was for a little while, before the gameDone function is called
+    // A winning row increases the credit and leaves the rest as it was for a little while, before the roundDone function is called
     game.credit += 10;   
     
     // Change winning text
@@ -338,7 +338,7 @@ function winRound(){
 
     showCreditInfo();
 
-    //This code disables GO and HOLD buttons while the winning combination is displayed and waiting to execute gameDone
+    //This code disables GO and HOLD buttons while the winning combination is displayed and waiting to execute roundDone
     for (let holdButton of holdButtons){
         holdButton.setAttribute('disabled', true);
     }
@@ -346,7 +346,7 @@ function winRound(){
     buttonGo.setAttribute('disabled', true);
     
 
-    //Added method to wait 1 sec before calling gameDone, so the new credit and winning combination displays before moving on
+    //Added method to wait 1 sec before calling roundDone, so the new credit and winning combination displays before moving on
 
     setTimeout(() => {
     roundDone();
@@ -366,7 +366,7 @@ function quitGame(){
 }
 
 
-// Function to remove held buttons and remove disabled attribute at end of a game (needs to be referred to in several scenarios)
+// Function to remove held buttons and remove disabled attribute at end of a game (referred to in several scenarios)
 function resetHold(){
     for (let holdButton of holdButtons){
         holdButton.classList.remove('held-button');
@@ -394,25 +394,28 @@ let resultModal =  new bootstrap.Modal(document.querySelector('#result-modal'));
 function showResultModal() {
     //Show the modal, from https://stackoverflow.com/questions/11404711/how-can-i-trigger-a-bootstrap-modal-programmatically
     resultModal.show();
+
     let roundsPlayedModal = document.getElementById('rounds-played-modal');
-    //the last game played is not added in the credit info section when credit is 0, so it needs to add this last game played first, then the correct nr of played games is displayed in the mdoal
+
+    //The last round played is not added in the credit info section when credit is 0, so it needs to add this last round played first, then the correct nr of played rounds is displayed in the modal
     game.roundsPlayed ++;
     roundsPlayedModal.innerHTML = game.roundsPlayed;
-    // Code to make sure the quitGame function is called for buth quit buttons in modal
+
+    // Code to make sure the quitGame function is called for both quit buttons in modal
     const quitResultButtons = document.querySelectorAll('.result-modal-quit');
+
     for (const quitResultButton of quitResultButtons){
         quitResultButton.addEventListener('click', quitGame);
     }
+
     // Code to give option to restart like the button in the credit info section
     const resultModalRestart = document.getElementById('result-modal-restart');
+
     resultModalRestart.addEventListener('click', resetGame);
     
 
 }
 
-// Need to fix hold function
-// Need to fix winning combination flash effect? See https://www.tutorialspoint.com/how-to-create-a-blinking-effect-with-css3-animations
-// space key event for go button?
-// Check spinsLeft as it does not work optimally
+
 
 
