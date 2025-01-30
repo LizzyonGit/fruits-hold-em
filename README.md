@@ -171,23 +171,32 @@ The logo is the game name written in font *Nabla*.
 
 - __How to play modal__
 
-  - When you click **How to play**, the corresponding modal opens with information on how to play the game.
+  - When you click **How to play**, the corresponding modal opens with information on how to play the game. You can close this modal by clicking **Close** or **X** in the top right corner.
 
 ![How to play modal](docs/screenshots/features-navbar.png)
 
 - __Game section__
 
-  - The game section holds three columns, a **HOLD** button under each column, and a **GO** button at the bottom. Here is where you play the game. 
-  
-  - You click **GO** to start the game so the columns get filled with fruits, and from there, you just click **GO** to 'spin' the columns each time. 
-  
-  - You can click **HOLD** to prevent the column above it to spin. The **HOLD** button changes from green to red with the button text **HELD**, and it changes back when you click it again. When you hold two columns, the third **HOLD** button becomes disabled so you can not hold three columns. If you enable one of the two **HELD** buttons again, the disabled button gets enabled again.
+  The game section holds three columns, a **HOLD** button under each column, and a **GO** button at the bottom. Here is where you play the game.
 
-  Your chosen held columns stay held between the spins, but the buttons get reset at the start of a new round.
-  
-  When you have a winning row in the middle, all **HOLD** buttons and the **GO** button become disabled until the new round starts with reset fruits.
+     __GO button__
 
-  When you have a winning middle row, the background for the row changes from red to green with a golden border, and a text appears above the columns with **WINNER!!**.
+     - You click **GO** to start the game so the columns get filled with fruits, and from there, you just click **GO** to 'spin' the columns each time. 
+  
+     __HOLD buttons__
+
+     - You can click **HOLD** to prevent the column above it to spin. The **HOLD** button changes from green to red with the button text **HELD**, and it changes back when you click it again. When you hold two columns, the third **HOLD** button becomes disabled so you can not hold three columns. If you enable one of the two **HELD** buttons again, the disabled button gets enabled again.
+
+     - Your chosen held columns stay held between the spins, but the buttons get reset at the start of a new round.
+  
+     __Winning row__
+
+     - When you have a winning middle row, the background for the row changes from red to green with a golden border, and a text appears above the columns with **WINNER!!**. Regardless of how many spins you have left, the round ends with a winning row. The round's final display of fruits displays for one second, and during this time, all **HOLD** buttons and the **GO** button become disabled, until the new round starts automatically with reset fruits.
+
+     __No winning row__
+
+     - When you have zero spins left and no winning combination, the round ends just like when you would have a winning combination; the final spin's fruits display for one second, during which **HOLD** and **GO** buttons are disabled, and a new round starts automatically after that.
+
 
 ![Game section before start](docs/screenshots/game-before-start.png)
 
@@ -199,7 +208,29 @@ The logo is the game name written in font *Nabla*.
 
 - __Credit info section__
 
-  - The **About** section gives an introduction to who Sotis is and his background. For a user wanting to know more about Sotis, this is important information. The insight into who he is helps deciding on whether or not to book an appointment.
+  The credit info section holds the following:
+
+  __Spins left__
+  - The spin count counts down from 3 to 0 each round. A new round gives you 3 spins. At the start of a new round, new fruits are set and count right away if you win, without needing to spin. So effectively, you get four fruit spins, but you can not control the first one.
+
+  __Credit__
+  - You start the game with 10 credit. Apart from the first round, which is effectively free, at the start of each new round, credit decreases with 5. If you get a winning row, credit increases with 10 during the 1 second pause at the end of the round. This may look like credit only increases with 5, because a new round takes 5 credit at the start. When you have two winning combinations in a row, credit increases with 10 twice, but then takes 5 at the start of a new round, if this round does not start with a winning combination, so it looks like credit increases with 15.
+
+  - When credit is 0 after the last spin of a round, the **Game over** modal pops up. Credit can not go negative.
+  
+  __Game over modal__
+  - The **Game over** modal informs you that you have no credit left for a new round. It informs you how many rounds you have managed to play. When you click **Play again**, a new game starts. When you click **Quit** r the **X** in the top right corner, you go back to the start page, before a game starts.
+
+  __Rounds played__
+  - The number of rounds you played starts at 0 for your first round, and increases with 1 at the start of each new round. If you never get winning combinations, you can play 3 rounds. This is because the first round is effectively free, because you start with 10 credit the first round, and it does not decrease until the start of the next round. 
+
+  __Restart button__
+  - The **Restart** button starts a new game right away with reset fruits and the credit info default values. It works the same as the first time you click **GO**.
+
+  __Quit button and Quit game modal__
+   - The **Quit** button triggers the **Quit game** modal and asks you to confirm if you want to quit the game. You can click **Stay** or the **X** in the top right corner, to stay on the current game. You can click **Quit** to go back to the start page, before a game starts.
+
+
 
 ![About](docs/screenshots/features-about.png)
 
