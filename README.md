@@ -189,11 +189,11 @@ The logo is the game name written in font *Nabla*.
 
   When you have a winning middle row, the background for the row changes from red to green with a golden border, and a text appears above the columns with **WINNER!!**.
 
-![Game section before start](docs/screenshots/features-hero.png)
+![Game section before start](docs/screenshots/game-before-start.png)
 
-![Game section in play with one held column](docs/screenshots/features-hero.png)
+![Game section in play with one held column](docs/screenshots/game-in-play.png)
 
-![Game section with winning row](docs/screenshots/features-hero.png)
+![Game section with winning row](docs/screenshots/winning-game.png)
 
 
 
