@@ -37,7 +37,7 @@ function selectNineFruits(){
 }
 
 //Hold function implementation
-// targets all hold buttons
+//Targets all hold buttons
 const holdButtons = document.querySelectorAll('.hold-button');
 
 //Click event added to all hold buttons, calls function holdColumn and changeText
@@ -151,7 +151,7 @@ let middleFruitThree = document.getElementById('third-column-middle');
 
 // selectFruitFunction called by GO button
 function selectFruitFunction() {
-//At the start, when there are no fruits, GO will behave like the Restart button so it will not count down the spins on the first click. After that, it will count down the spins left
+//At the start, when there are no fruits, GO will behave like the Restart button so it will not count down the spins on the first click. After that, it will count down the spins left if no win
     if (allFruits.length === 0){
         resetGame();
 
@@ -238,7 +238,7 @@ function resetGame(){
 
 
 // From resetGame, each time you click Go:
-// - Spins left -1
+// - Spins left -1, until 0
 
 function spinDecrease(){
 
