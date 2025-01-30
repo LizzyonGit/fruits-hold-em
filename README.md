@@ -234,65 +234,22 @@ The logo is the game name written in font *Nabla*.
 
 ![About](docs/screenshots/features-about.png)
 
-- __Image with caption__
-
-  - The image with caption between the **About** and **Philosophy** sections, where Sotis sits with a notebook, should give the user more context. For the user, it is part of gaining more information about Sotis and seeing him at work.
-
-![Image with caption](docs/screenshots/features-image.png)
-
-- __Philosophy section__
-
-  - The **Philosophy** section gives an insight into how Sotis works and what his methods and convictions are. This gives the user more information about his professionality, what to expect,  and helps in making the decision to book an appointment or not.
-
-![Philosophy](docs/screenshots/features-philosophy.png)
-
-- __Testimonials section__
-
-  - The **Testimonials** section displays previous clients' testimonials about their experiences with Sotis. They are displayed in a text-based carousel, with control buttons and playing on page load. This section is important in convincing users to book an appointment, as the testimonials come from people outside and will gain trust for Sotis.
-
-![Testimonials](docs/screenshots/features-testimonials.png)
-
-- __The footer__ 
-
-  - The footer section includes an address, email address, phone number and links to *X*, *Facebook* and *Instagram*. The links will open in a new tab to allow easy navigation for the user. The address and contact information are important for the user to know where Sotis works, and the possibility to contact him is important to gain trust. The links to the social media are important, so the user can get more information and context outside the website, potentially also seeing how trustworthy Sotis is by checking followers and comments on social media.
-
-![Footer](docs/screenshots/features-footer.png)
-
-- __The What I offer page__
-
-  - The page **What I offer** has an introductory header text and displays the four different sessions you can book with Sotis in card format. Each card has an image, related to the session type, a title, description, button that links to the book.html page, and a footer with duration and fee information. This page is crucial for the user to decide if they want to book a session and if so, which session they want to book.
-   
-   
-   Project file: what-i-offer.html
-
-![What I offer](docs/screenshots/features-offer.png)
-
-- __The Book page__
-
-  - The **Book** page consists of an introductory header text and a form with the fields **First name**, **Last name**, **Email**, **Phone**, **Session type**, **Preferred date and time**, and a **Send** button. All fields are required to be able to submit the form. The **Book** page is crucial for the user and site owner, as it allows to book an appointment with Sotis. Clicking **Send** leads to the CI formdump https://formdump.codeinstitute.net/.
-
-
-  Project file: book.html
-
-![Book](docs/screenshots/features-book.png)
 
 - __The 404 page__
 
-  - The 404.html page consists of a simple text explaining the page is not found, and a button that links to the home page, so the user can easily go there. I did not want this page to have an image as it may just slow down the loading, I wanted it to be as simple as possible.
+  - The 404.html page consists of a simple text explaining the page is not found, and a **Back to play** button that links to the home page.
 
-  
   Project file: 404.html
 
 ![404 not found](docs/screenshots/features-404.png)
 
 ### Features left to implement
 
-- Video recordings (short parts) of sessions added to the page **What I offer**.
-- A possibility to sign up for a newsletter, where Sotis gives life coach tips for example.
-- A separate page with life coach tips.
-- A more dynamic booking form that is connected to a real calendar, so that people can only book available times and don't need to wait for a manual booking confirmation, possibly also payment options.
-- A testimonials section with small profile pictures, and possibly several testimonials at once for large screens.
-- When you click the **Book now** button on each card on the page **What I offer**, and you arrive at the **Book** page, the equivalent session type should be selected in the form.
+- Sound toggle
+- More exciting graphics when you have a winning row
+- Different credit values wfor different fruits
+- Different winning row or lines
+
 
 ## Testing 
 
