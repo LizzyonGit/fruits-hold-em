@@ -4,9 +4,8 @@
 
 **Fruits hold 'em** is a slot machine game purely based on luck, for gamers and people who want to see how lucky they are today, or just enjoy playing this kind of games, without losing money.
 
-The fruit images will line up randomly each spin. Three spins is one game where you can earn credits or lose them. You can hold some fruits so that you can increase your chance to win. You start with some credit by default and you can play until your credit is finished or when you click one of the buttons to reset or quit to the home page. You can keep track of your credit, how many spins you have left the current game, and how many games you have played. At any time, you can trigger a module with the rules about how to play and how you win. 
+Click **GO** and the fruit images will line up randomly each spin. You get three spins in one round to try to get a winning middle row with three of the same fruits. You can hold up to two fruits so that you can increase your chance to win. If you win a round, you earn credit. You can keep track of your credit, how many spins you have left the current round, and how many rounds you have played. You can play until your credit is finished, or when you click one of the buttons **Restart** or **Quit**. The button **How to play** triggers a dialog box with the rules of the game.
 
-In the footer, there are links to social media if you want to know more or follow the game creators.
 
 ![Screenshot webpages on different devices](docs/screenshots/responsive-website.png)
 
@@ -25,61 +24,57 @@ In the footer, there are links to social media if you want to know more or follo
 The website aims to offer users a:
 - fun and simple game to just enjoy and/or to quickly and easily test their luck, 
 - responsive website across all screen sizes,
-- user-friendly, simple navigation across the website. 
+<!-- - user-friendly, simple navigation across the website. -->
 
 ### User stories
 
 #### As a gamer, I want to:
 
-- be able to navigate to all pages on any device and experience a user-friendly website,
+<!--- be able to navigate to all pages on any device and experience a user-friendly website,-->
 - find information on how the game works, so that I can play the game,
 - have the possibilty to hold certain fruits, so that I can increase the chance of winning,
 - keep track of how many spins I have left, so that I can adapt my tactic,
-- keep track of my credit, so that I can see how lucky I am,
-- keep track of how many games I have played, so that I can decide if I should stop or continue,
-- turn on or off the sound, so that I can decide which I prefer more,
+- keep track of my credit, so that I can follow my progress,
+- keep track of how many rounds I have played, so that I can follow my progress or decide if I should stop or continue,
+<!-- - turn on or off the sound, so that I can decide which I prefer more,-->
 - be able to quit or restart the game, so I have control over the game without needing to leave the website,
-- find links to social media, so that I can find out more about the game and find other games by the same makers.
+<!-- - find links to social media, so that I can find out more about the game and find other games by the same makers.-->
 
 #### As a site owner, I want to offer visitors a:
 
 - fun and addictive game, so that I can get a steady user base and gain traffic to my website,
-- way to easily find me on social media, so that I can gain followers there.
+<!-- - way to easily find me on social media, so that I can gain followers there.-->
 
 #### Tasks to achieve user stories
 
 Create a:
-- home page with a link to play and to the rules,
-- **Rules** modal with information on how to play, which combinations make you win, and how the game ends,
-- sound on/off button,
+- home page with a button to play,
+- **How to play** button with information on how to play, which combinations make you win, and how the game ends,
 - responsive slot machine like box with:
   - three columns with fruits,
   - logic to :
     - increase the credit with a winning combination, 
-    - decrease the credit when no winning combination,
-    - decrease spins left per game and reset it at start of a game,
-    - increase games played,
-    - display visual effect when there is a winning combination,
-    - play sound effects when spinning,
-    - play winning sound effect when there is a winning combination,
-  - **Hold** buttons under each column, with logic to:
-    - hold a column so it does not spin when you click **Go**,
-    - change to **Held** when clicked,
-    - you can not hold three columns,
+    - decrease the credit at start of a new round,
+    - decrease spins left per round and reset it at start of a round,
+    - increase rounds played,
+    - display visual effect when there is a winning combination.
+  - **HOLD** buttons under each column, with logic to:
+    - hold a column so it does not spin when you click **GO**,
+    - keep the held columns held each spin in the same round,
+    - change to **HELD** when clicked,
+    - change back to **HOLD** when clicked again,
+    - not being able to hold three columns at once,
     - reset when there is a winning combination or at the end of the game.
   - a **Go** button to spin the machine,
-  - information on how: 
+  - always visible information on how: 
     - much credit left,
     - many spins left,
     - many games played.
-- button to start a new game,
+- button to restart,
 - button to quit the game,
-- navigation bar with navigation to **Home** and **Rules**,
 - modal with information when:
   - the game ends due to insufficient credit, with an appropriate text,
-  - you click **Quit**, with an appropriate text,
-  - you click **New game**, with an appropriate text.
-- footer with social media links,
+  - you click **Quit**, with an appropriate text.
 - suiting background image for the pages,
 - favicon (adds to user-friendly website experience).
 
@@ -156,7 +151,7 @@ When I filtered on a *Shaded* appearance and *Color* technology, I found *Nabla*
 For my fruit images, I use HTML symbols. I chose fruits that look distinctive to enhance accessibility, and another advantage of HTML symbols, is that it does not impact my performance as much as images would do. Later, I saw that my old computer displays the symbols differently than my new computer. This would not be with images, but I think for the game functionality, performance is more important. The different symbols do not impact the game functionality. I realise it is not good for consistency and for example marketing, that's why I did not reuse these symbols as images elsewhere on the website, like the favicon, because than it can get messy with different designs on the same page, for some devices. 
 
 
-The background image is from [Canva](https://www.canva.com/). Originally a black background with gold decoration, I changed the background to purple and kept the gold decoration. I think the image enhances the luxury feeling I want to convey.
+The background image is from [Canva](https://www.canva.com/). Originally a black background with gold decoration, I changed the background to purple and removed the outer fram of the decoration, but kept the curly decoration and in the same colour as it was. I think the image enhances the luxury feeling I want to convey.
 
 
 The favicon is an image of the **'em** in the logo. To create the favicon files, I used [RealFaviconGenerator](https://realfavicongenerator.net/).
@@ -168,21 +163,41 @@ The logo is the game name written in font *Nabla*.
 
 ### Existing features
 
-- __Navigation bar__
+- __Header__
 
-  - All three pages have a navigation bar with the logo, **SOTIS LIFE COACH** and **Home** linking to the index.html page, **About**, **Philosophy** and **Testimonials** linking to the corresponding sections on the index.html page, **What I offer** linking to the what-i-offer.html page and the **Book** button linking to the book.html page. The page you are currently on is lighting up for the **Home** and **What I offer** page.
-  - The navigation bar allows you to easily navigate between pages and specific sections on a page. It is fixed on top of the screen which is specifically useful for mobile phone users, as the pages are longer there, so the navigation is always easily reached.
+  - The header holds the logo, a motivating text and the button **How to play**. 
 
-![Navigation bar](docs/screenshots/features-navbar.png)
+![Header](docs/screenshots/features-navbar.png)
 
-- __The landing page image__
+- __How to play modal__
 
-  - The landing page has a hero image of Sotis, looking into the camera, a header *Sotis life coach* with an appropriate quote about cats and life. This section hopes to grasp the user's attention and give a positive feeling.
-  - My initial hero image would be with the **About** section on top, but I decided to focus on the life coach himself, Sotis, in the hero image, with a one-liner on it, as I've seen in several life coach website templates.
+  - When you click **How to play**, the corresponding modal opens with information on how to play the game.
 
-![Landing page image](docs/screenshots/features-hero.png)
+![How to play modal](docs/screenshots/features-navbar.png)
 
-- __About section__
+- __Game section__
+
+  - The game section holds three columns, a **HOLD** button under each column, and a **GO** button at the bottom. Here is where you play the game. 
+  
+  - You click **GO** to start the game so the columns get filled with fruits, and from there, you just click **GO** to 'spin' the columns each time. 
+  
+  - You can click **HOLD** to prevent the column above it to spin. The **HOLD** button changes from green to red with the button text **HELD**, and it changes back when you click it again. When you hold two columns, the third **HOLD** button becomes disabled so you can not hold three columns. If you enable one of the two **HELD** buttons again, the disabled button gets enabled again.
+
+  Your chosen held columns stay held between the spins, but the buttons get reset at the start of a new round.
+  
+  When you have a winning row in the middle, all **HOLD** buttons and the **GO** button become disabled until the new round starts with reset fruits.
+
+  When you have a winning middle row, the background for the row changes from red to green with a golden border, and a text appears above the columns with **WINNER!!**.
+
+![Game section before start](docs/screenshots/features-hero.png)
+
+![Game section in play with one held column](docs/screenshots/features-hero.png)
+
+![Game section with winning row](docs/screenshots/features-hero.png)
+
+
+
+- __Credit info section__
 
   - The **About** section gives an introduction to who Sotis is and his background. For a user wanting to know more about Sotis, this is important information. The insight into who he is helps deciding on whether or not to book an appointment.
 
