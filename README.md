@@ -23,62 +23,58 @@ Click **GO** and the fruit images will line up randomly each spin. You get three
 
 The website aims to offer users a:
 - fun and simple game to just enjoy and/or to quickly and easily test their luck,
-- easy navigation on the game page, 
-- responsive website across all screen sizes,
-<!-- - user-friendly, simple navigation across the website. -->
+- simple navigation on the game page, 
+- responsive website across all screen sizes.
 
 ### User stories
 
 #### As a gamer, I want to:
 
-<!--- be able to navigate to all pages on any device and experience a user-friendly website,-->
+- easily navigate on the game page on any device, so that I get a user-friendly experience,
 - find information on how the game works, so that I can play the game,
 - be able to play the game,
 - have the possibilty to hold certain fruits, so that I can increase the chance of winning,
 - keep track of how many spins I have left, so that I can adapt my tactic,
 - keep track of my credit, so that I can follow my progress,
 - keep track of how many rounds I have played, so that I can follow my progress or decide if I should stop or continue,
-<!-- - turn on or off the sound, so that I can decide which I prefer more,-->
-- be able to quit or restart the game, so that I have control over the game without needing to leave the website,
-<!-- - find links to social media, so that I can find out more about the game and find other games by the same makers.-->
+- be able to quit or restart the game, so that I have control over the game without needing to leave the website.
 
 #### As a site owner, I want to offer visitors a:
 
-- fun and addictive, user-friendly game, so that I can get a steady user base and gain traffic to my website,
-<!-- - way to easily find me on social media, so that I can gain followers there.-->
+- fun and addictive, user-friendly game, so that I can get a steady user base and gain traffic to my website.
 
 #### Tasks to achieve user stories
 
 Create a:
-- home page with a button to play,
-- **How to play** button with information on how to play, which combinations make you win, and how the game ends,
+- **How to play** button that triggers information on how to play, which combinations make you win, and how the game ends,
 - responsive slot machine like box with:
   - three columns with fruits,
-  - logic to :
-    - increase the credit with a winning combination, 
-    - decrease the credit at start of a new round,
-    - decrease spins left per round and reset it at start of a round,
-    - increase rounds played,
-    - display visual effect when there is a winning combination.
   - **HOLD** buttons under each column, with logic to:
     - hold a column so it does not spin when you click **GO**,
     - keep the held columns held each spin in the same round,
-    - change to **HELD** when clicked,
-    - change back to **HOLD** when clicked again,
+    - change to **HELD** and different colour when clicked,
+    - change back to **HOLD** and original colour when clicked again,
     - not being able to hold three columns at once,
-    - reset when there is a winning combination or at the end of the game.
-  - a **Go** button to spin the machine,
+    - reset buttons at the start of a new round.
+  - a **GO** button to start the game and spin the machine,
+- section with: 
   - always visible information on how: 
     - much credit left,
     - many spins left,
     - many games played.
-- button to restart,
-- button to quit the game,
+  - a button to restart,
+  - a button to quit the game,
+  - logic to:
+    - increase the credit with a winning combination, 
+    - decrease the credit at start of a new round,
+    - decrease spins left per round and reset it at start of a round,
+    - increase rounds played,
+    - display visual effect and appropriate text when there is a winning combination.
 - modal with information when:
-  - the game ends due to insufficient credit, with an appropriate text,
-  - you click **Quit**, with an appropriate text.
-- suiting background image for the pages,
-- favicon (adds to user-friendly website experience).
+  - the game ends due to insufficient credit, with the final number of rounds played and an option for the user to restart or quit,
+  - you click **Quit**, with an appropriate text and option for the user to stay or confirm quit.
+- suitable background image for the pages, to add to the overall positive experience,
+- favicon.
 
 ### Design
 
@@ -251,6 +247,7 @@ The logo is the game name written in font *Nabla*.
 - More exciting graphics when you have a winning row, like flashing effects.
 - Different credit values for different fruits.
 - Different winning lines.
+- Spinning wheel effect in each spin before the fruits are settled.
 - Social media links or links to external website of the game makers.
 
 
