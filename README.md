@@ -22,7 +22,8 @@ Click **GO** and the fruit images will line up randomly each spin. You get three
 ### Site goals
 
 The website aims to offer users a:
-- fun and simple game to just enjoy and/or to quickly and easily test their luck, 
+- fun and simple game to just enjoy and/or to quickly and easily test their luck,
+- easy navigation on the game page, 
 - responsive website across all screen sizes,
 <!-- - user-friendly, simple navigation across the website. -->
 
@@ -32,17 +33,18 @@ The website aims to offer users a:
 
 <!--- be able to navigate to all pages on any device and experience a user-friendly website,-->
 - find information on how the game works, so that I can play the game,
+- be able to play the game,
 - have the possibilty to hold certain fruits, so that I can increase the chance of winning,
 - keep track of how many spins I have left, so that I can adapt my tactic,
 - keep track of my credit, so that I can follow my progress,
 - keep track of how many rounds I have played, so that I can follow my progress or decide if I should stop or continue,
 <!-- - turn on or off the sound, so that I can decide which I prefer more,-->
-- be able to quit or restart the game, so I have control over the game without needing to leave the website,
+- be able to quit or restart the game, so that I have control over the game without needing to leave the website,
 <!-- - find links to social media, so that I can find out more about the game and find other games by the same makers.-->
 
 #### As a site owner, I want to offer visitors a:
 
-- fun and addictive game, so that I can get a steady user base and gain traffic to my website,
+- fun and addictive, user-friendly game, so that I can get a steady user base and gain traffic to my website,
 <!-- - way to easily find me on social media, so that I can gain followers there.-->
 
 #### Tasks to achieve user stories
@@ -237,7 +239,7 @@ The logo is the game name written in font *Nabla*.
 
 - __The 404 page__
 
-  - The 404.html page consists of a simple text explaining the page is not found, and a **Play Fruits hold 'em** button that links to the home page.
+  - The 404.html page consists of a simple text saying it is not a lucky page, and a **Play Fruits hold 'em** button that links to the home page.
 
   Project file: 404.html
 
@@ -249,6 +251,7 @@ The logo is the game name written in font *Nabla*.
 - More exciting graphics when you have a winning row, like flashing effects.
 - Different credit values for different fruits.
 - Different winning lines.
+- Social media links or links to external website of the game makers.
 
 
 ## Testing 

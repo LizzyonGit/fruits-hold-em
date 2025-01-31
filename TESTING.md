@@ -14,12 +14,14 @@ I have been testing throughout developing, fixing issues as I went.
   * [JavaScript validator](#javascript-validator)
   * [Lighthouse](#lighthouse)
 * [Manual testing](#manual-testing)
-  * [Testing User Stories](#testing-user-stories)
-  * Issues
+  * [User story testing](#user-story-testing)
+  * [Issues](#issues)
     * [Logic](#logic)
     * [Accessibility](#accessibility)
     * [Responsiveness](#responsiveness)
   * [Full Testing](#full-testing)
+
+## Automated testing
 
 ### HTML validator
 
@@ -39,6 +41,27 @@ I used [JSHint](https://jshint.com/) to validate my script.js file. With the set
 
 
 - - -
+## Manual testing
+
+### User story testing
+
+|   User story                                                            | How it is achieved    |
+|  -----------                                                             | -----------           |
+|**As a gamer, I want to:**|
+|find information on how the game works, so that I can play the game,|**How to play** button which you can click to trigger modal with information on how the game works.|
+|be able to play the game,|**GO** button, and the game is playable with keys as well as with a mouse.|
+|have the possibilty to hold certain fruits, so that I can increase the chance of winning,|**HOLD** button under each column which you can click to hold a fruit.|
+|keep track of how many spins I have left, so that I can adapt my tactic,|**Spins left** in the credit info section, which counts down from 3 to 0.|
+|keep track of my credit, so that I can follow my progress,|**Credit** in the credit info section, which increases with 10 for each win, and decreases with 5 at the start of each new round|
+|keep track of how many rounds I have played, so that I can follow my progress or decide if I should stop or continue,|**Rounds played** in the credit info section, which increases with 1 at the start of each new round, and the **Game over** modal which pops up after the last round you played if you have no credit left, with the final number of rounds you played.|
+|be able to quit or restart the game, so that I have control over the game without needing to leave the website.|The **Restart** and **Quit** buttons in the credit info section, the **Quit game** modal triggered by the **Quit** button, with buttons to confirm if you want to quit, or if you change your mind you can stay on the current game, and the **Game over** modal after last round, with a button to restart and a button to quit the game.|
+|**As a site owner, I want to offer visitors a:**|
+|fun and addictive, user-friendly game, so that I can get a steady user base and gain traffic to my website.|The responsive layout, the game is easy and fast to play with not too many clicks, and the game is playable with keys as well as with a mouse.|
+
+
+
+
+### Issues
 
 #### Logic
 
@@ -93,3 +116,4 @@ After I found this solution, I just had to adjust padding and margin for differe
 
 Different computers
 The fruit symbols on my newer computer look different than on my older computer. I had to test if the background colour for a winning combination worked for both computers. 
+
