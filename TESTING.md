@@ -37,10 +37,39 @@ For style.css, there are no errors. There are some warnings related to the impor
 
 I used [JSHint](https://jshint.com/) to validate my script.js file. With the setting ES6, the code passes, part from one error: **One undefined variable: bootstrap**. This has to do with **let resultModal =  new bootstrap.Modal(document.querySelector('#result-modal'));**. Apart from the Stackoverflow post that I took this from, the code is also in the [Bootstrap documentation](https://getbootstrap.com/docs/5.3/components/modal/#via-javascript). So I did not think I needed to change the code, I suspected this had to with the Bootstrap JavaScript file not being read because it is external. I went to look for this error and if I needed to do anything, and I found [this post](https://code-institute-room.slack.com/archives/C026PTF46F5/p1718936785177029) on Slack with the same issue, saying I can indeed ignore this. 
 
-### Lighthouse
+
+### Lighthouse testing
+
+#### Index.html
+
+Along the way, i have used Lighthouse for checking the colour contrast and it reminded me to add hidden headings for accessibility.
+
+Running the home page in Lighthouse, for Desktop, results in 100% for accessibility and best practices, and 97% for performance:
+
+![Lighthouse result 1](docs/screenshots/lighthouse-home-1.png)
+
+The main suggestions for the performance are related to Bootstrap and Google Fonts, which I can not avoid if I want to use them. 
+
+It also suggests a more efficient cache policy, which is related to static assets not being cached, with my background image as the most important one. According to the [Lighthouse documentation](https://developer.chrome.com/docs/lighthouse/performance/uses-long-cache-ttl), to fix this I would need to change a configuration in the server, which is beyond the scope of this project.
+
+Running Lighthouse in incognito mode gives 100% on performance as well.
+
+For Mobile, the performance is 88% with a warniing that the h1 element, the title, is the element that takes the longest to load. I really like the font for the title and I think the size is perfect, so I would not want to change it. When I run Lighthouse again for Mobile in incognito mode, the performance is 98% with the same issues as for Desktop. So then there is no mention of the title taking too long to load. 
+
+#### 404.html
+
+The first Lighthouse report gives 99% on performance and 100% on accessibility and best practices.
+
+![Lighthouse result 1](docs/screenshots/lighthouse-404-1.png)
+
+Any issues it mentions are the same as for index.html. In incognito, it gives 100% for performance.
+
+For mobile, it gives 98% for performance, and apart from the same issues as before caused by Bootstrap, Google Fonts and cache policy, it finds an issue with the used font for the h1 element beacause of a large layout shift. But the score 98 is good so I am keeping this as it is. However, running it in incognito mode, first I had 88%, but when I tried it again, it got to 98% as well, with those same issues as before.
+
 
 
 - - -
+
 ## Manual testing
 
 ### User story testing
