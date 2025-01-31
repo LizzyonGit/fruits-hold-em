@@ -237,7 +237,7 @@ The logo is the game name written in font *Nabla*.
 
 - __The 404 page__
 
-  - The 404.html page consists of a simple text explaining the page is not found, and a **Back to play** button that links to the home page.
+  - The 404.html page consists of a simple text explaining the page is not found, and a **Play Fruits hold 'em** button that links to the home page.
 
   Project file: 404.html
 
@@ -245,10 +245,10 @@ The logo is the game name written in font *Nabla*.
 
 ### Features left to implement
 
-- Sound toggle
-- More exciting graphics when you have a winning row
-- Different credit values wfor different fruits
-- Different winning row or lines
+- Sound toggle with different sounds depending on a win or not.
+- More exciting graphics when you have a winning row, like flashing effects.
+- Different credit values for different fruits.
+- Different winning lines.
 
 
 ## Testing 
