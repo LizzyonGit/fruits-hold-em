@@ -1,6 +1,6 @@
 # Fruits hold 'em
 
-[Live link to website](https://lizzyongit.github.io/sotis-lifecoach/index.html)
+[Live link to website](https://lizzyongit.github.io/fruits-hold-em/index.html)
 
 **Fruits hold 'em** is a slot machine game purely based on luck, for gamers and people who want to see how lucky they are today, or just enjoy playing this kind of games, without losing money.
 
@@ -255,81 +255,6 @@ The logo is the game name written in font *Nabla*.
 
 See [TESTNG.md](TESTING.md).
 
-### User story testing
-
-|   User story                                                            | How it is achieved    |
-|  -----------                                                             | -----------           |
-|**As any user of this website, I want to:**|
-|be able to navigate to all pages on any device and experience a user-friendly website|Fixed navigation bar that is always visible, responsiveness of all pages.|
-|**As a person interested in seeing a life coach, I want to:**|
-|find information about Sotis the life coach and how he works, so that I can decide if I consider booking an appointment with him.  |**About** and **Philosophy** sections, pictures, social media links.            |
-|**As a potential client, I want to:**      |
-|find information about what Sotis can offer me, how much it would cost and where it would be, so that I can decide if I want to book an appointment with him.   | **What I offer** page with all the offered sessions, address in the footer.        |
-|be able to contact Sotis, so that I can ask questions about anything unclear, so that I can decide if I still want to book an appointment with him.| Contact information in the footer.        |
-|read reviews from previous clients, to decide if I also want to book an appointment with Sotis.| **Testimonials** section. |
-|find a way to book an appointment, so that I can do this easily on the website.| **Book** page with booking form, reached via **Book now** buttons on **What I offer** page and **Book** button in the navigation bar. |
-|**As a confirmed client, I want to:**     |
-find contact information, so that I can contact Sotis about any matter regarding my appointment.  | Contact information in the footer.        |
-|**As a site owner, I want to:**    |
-get word around about a special cat offering life coach services, so that I build brand awareness.  | The **About** and **Philosophy** sections, images, the inspiring quote, page **What I offer**, social media links.        |
- get visitors to book an appointment, so that I grow my business and help clients.| The **About**, **Philosophy** and **Testimonials** sections, images, and **What I offer** page should convince the visitors, while the buttons that link to the **Book** page, and the **Book** page form should get the visitors to actually book.      |
-
-### Issues
-
-I want to mention a few issues here because they were not straightforward to fix.
-
-#### Testimonials carousel
-The biggest issue I faced was the text-based **Testimonials** carousel, it needed a lot of customised styles.
-
-- To have the controls not overlap the text, I had to give the carousel slide a certain padding which also had to be adapted for different screens with media queries, because for smaller screens, too much padding caused a lot of empty space and cramped text.
-
-- Because the testimonial texts are not equally long, the blue background carousel slides had different heights for different testimonials, which I fixed with media queries with a min-height value. 
-
-- The texts were in the top of the slide, which did not look good. I needed to get it vertically in the middle. 
-
-  Css *vertical-align* did not work, I tried to add new divs with *.container*, *.row* and *.col* and use *align-items-center* or *align-self-center*, but this made the carousel not work good.
-
-  Playing around in DevTools, *display:inline-flex* worked on some element, but since I did not understand what it actually did, I did not go with that. 
-
-  Targeting all the carousel items with the *carousel-item* class and css *display:flex* and *align-items:center*, made the carousel look disturbed and not work. 
-
-  Targeting the *container-item* class with the *active* class and custom css *display:flex* and *align-items:center*, finally worked to get the text in the middle each slide. I realised in DevTools, that when the carousel runs, the slide that is there, gets the *active* class. But it makes it hard to troubleshoot since it changes so quickly. Targeting only the carousel item with the *active* class may override some other setting since it's more specific than just targeting *.carousel-item*, so I guess this is why it worked.
-
-- The next issue was that in between two carousel items, before the upcoming carousel item displays correctly in the middle on the blue background, there was a white background where the upcoming text was displayed in the top. To fix the background color to remain blue all the time, I added the background to the wrapper div element. 
-
-- But the text still displayed in the top of the slide in between two slides, so there was a little 'jump' every time in between two slides, from the top to the middle. 
-
-  I tried some different styles of 'sliding', like 'fade', but it did not work. 
-
-  My thought was that I should make the upcoming slide look like the active slide, so I applied the same styles to the *.carousel-inner* div to get it to look like the active carousel-item, which made it look better since the upcoming text was not in the top anymore, but in the middle. 
-
-- But there was still another kind of jump; since the padding seemed to be different between the slides, the upcoming text was wider than the text on the active slide, so the sides 'jumped' inwards. 
-
-  I tried to target the actual *carousel.item* class with some of the same styles as the active carousel item, but that did not look better, it went up and down again or all testimonials were on top of each other. So the little jump seemed better at that time.
-
-  However, I could not let this go and tried to fix this again later. DevTools helped me enormously with the carousel. Initially, I could not figure out the issue but as the slides went on and I was looking at what happened in the DevTools side panel, I suddenly noticed a class *.carousel-item-next*, and figured this must be the 'upcoming' slide. I tested giving that the same padding as the active slide, which resulted in the text being the same width, since both the upcoming slide and the active slide had the same padding. 
-
-  But, then the text was not vertically in the middle, so it needed to have *display:flex* and *align-items:center* as well, so it would be exactly the same as the *active* class. 
-
-  I realised then that when you control the carousel yourself, and go to the previous slide manually, the previous slide ofcourse still has the 'jump' and previous issues, so I found *.carousel-item-prev* in DevTools and targeted that class with the same styles as *.coursel-item-next*, which finally made the carousel work smoothly without 'jumps'.
-
-#### Anchor links on fixed navigation bar
-
-- The fixed navigation bar was overriding the headers after you clicked on the anchor links **About**, **Philosophy** and **Testimonials**. However, the solution provided in the *Boardwalk games* project did not work for me, since I have not used so much margin or padding between my sections as in the *Boardwalk games*, so there would be no place for the navigation bar anyway. The navigation bar would simply need to overlap content. I did not want to add spaces just because of this navigation bar and decided to look for a solution. 
-
-  I googled and found [this article](https://css-tricks.com/fixed-headers-on-page-links-and-overlapping-content-oh-my/) with the suggestion of a simple style rule for the html element: *scroll-padding-top: 70px; /* height of sticky header */*. I checked if this *scroll-padding-top* is supported by all browsers, and found that it was [on this page](https://developer.mozilla.org/en-US/docs/Web/CSS/scroll-padding-top). I applied it with my navigation bar's height of 56px, and it worked.
-
-- Another issue I needed to fix was that of the navigation bar not closing after clicking an anchor link, as is done in the *Boardwalk games* project as well. The javascript code provided there, interfered with my *scroll-padding-top* solution, so I needed to find another solution for closing the navigation bar after clicking an anchor link. 
-
-  For this, I used a posted bug report on CI's Slack from October 16-22 2024. James_BC provides an html code to make the anchor links close after clicking. This html code did not work but I quickly found that this was because the id was not correct, so I adapted the code and it worked. 
-
-  James_BC also provided a css code that would fix an issue on larger screens, as the navigation bar menu titles seem to collapse and open again when clicking on an anchor link. I copied this code in my css stylesheet under media queries, and it worked.
-
-- However, I noticed that the navigation bar did not close when you click next to an anchor link text, even if it navigates to the link. My mentor Antonio Rodriguez found a fix for that during a mentor session, he provided a css style making the span element inside the anchor link display as a full width block, and therefore, when you click next the the link title, the navigation bar closes and navigates to the link. 
-
-- But I saw later that when you click a bit under an anchor link title, the navigation bar will not close even if it navigates correctly. In DevTools, I saw this had to do with a padding that is missing on the span, so the span's height was not the same as the anchor link. To fix this, I decided to give those wrapping anchor link elements a new class, and target them to not have a padding, and put the padding on the span element inside them instead. This way, all the menu items have the same space between, and you can click a bit under or above an anchor link title, and still go to the correct section while the navigation bar closes.
-
-- A small issue left is that the navigation bar is not closing quickly, it seems to roll up as the page navigates to the correct section, but I think this is acceptable.
 
 ### Validator testing 
 
@@ -500,71 +425,96 @@ None.
 
 ### Languages
 
-- HTML 5
-- CSS 3
+- HTML
+- CSS
+- JavaScript
 
 ### Frameworks - libraries - programs used
 
 - [Bootstrap](https://getbootstrap.com/) version 5.3
 - [Figma](https://www.figma.com/) for wireframes
 - Chrome DevTools for verifying responsibility and troubleshooting code
+- [CodePen](https://codepen.io/pen/) for troubleshooting code
 - [Gitpod](https://www.gitpod.io/) for coding
 - [GitHub](https://github.com/) for version control and hosting
 - [Google Fonts](https://fonts.google.com/) for my font pair
-- [Fontawesome](https://fontawesome.com/) for my icons
+- [Canva](https://www.canva.com/) for background image
+- Windows Paint for the cropping background image
 - [TinyPNG](https://tinypng.com/) for compressing image size and converting to webp
-- Windows Paint for resizing and cropping images
-- Windows Photos for resizing images
-- [Responsinator](http://www.responsinator.com/) for checking responsiveness
-- [Canva](https://www.canva.com/) for logo
-- [Lunapic](https://www3.lunapic.com/editor/) for transparent background and coloring in logo
+- Windows snipping tool for the favicon
 - [RealFaviconGenerator](https://realfavicongenerator.net/) for creating favicon icons and the html code, and checking the favicon
+- [Responsinator](http://www.responsinator.com/) for checking responsiveness
 - [Autoprefixer](https://autoprefixer.github.io/) for adding the necessary prefixes to my css stylesheet
 - [Chrome UA Spoofer](https://chromewebstore.google.com/detail/user-agent-switcher-for-c/djflhoibgkdhkhhcedjiklpkjnoahfmg) to test my website on Safari
 
-## Deployment
+## Deployment and development
 
-- The site was deployed to GitHub pages. The steps to deploy are: 
-  - In the GitHub repository, navigate to the **Settings** tab,
-  - In the left menu, select **Pages**,
-  - Under **Source**, select **Deploy from a branch**
-  - Under **Branch**, select **main**,
-  - Click **Save**, 
-  - In the GitHub repository, in the right menu, click **Deployments** to view the link to the deployed website.
+### Deployment
+The site was deployed to GitHub pages. The steps to deploy are: 
+  1. In the GitHub repository, navigate to the **Settings** tab,
+  2. In the left menu, select **Pages**,
+  3. Under **Source**, select **Deploy from a branch**,
+  4. Under **Branch**, select **main**,
+  5. Click **Save**, 
+  6. In the GitHub repository, in the right menu, click **Deployments** to view the link to the deployed website.
 
-The live link can be found here - https://lizzyongit.github.io/sotis-lifecoach/index.html.
+The live link can be found here - https://lizzyongit.github.io/fruits-hold-em/index.html.
+
+### Local development
+To fork the repository:
+  - In the GitHub repository, click the **Fork** button in the top right corner.
+
+To clone the repository:
+  1. Select if you want to clone with HTTPS, SSH or GitHub CLI, and copy the link below it,
+  2. Open the terminal in your code editor and change the current working directory to the location you want to clone this repository to,
+  3. Type *git clone* and paste the from step 1. Press enter.
+
+
+
 
 ## Credits 
 
 ### Content 
 
-- The quote on the hero image was taken from [Sandjest](https://sandjest.com/blogs/quotes/cat-quotes).
-- All other text was written by me.
-- The icons in the footer were taken from [Font Awesome](https://fontawesome.com/).
+- All content is written by me.
 
 ### Media
 
-- All images are my own.
+- The original background image is on Canva, by 'hielmannuraddin's Team', called [Black and Gold Classic Background A4 Document](https://www.canva.com/sv_se/mallar/EAGICesfS6E-black-and-gold-classic-background-a4-document/). I edited this image in Canva.
 
 ### Resources
 
-
-- Redirect to other page [tutorialspoint](https://www.tutorialspoint.com/how-to-redirect-to-another-webpage-using-javascript).
+- For a font pairing idea, [this article](https://www.creatopy.com/blog/google-font-pairings/#21).
+- To decide on which colours to use, I have researched several websites:
+  - https://www.newwavemagazine.com/single-post/the-psychology-of-color-in-casinos-how-design-choices-influence-the-player-s-mood
+  - https://colorfulconsole.com/the-art-of-slot-machine-design-using-colors-to-enhance-gameplay/ 
+  - https://www.globalbrandsmagazine.com/color-schemes-popular-among-online-gambling-brands/ 
+  - https://fashionisers.com/2020/06/22/color-psychology-in-online-casino-games-design/ 
+  - https://hickmandesign.co.uk/blog/other/psychology-of-casino-game-design/?srsltid=AfmBOoqN_NQjVzYCdMEXdxkKP7hirVuOcc1yR1pRNuj2DlTwndNwtmi- 
+  - https://www.globalbrandsmagazine.com/casino-colors-psychology-lucky-gambling-colors/
+  - https://www.myperfectcolor.com/paint/101581-true-value-3496-casino-green#:~:text=The%20RGB%20values%20for%20True,light%20that%20a%20color%20reflects
+- For getting a colour scheme and checking the color contrast, [Coolors.co](https://coolors.co).
 
 - Bootstrap documentation [Bootstrap](https://getbootstrap.com/docs/5.3/getting-started/introduction/).
-- [W3schools](https://www.w3schools.com/) for looking up semantic html.
+- [W3schools](https://www.w3schools.com/) for getting the fruit icons and to read up on concepts.
+- [MDN Web Docs](https://developer.mozilla.org/en-US/) to read up on concepts.
 - [Stackoverflow](https://stackoverflow.com/) for general code questions.
-- For font pairing idea, [this blog from Approval studio](https://approval.studio/blog/how-to-combine-fonts/).
-- Inspiration from CI walkthrough projects *Boardwalk Games*, *Mei Wong portfolio* and *Love running*.
-- Inspiration from [this website template](https://themewagon.github.io/Pilates/).
-- For getting a color scheme and checking the color contrast, [Coolors.co](https://coolors.co).
+- Inspiration and code bits from CI walkthrough project *Simon says*.
+
+- How to redirect to other page with javascript: [tutorialspoint](https://www.tutorialspoint.com/how-to-redirect-to-another-webpage-using-javascript).
+- How to open a Bootstrap modal with javascript: [Stackoverflow](https://stackoverflow.com/questions/62101647/.javascript-bootstrap-open-bootstrap-modal-with-javascript-and-not-with-button).
+- To set focus on an element: [Laracasts](https://laracasts.com/index.php/discuss/channels/vue/how-to-focus-on-an-input-after-disabling).
+- Troubleshoot *aria-hidden* error: 
+ - https://github.com/WordPress/gutenberg/issues/56547, 
+ - https://github.com/twbs/bootstrap/issues/41005, 
+ - https://stackoverflow.com/questions/62677291/aria-hidden-elements-do-not-contain-focusable-elements-issue-when-modal-is-sho.
+- Troubleshoot missing focus-outline on buttons: https://github.com/twbs/bootstrap/issues/38903.
+- To understand background-size setting: [Cloudinary](https://cloudinary.com/guides/front-end-development/6-ways-to-stretch-a-background-image-with-css).
+- Slack post on a console error I got as well: https://code-institute-room.slack.com/archives/D07L9QW7YS3/p1738070720220649.
+
 - [Grammarly](https://www.grammarly.com/grammar-check) spellchecker.
 - [Diffchecker](https://www.diffchecker.com/text-compare/) for checking autoprefixer changes.
-- Fixing the navigation bar to not overlap internal links, [this article from Css-tricks](https://css-tricks.com/fixed-headers-on-page-links-and-overlapping-content-oh-my/).
-- Checking browser compatibility of a css style rule, [this page from MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/scroll-padding-top).
-- CI bug report Slack channel, post from James_BC on 16-22 Oct 2024, for the html and css code for fixing the navigation bar to close after clicking anchor links, with a minor adjustment from me.
-- Checking what I can do to improve performance, [Chrome DevTools documentation](https://developer.chrome.com/docs/lighthouse/performance/mainthread-work-breakdown/?utm_source=lighthouse&utm_medium=devtools).
-- [Markdown guide](https://www.markdownguide.org/) for markdown syntax.
 
 ## Acknowledgments
-- My mentor Antonio Rodriguez for tips, feedback, and fixing a bug.
+- My mentor Jubril for the feedback.
+- My cohort facilitator Kay for the pep talks.

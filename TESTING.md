@@ -1,6 +1,6 @@
 # Fruits hold 'em - Testing
 
-[Live link to website](https://lizzyongit.github.io/sotis-lifecoach/index.html)
+[Live link to website](https://lizzyongit.github.io/fruits-hold-em/index.html)
 
 
 I have been testing throughout developing, fixing issues as I went. 
@@ -48,7 +48,7 @@ I used [JSHint](https://jshint.com/) to validate my script.js file. With the set
 |   User story                                                            | How it is achieved    |
 |  -----------                                                             | -----------           |
 |**As a gamer, I want to:**|
-|easily navigate on the game page on any device, so that I get a user-friendly experience,|responsive layout, favicon, possible to play with keys as well as mouse, only a few buttons that you need to click|
+|easily navigate on the game page on any device, so that I get a user-friendly experience,|Responsive layout, favicon, possible to play with keys as well as mouse, only a few buttons that you need to click|
 |find information on how the game works, so that I can play the game,|**How to play** button which you can click to trigger modal with information on how the game works.|
 |be able to play the game,|**GO** button that you use both to start the game and spin the fruits, the game is playable with keys as well as with a mouse and not colour dependant as held **HOLD** buttons change text as well as colour.|
 |have the possibilty to hold certain fruits, so that I can increase the chance of winning,|**HOLD** button under each column which you can click to hold a fruit.|
@@ -57,12 +57,14 @@ I used [JSHint](https://jshint.com/) to validate my script.js file. With the set
 |keep track of how many rounds I have played, so that I can follow my progress or decide if I should stop or continue,|**Rounds played** in the credit info section, which increases with 1 at the start of each new round, and the **Game over** modal which pops up after the last round you played if you have no credit left, with the final number of rounds you played.|
 |be able to quit or restart the game, so that I have control over the game without needing to leave the website.|**Restart** and **Quit** buttons in the credit info section, the **Quit game** modal triggered by the **Quit** button, with buttons to confirm if you want to quit, or if you change your mind you can stay on the current game, and the **Game over** modal after last round, with a button to restart and a button to quit the game.|
 |**As a site owner, I want to offer visitors a:**|
-|fun and addictive, user-friendly game, so that I can get a steady user base and gain traffic to my website.|responsive layout, favicon, the game is easy and fast to play with not too many clicks, and the game is playable with keys as well as with a mouse.|
+|fun and addictive, user-friendly game, so that I can get a steady user base and gain traffic to my website.|Responsive layout, favicon, the game is easy and fast to play with not too many clicks, and the game is playable with keys as well as with a mouse.|
 
 
 
 
 ### Issues
+
+Here I want to highligt some issues and bugs that were not straightforward to fix.
 
 #### Logic
 
@@ -87,7 +89,7 @@ I also had to change my colour background for a winning combination from gold to
 
 I focuses a lot on using this game with the keyboard. I think clicking GO all the time is not user friendly, it is easier to press Enter or Space. I found this myself when I was testing the game. I did not have to do antyhing to get Space and Enter to work for clicking the button. But I did encounter other problems.
 
-Disabled buttons
+##### Disabled buttons
 
 For the game flow, some buttons are disabled in some situations. You can not hold three columns, so when two HOLD buttons are clicked, the third HOLD button becomes disabled. But I noticed you could still press the key on it to hold it. Also, after a round with three spins or a winning combination, the game pauses a short time to see the result before starting a new round with three spins. During this time, all HOLD buttons and the GO button are disabled. But I noticed you could still press the Space or Enter key on the GO button, which caused the spins to go negative during this short time. So I needed to find out a way to prevent this from happening, as you should not be able to do anything with disabled buttons.
 
@@ -95,7 +97,7 @@ I spend some time finding a solution for this, as I looked specifically for a wa
 
 Then I googled for Bootstrap classes and what to do to prevent key events on disabled buttons. In the Bootstrap documentation, I went to the root of the problem by looking into how to change the disabled class in bootstrap, then I found the confirmation that the *disabled* class does not prevent key events [here](https://getbootstrap.com/docs/5.3/forms/overview/#disabled-forms), only pointer-events. It says you need to add *tabindex -1* to prevent focus. So it turns out it is better to add the *disabled* attribute instead of the class, because the attribute already prevents focus. When I was creating these disabled buttons initially, I went for the *disabled* class because it seemed easier, and I remembered the exact Javascript code for accessing them. I did not think of this crucial difference for key events. So I freshed up my memory about working with attributes instead of classes, and rewrote the code. Attributes are mentioned in the LMS, but I used external sources for more code like *toggleAttribute* from [here](https://developer.mozilla.org/en-US/docs/Web/API/Element/toggleAttribute). It was fairly easy to change this and I did not need any more functions to make it work like it should.
 
-Focused buttons
+##### Focused buttons
 
 When I was testing the keys with the different buttons, I noticed a difference between hovering with a mouse or focusing with a key. I had added some *:hover* pseudo-classes in my css, but not any *:focus* pseudo-classes. I added this to immitate the hovered effect, and while I read more about *:focus*, I found out about *:focus-visible* [here](https://developer.mozilla.org/en-US/docs/Web/CSS/:focus-visible) and how this can be more user friendly. This was applicable for my *Quit* and *Restart* buttons, since when you focus on it and then clicked with the mouse, after moving the mouse, the focus background colour was still there, which was very unnecessary. Using *:focus-visible*, this background colour is removed when you move the mouse away.
 
@@ -115,6 +117,6 @@ After I found this solution, I just had to adjust padding and margin for differe
 
 
 
-Different computers
+##### Different devices
 The fruit symbols on my newer computer look different than on my older computer. I had to test if the background colour for a winning combination worked for both computers. 
 
