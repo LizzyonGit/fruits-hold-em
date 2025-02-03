@@ -35,7 +35,7 @@ For style.css, there are no errors. There are some warnings related to the impor
 
 ### Javascript validator
 
-I used [JSHint](https://jshint.com/) to validate my script.js file. With the setting ES6, the code passes, part from one error: **One undefined variable: bootstrap**. This has to do with **let resultModal =  new bootstrap.Modal(document.querySelector('#result-modal'));**. Apart from the Stackoverflow post that I took this from, the code is also in the [Bootstrap documentation](https://getbootstrap.com/docs/5.3/components/modal/#via-javascript). So I did not think I needed to change the code, I suspected this had to with the Bootstrap JavaScript file not being read because it is external. I went to look for this error and if I needed to do anything, and I found [this post](https://code-institute-room.slack.com/archives/C026PTF46F5/p1718936785177029) on Slack with the same issue, saying I can indeed ignore this. 
+I used [JSHint](https://jshint.com/) to validate my script.js file. With the setting ES6, the code passes, part from one error: **One undefined variable: bootstrap**. This has to do with **let resultModal =  new bootstrap.Modal(document.querySelector('#result-modal'));**. Apart from the [Stackoverflow post](https://stackoverflow.com/questions/62101647/.javascript-bootstrap-open-bootstrap-modal-with-javascript-and-not-with-button) that I took this from, the code is also in the [Bootstrap documentation](https://getbootstrap.com/docs/5.3/components/modal/#via-javascript). So I did not think I needed to change the code, I suspected this had to with the Bootstrap JavaScript file not being read because it is external. I went to look for this error and if I needed to do anything, and I found [this post](https://code-institute-room.slack.com/archives/C026PTF46F5/p1718936785177029) on Slack with the same issue, saying I can indeed ignore this. 
 
 
 ### Lighthouse testing
@@ -153,3 +153,43 @@ After I found this solution, I just had to adjust padding and margin for differe
 ##### Different devices
 The fruit symbols on my newer computer look different than on my older computer. I had to test if the background colour for a winning combination worked for both computers. 
 
+### Full testing
+
+
+
+
+|Feature|Expected outcome|Testing performed|Result|Pass/Fail|
+| --- | --- | --- | --- | --- |
+|**How to play** button|Opens **How to play** modal|Clicked/pressed button|**How to play** modal opens|Pass|
+|**How to play** modal|Can close it|Clicked/pressed the closing buttons|**How to play** modal closes|Pass|
+|**GO** button|Starts the game|Clicked/pressed button when game has not started|Fruits displayed, **Spins left**, **Credit**, **Rounds played** get default values|Pass|
+|**GO** button|Triggers new spin|Clicked/pressed button when game has started|New fruits displayed, **Spins left** decreases with 1|Pass|
+|**GO** button|Triggers new round|Clicked/pressed button when 1 spin left|Pauses the last result 1 sec, then moves to new round where **Spins left** is 3, **Credit** decreases with 5, **Rounds played** increases with 1 |Pass|
+|**HOLD** button|Holds column from getting new fruits|Clicked/pressed a **HOLD** button, then **GO**|Fruits in the column do not change, other columns change|Pass|
+|**HOLD** buttons|Change colour and text when clicked/pressed|Clicked/pressed **HOLD** buttons|Text changes to **HELD**, colour to red, changes back to original when clicked/pressed again|Pass|
+|**HOLD** buttons|Only possible to click/press 3 **HOLD** buttons|Clicked/pressed 2 **HOLD** buttons|Third **HOLD** button gets disabled and not possible to click/press, disabled button gets enabled when you click/press one of the **HELD** buttons|Pass|
+|Winning middle row|When three identical fruits are there: 1 Change background, 2 Display winner text above columns, 3 **Credit** increases with 10, 4 Game pauses 1 second before new round|Spin until a winning row comes|Background changes to green with golden border, *WINNER!!* displays above columns, **Credit** increases with 10 and game pauses 1 second before new round|Pass|
+|**Restart** button| --- | --- | --- | --- |
+|**Quit** button| --- | --- | --- | --- |
+|**Quit game** modal| --- | --- | --- | --- |
+|**Game over** modal| --- | --- | --- | --- |
+|404 page| --- | --- | --- | --- |
+
+
+
+
+
+
+
+
+
+
+
+
+| Scenario | Expected Outcome | Testing Performed | Result | Pass/Fail |
+| --- | --- | --- | --- | --- |
+|Completing the game without holding columns|**Spins left**, **Credit**, **Rounds played** are updated accordingly throughout the game|Playing the game and checking the credit info section values|**Spins left** goes from 3 to 1, **Credit** decreases with 5 at start of new round, increases with 10 when winning row, **Rounds played** increases with 1 at start if each round|Pass|
+|End of game|During the last round, after the last spin, the game ends and the **Game over** modal triggers|Play through the game until **Credit** is 0, **Spins left** is 1, click/press **GO** and when there is no winning row this last spin|**Game over** modal triggers|Pass|
+
+Not possible to hold winning rows
+Not possible to click/press GO during pause
