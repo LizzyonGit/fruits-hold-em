@@ -56,6 +56,7 @@ body * {
 
 h1 {
     font-family: var(--logo-font);
+    color: var(--primary-button-color); /*Text colour in case back-up font is used*/
 }
 
 

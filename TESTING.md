@@ -169,27 +169,21 @@ The fruit symbols on my newer computer look different than on my older computer.
 |**HOLD** buttons|Change colour and text when clicked/pressed|Clicked/pressed **HOLD** buttons|Text changes to **HELD**, colour to red, changes back to original when clicked/pressed again|Pass|
 |**HOLD** buttons|Only possible to click/press 3 **HOLD** buttons|Clicked/pressed 2 **HOLD** buttons|Third **HOLD** button gets disabled and not possible to click/press, disabled button gets enabled when you click/press one of the **HELD** buttons|Pass|
 |Winning middle row|When three identical fruits are there: 1 Change background, 2 Display winner text above columns, 3 **Credit** increases with 10, 4 Game pauses 1 second before new round|Spin until a winning row comes|Background changes to green with golden border, *WINNER!!* displays above columns, **Credit** increases with 10 and game pauses 1 second before new round|Pass|
-|**Restart** button| --- | --- | --- | --- |
-|**Quit** button| --- | --- | --- | --- |
-|**Quit game** modal| --- | --- | --- | --- |
-|**Game over** modal| --- | --- | --- | --- |
-|404 page| --- | --- | --- | --- |
+|**Restart** button|Resets fruits and **Spins left**, **Credit**, **Rounds played** go back to default values |Click/press **Restart** button|Fruits are reset and **Spins left** is 3, **Credit** is 10, **Rounds played** is 0|Pass|
+|**Quit** button|Opens **Quit game** modal|Click/press **Quit** button|**Quit game** modal opens|Pass|
+|**Quit game** modal|Lets you change your mind and stay on current game, or confirm and quit the current game and go back to the window before the game has started|Click/press the **X**, **Stay** and **Quit** button|**Stay** and **X** closes the modal and lets you continue the current , **Quit** sends you back to the window before the game has started with empty fruit columns and empty values in the credit info section|Pass|
+|**Game over** modal|Displays the correct number of rounds you have played, which is 1 more than currently in the background for **Rounds played**, lets you choose to play a new game or quit playing|Check the number of rounds played displayed in the modal, click/press **X**, **Play again** and **Quit** button|Displays the correct number of rounds played, **X** and **Quit** send you back to the pre-game window, **Play again** restarts the game|Pass|
+|404 page|Appears when it should|Type in the URL with errors|Page appears|Pass|
+|404 page **Play Fruits hold 'em** button|Links to index.html page|Click/press button (Enter key, not Space)|Sends you to index.html|Pass|
+|All buttons hover effect|All buttons have a distinctive hover colour effect, except for **HELD** buttons|Hover over all buttons|Minor hover colour effect on **X** in modals, but still OK|Pass|
+|All buttons focus effect|All buttons have an extra border around them when they are focused with a key, and they change colour according to the hover effect|Focus all buttons with the keyboard|All buttons have an extra border around when they are in focus, and their colour changes to their hover colour|Pass|
 
 
-
-
-
-
-
-
-
-
-
-
-| Scenario | Expected Outcome | Testing Performed | Result | Pass/Fail |
+|Scenario|Expected outcome|Testing performed|Result|Pass/Fail|
 | --- | --- | --- | --- | --- |
 |Completing the game without holding columns|**Spins left**, **Credit**, **Rounds played** are updated accordingly throughout the game|Playing the game and checking the credit info section values|**Spins left** goes from 3 to 1, **Credit** decreases with 5 at start of new round, increases with 10 when winning row, **Rounds played** increases with 1 at start if each round|Pass|
 |End of game|During the last round, after the last spin, the game ends and the **Game over** modal triggers|Play through the game until **Credit** is 0, **Spins left** is 1, click/press **GO** and when there is no winning row this last spin|**Game over** modal triggers|Pass|
+|Not possible to hold on winning rows|When you get a winning row, you can not hold any of the columns for the next round|Get a winning row and try to click/press *HOLD** buttons|It is not possible to click/press **HOLD** buttons an the new round starts after 1 second with reset columns|Pass|
+|Not possible to click/press **GO** during pause at end of a round so **Spins left** will not go negative|**GO** button is not possible to click/press at the end of a round during the 1 second pause|Try to click/press **GO** at end of a round during the pause|It is not possible to click/press **GO** during pause at end of a round, and **Spins left** is not going negative|Pass|
+|Winning row on first 'spin'|A winning row counts also when it comes after fruits are reset at start of the game or a new round, not after an actual spin|Playing until I get a winning row at the start|The winning row works as expected with the background, text, credit increase and pause before a new round|Pass|
 
-Not possible to hold winning rows
-Not possible to click/press GO during pause
