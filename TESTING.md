@@ -151,11 +151,16 @@ After I found this solution, I just had to adjust padding and margin for differe
 
 
 ##### Different devices
-The fruit symbols on my newer computer look different than on my older computer. I had to test if the background colour for a winning combination worked for both computers. 
+The fruit symbols on my newer computer with Window 11 look different than on my older computer with Windows 10. I had to test if the background colour for a winning combination worked for both computers. I changed the background in Chrome developer tools for the all the columns and think it is OK.
+Firefox also has a slightly different fruit look than Chrome and Edge on my new Windows 11 computer. Firefox's symbols look a bit more threedimensional. I tested the green winning background and it still works for them.
+
+Browsers
+
+
 
 ### Full testing
-
-
+Tested on Chrome, Edge and FireFox.
+In Firefox, I get two warnings in the console about the used font using an empty gid in glyph 1 and 209: *downloadable font: glyf: empty gid 1364 used as component in glyph 1 (font-family: "Nabla" style:normal weight:400 stretch:100 src index:0) source: https://fonts.gstatic.com/s/nabla/v10/j8_D6-LI0Lvpe7Makz5UhJt9C3uqg_X_75gyGS4jAxsNIjrRBRdeFQx8.woff2*, and *downloadable font: glyf: empty gid 1649 used as component in glyph 209 (font-family: "Nabla" style:normal weight:400 stretch:100 src index:0) source: https://fonts.gstatic.com/s/nabla/v10/j8_D6-LI0Lvpe7Makz5UhJt9C3uqg_X_75gyGS4jAxsNIjrRBRdeFQx8.woff2*. While I could not figure out what glyphs these are, I found someone else getting the same kind of warning which could be ignored [here](https://github.com/arrowtype/recursive/issues/539). But this was related to a different font. I know that my font *Nabla* is not suported everywhere, but it renders OK in Firefox. When I check the console for the [Google Fonts page for Nabla](https://fonts.google.com/specimen/Nabla/glyphs), I get similar warnings including the two exact ones I got. My conclusion is that I did not do anything wrong, these are warnings related to *Nabla* only.
 
 
 |Feature|Expected outcome|Testing performed|Result|Pass/Fail|
