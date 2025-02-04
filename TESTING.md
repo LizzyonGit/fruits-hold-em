@@ -30,7 +30,7 @@ No issues for index.html and 404.html.
 
 ### W3C validator
 
-For style.css, there are no errors. There are some warnings related to the imported Google Fonts and used variables, that can be ignored. There are also warnings about setting the same colours for backgrounds and borders onbuttons and the middle row when there is no winning combination, which I did on purpose to override the boostrap button and border colours, and for the middle row, the border is the same colour but it is distinctive from the background colour, to highlight the middle row is the row the whole game is about.
+For style.css, there are no errors. There are some warnings related to the imported Google Fonts and used variables, that can be ignored. There are also warnings about setting the same colours for backgrounds and borders onbuttons and the middle row when there is no winning combination, which I did on purpose to override the boostrap button and border colours, and for the middle row, the border is the same colour but it is distinctive from the background colour, to highlight the middle row is the row the whole game is about. Because I ran my code through the Autoprefixer, I also get warnings about this, which can be ignored.
 
 
 ### Javascript validator
@@ -73,6 +73,8 @@ For mobile, it gives 98% for performance, and apart from the same issues as befo
 
 
 - - -
+### Favicon testing
+I run https://lizzyongit.github.io/fruits-hold-em/ through Realfavicongenerator's [favicon checker](https://realfavicongenerator.net/favicon-checker/lizzyongit.github.io%2Ffruits-hold-em%2F), and I only got a warning about a missing title for web apps, which actually would be taken from the website's title if this would be applicable, which it is not because the website is not an app. There is a missing web app manifest which is also not applicable.
 
 ## Manual testing
 
@@ -157,10 +159,13 @@ The fruit symbols on my newer computer with Window 11 look different than on my 
 Later I noticed that Firefox also has a slightly different fruit look than Chrome and Edge on my new Windows 11 computer. Firefox's symbols look a bit more threedimensional. I tested the green winning background and it still works for them.
 
 
-My Android phone also has different fruits, but they do work with the background colours.
+My Android phone and iPhone also have different fruits, but they do work with the background colours.
 
 
 This is the price I am willing to pay by chosing HTML symbols instead of images. For the game functionality, it does not matter and I do think performance is more important than similar images.
+
+#### Safari lacks *h1* font support
+Unfortunately, Safari does not support *Nabla*, my chosen font for all *h1* elements. I considered creating an image for all h1 elements, so that these can be the same for all browsers, but I don't like the impact that would have on performance. I also did not want to change my font, because I really like it. So I tried to find similar one that would be supported in Safari. I found one in Goodle Fonts, *Passero One*. After some searching on the internet, I found a way to only target Safari with CSS [in this article](https://wojtek.im/journal/targeting-safari-with-css-media-query). While not ideal, Safari now has a different font for the logo and titles for modals and the 404 page. And the favicon now does not match the logo in Safari, but I find this an acceptable discrepency.
 
 ### Full testing
 
@@ -170,9 +175,6 @@ I tested on Chrome, Edge and FireFox.
 
 In Firefox, I get two warnings in the console about the used font using an empty gid in glyph 1 and 209: *downloadable font: glyf: empty gid 1364 used as component in glyph 1 (font-family: "Nabla" style:normal weight:400 stretch:100 src index:0) source: https://fonts.gstatic.com/s/nabla/v10/j8_D6-LI0Lvpe7Makz5UhJt9C3uqg_X_75gyGS4jAxsNIjrRBRdeFQx8.woff2*, and *downloadable font: glyf: empty gid 1649 used as component in glyph 209 (font-family: "Nabla" style:normal weight:400 stretch:100 src index:0) source: https://fonts.gstatic.com/s/nabla/v10/j8_D6-LI0Lvpe7Makz5UhJt9C3uqg_X_75gyGS4jAxsNIjrRBRdeFQx8.woff2*. While I could not figure out what glyphs these are, I found someone else getting the same kind of warning which could be ignored [here](https://github.com/arrowtype/recursive/issues/539). But this was related to a different font. I know that my font *Nabla* is not suported everywhere, but it renders OK in Firefox. When I check the console for the [Google Fonts page for Nabla](https://fonts.google.com/specimen/Nabla/glyphs), I get similar warnings including the two exact ones I got. My conclusion is that I did not do anything wrong, these are warnings related to *Nabla* only.
 
-Safari
-Font Nabla does not display, no back-up check autofix?
-Fruits different but ok
 
 
 
