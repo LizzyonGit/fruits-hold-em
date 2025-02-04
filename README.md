@@ -165,13 +165,13 @@ The logo is the game name written in font *Nabla*.
 
   - The header holds the logo, a motivating text and the button **How to play**. 
 
-![Header](docs/screenshots/features-navbar.png)
+![Header](docs/screenshots/header.png)
 
 - __How to play modal__
 
   - When you click **How to play**, the corresponding modal opens with information on how to play the game. You can close this modal by clicking **Close** or **X** in the top right corner.
 
-![How to play modal](docs/screenshots/features-navbar.png)
+![How to play modal](docs/screenshots/how-to-play-modal.png)
 
 - __Game section__
 
@@ -230,7 +230,9 @@ The logo is the game name written in font *Nabla*.
 
 
 
-![About](docs/screenshots/features-about.png)
+![Credit info section](docs/screenshots/credit-info-section.png)
+![Quit game modal](docs/screenshots/quit-game-modal.png)
+![Game over modal](docs/screenshots/game-over-modal.png)
 
 
 - __The 404 page__
