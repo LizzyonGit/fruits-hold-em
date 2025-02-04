@@ -1,11 +1,12 @@
 /*Google Fonts import*/
-@import url('https://fonts.googleapis.com/css2?family=Didact+Gothic&family=Nabla&family=Poiret+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nabla&family=Passero+One&display=swap');
 
 /*CSS variables*/
 :root {
     --primary-font: "Didact Gothic", sans-serif;
     --secondary-font: "Poiret One", cursive;
     --logo-font: "Nabla", cursive;
+    --safari-font: "Passero One", crusive;
     --background-color: #4C004C; /*purple*/
     --background-color-light: #28775B; /*casino green*/
     --primary-color: #FF0000; /* red */
@@ -56,10 +57,10 @@ h1 {
     color: var(--primary-button-color); /*Text colour in case back-up font is used*/
 }
 
-
+/*Targets Safari only, because Nabla is not supported in Safari and h1 is not displayed at all. Comes from https://wojtek.im/journal/targeting-safari-with-css-media-query.*/
 @supports (hanging-punctuation: first) and (font: -apple-system-body) and (-webkit-appearance: none) {
-    h1{
-        font-family: var(--secondary-font);
+    h1 {
+        font-family: var(--safari-font);
         color: var(--primary-button-color);
     }
   }
