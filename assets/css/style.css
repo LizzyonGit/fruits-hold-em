@@ -58,7 +58,7 @@ h1 {
 
 
 @supports (hanging-punctuation: first) and (font: -apple-system-body) and (-webkit-appearance: none) {
-    .h1{
+    h1{
         font-family: var(--secondary-font);
         color: var(--primary-button-color);
     }
