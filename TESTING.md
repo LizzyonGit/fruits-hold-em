@@ -19,7 +19,7 @@ I have been testing throughout developing, fixing issues as I went.
     * [Logic](#logic)
     * [Accessibility](#accessibility)
     * [Responsiveness](#responsiveness)
-  * [Full Testing](#full-testing)
+  * [Full testing](#full-testing)
 
 ## Automated testing
 
@@ -35,13 +35,11 @@ For style.css, there are no errors. There are some warnings related to the impor
 
  ![Css warnings](docs/screenshots/css-warnings.png)
 
-
 ### Javascript validator
 
 I used [JSHint](https://jshint.com/) to validate my script.js file. With the setting ES6, the code passes, part from one error: **One undefined variable: bootstrap**. This has to do with **let resultModal =  new bootstrap.Modal(document.querySelector('#result-modal'));**. Apart from the [Stackoverflow post](https://stackoverflow.com/questions/62101647/.javascript-bootstrap-open-bootstrap-modal-with-javascript-and-not-with-button) that I took this from, the code is also in the [Bootstrap documentation](https://getbootstrap.com/docs/5.3/components/modal/#via-javascript). So I did not think I needed to change the code, I suspected this had to with the Bootstrap JavaScript file not being read because it is external. I went to look for this error and if I needed to do anything, and I found [this post](https://code-institute-room.slack.com/archives/C026PTF46F5/p1718936785177029) on Slack with the same issue, saying I can indeed ignore this. 
 
  ![JSHint error](docs/screenshots/jshint.png)
-
 
 ### Lighthouse testing
 

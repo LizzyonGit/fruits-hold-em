@@ -6,7 +6,6 @@
 
 Click **GO** and the fruit images will line up randomly each spin. You get three spins in one round to try to get a winning middle row with three of the same fruits. You can hold up to two fruits so that you can increase your chance to win. If you win a round, you earn credit. You can keep track of your credit, how many spins you have left the current round, and how many rounds you have played. You can play until your credit is finished, or when you click one of the buttons **Restart** or **Quit**. The button **How to play** triggers a dialog box with the rules of the game.
 
-
 ![Screenshot webpages on different devices](docs/screenshots/responsive-website.png)
 
 ## Index
@@ -106,7 +105,7 @@ Below are my initial wireframes per page for mobile, tablet and laptop screen si
 
 #### Color schemes
 
- A lot has been written about colours in casino's and slot machines in particular, and not all give the same reason for using particular colors. Basically all websites I found say red is the main colour in casino's, because it symbolises excitement, and it attracts attention. Red in combination with gold represents success and winning, and gold ofcourse symbolises luxury. I based my choices on [this article](https://www.newwavemagazine.com/single-post/the-psychology-of-color-in-casinos-how-design-choices-influence-the-player-s-mood), which says gold and red simulates a real life casino feel in online games.
+ A lot has been written about colours in casino's and slot machines in particular, and not all give the same reason for using particular colors. Basically all websites I found say red is the main colour in casino's, because it symbolises excitement, and it attracts attention. Red in combination with gold represents success and winning, and gold ofcourse symbolises luxury. I based my choices on i.e. [this article](https://www.newwavemagazine.com/single-post/the-psychology-of-color-in-casinos-how-design-choices-influence-the-player-s-mood), which says gold and red simulates a real life casino feel in online games.
  
  
  Purple and black convey exclusiveness and class and I have seen a purple background a lot in images of slot machines, so I use this as well. 
@@ -126,23 +125,15 @@ Below are my initial wireframes per page for mobile, tablet and laptop screen si
  
  This is my pallete: https://coolors.co/4c004c-ff0000-ffd700-105837-28775b-000000-ffa500.
 
- These are my sources:
-
- https://colorfulconsole.com/the-art-of-slot-machine-design-using-colors-to-enhance-gameplay/
-https://www.globalbrandsmagazine.com/color-schemes-popular-among-online-gambling-brands/
-https://fashionisers.com/2020/06/22/color-psychology-in-online-casino-games-design/
-https://hickmandesign.co.uk/blog/other/psychology-of-casino-game-design/?srsltid=AfmBOoqN_NQjVzYCdMEXdxkKP7hirVuOcc1yR1pRNuj2DlTwndNwtmi-
-https://www.globalbrandsmagazine.com/casino-colors-psychology-lucky-gambling-colors/
-
-https://www.myperfectcolor.com/paint/101581-true-value-3496-casino-green#:~:text=The%20RGB%20values%20for%20True,light%20that%20a%20color%20reflects.
-
-
 #### Fonts
 
 Searching for fonts on [Google Fonts](https://fonts.google.com/), when I filtered on a *Calm* feeling, *Poiret One* really stood out to me. The calm feeling that I lack because I don't use blue in my colours (which the colour websites stated), can be compensated with this font. So I like it for my headings, but it is not good for informative texts. I found this article https://www.creatopy.com/blog/google-font-pairings/#21, and decided to pair it with *Didact Gothic* for my main body text.
 
 
 When I filtered on a *Shaded* appearance and *Color* technology, I found *Nabla*, which I liked for my logo, because of the tilted look and the orange colour makes a good match with my fruity theme, although I could change the colour later ofcourse. 
+
+
+Because *Nabla* is not supported by Safari, I use *Passero One* for Safari, as it looks a bit like *Nabla*.
 
 #### Logos and images
 
@@ -155,7 +146,7 @@ The background image is from [Canva](https://www.canva.com/). Originally a black
 The favicon is an image of the **'em** in the logo. To create the favicon files, I used [RealFaviconGenerator](https://realfavicongenerator.net/).
 
 
-The logo is the game name written in font *Nabla*.
+The logo is the game name written in font *Nabla*, and in *Passero One* for the Safari browser.
 
 ## Features 
 
@@ -201,8 +192,6 @@ The logo is the game name written in font *Nabla*.
 
   ![Game section with winning row](docs/screenshots/winning-game.png)
 
-
-
 - __Credit info section__
 
   The credit info section holds the following:
@@ -235,7 +224,6 @@ The logo is the game name written in font *Nabla*.
    
    ![Quit game modal](docs/screenshots/quit-game-modal.png)
 
-
 - __The 404 page__
 
   - The 404.html page consists of a simple text saying it is not a lucky page, and a **Play Fruits hold 'em** button that links to the home page.
@@ -243,7 +231,6 @@ The logo is the game name written in font *Nabla*.
   ![404 not found](docs/screenshots/404.png)
 
   Project file: 404.html
-
 
 ### Features left to implement
 
@@ -253,7 +240,6 @@ The logo is the game name written in font *Nabla*.
 - Different winning lines.
 - Spinning wheel effect in each spin before the fruits are settled.
 - Social media links or links to external website of the game makers.
-
 
 ## Testing 
 
@@ -283,7 +269,6 @@ See [TESTING.md](TESTING.md).
 - [RealFaviconGenerator](https://realfavicongenerator.net/) for creating favicon icons and the html code, and checking the favicon
 - [Responsinator](http://www.responsinator.com/) for checking responsiveness
 - [Autoprefixer](https://autoprefixer.github.io/) for adding the necessary prefixes to my css stylesheet
-- [Chrome UA Spoofer](https://chromewebstore.google.com/detail/user-agent-switcher-for-c/djflhoibgkdhkhhcedjiklpkjnoahfmg) to test my website on Safari
 
 ## Deployment and development
 
@@ -306,7 +291,6 @@ To clone the repository:
   1. Select if you want to clone with HTTPS, SSH or GitHub CLI, and copy the link below it,
   2. Open the terminal in your code editor and change the current working directory to the location you want to clone this repository to,
   3. Type *git clone* and paste the from step 1. Press enter.
-
 
 ## Credits 
 
