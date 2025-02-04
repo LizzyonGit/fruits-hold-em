@@ -26,7 +26,9 @@
 
 body {
     font-family: var(--primary-font);
-    justify-content: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     background-image: url(../images/background.webp);
     background-color: var(--background-color); /*In case image does not load*/
     background-repeat: no-repeat;
@@ -91,7 +93,8 @@ h2, h3 {
 
 #how-play-button:focus-visible, .btn-close:focus {
    outline: 0;
-   box-shadow: 0 0 0 0.25rem var(--secondary-color);
+   -webkit-box-shadow: 0 0 0 0.25rem var(--secondary-color);
+           box-shadow: 0 0 0 0.25rem var(--secondary-color);
 }
 
 /*Hovered over Hold button slightly darker green, mimics disabled green. This needs to be up so held-button:hover overrides this one.*/
