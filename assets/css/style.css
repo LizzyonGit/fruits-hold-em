@@ -222,12 +222,12 @@ h2, h3 {
 /*Size until 650 needs more bottom padding than available in Bootstrap (above pb-5) to not overlap background image decoration*/
 @media screen and (max-width: 650px) {
 main > section.pb-5 {
-   padding-bottom: 4rem !important;
+   padding-bottom: 4rem !important; /*!important is needed to override Bootstrap*/
 }}
 
 /*For screens until 369 the x-padding needs to be 1rem to not distort buttons and still fit in background image*/
 @media screen and (max-width: 369px) {
     main > section.pb-5 {
-       padding-right: 1rem !important;
-       padding-left: 1rem !important;
+       padding-right: 1rem !important; /*!important is needed to override Bootstrap*/
+       padding-left: 1rem !important; /*!important is needed to override Bootstrap*/
     }}
