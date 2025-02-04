@@ -12,14 +12,23 @@ I have been testing throughout developing, fixing issues as I went.
   * [HTML validator](#html-validator)
   * [W3C validator](#w3c-validator)
   * [JavaScript validator](#javascript-validator)
-  * [Lighthouse](#lighthouse)
+  * [Lighthouse testing](#lighthouse-testing)
+  * [Favicon testing](#favicon-testing)
 * [Manual testing](#manual-testing)
   * [User story testing](#user-story-testing)
   * [Issues](#issues)
     * [Logic](#logic)
     * [Accessibility](#accessibility)
     * [Responsiveness](#responsiveness)
+    * [Different fruit looks](#different-fruit-looks)
+    * [Safari lacks font support](#safari-lacks-h1-font-support)
   * [Full testing](#full-testing)
+    * [Browser testing](#browser-testing)
+    * [Device testing](#device-testing)
+    * [Feature testing](#feature-testing)
+    * [Scenario testing](#scenario-testing)
+    * [Unfixed bugs](#unfixed-bugs)
+
 
 ## Automated testing
 
@@ -61,7 +70,6 @@ For mobiles, the performance is 88% with a warning that the h1 element, the titl
 
 ![Lighthouse result mobile](docs/screenshots/lighthouse-index-mobile-incognito.png)
 
-
 #### 404.html
 
 The first Lighthouse report gives 99% on performance and 100% on accessibility and best practices.
@@ -74,8 +82,6 @@ For mobile, it gives 98% for performance, and apart from the same issues as befo
 
 ![Lighthouse result mobile](docs/screenshots/lighthouse-404-mobile-incognito.png)
 
-
-- - -
 ### Favicon testing
 I run https://lizzyongit.github.io/fruits-hold-em/ through Realfavicongenerator's [favicon checker](https://realfavicongenerator.net/favicon-checker/lizzyongit.github.io%2Ffruits-hold-em%2F), and I only got a warning about a missing title for web apps, which actually would be taken from the website's title if this would be applicable, which it is not because the website is not an app. There is a missing web app manifest which is also not applicable.
 
@@ -96,9 +102,6 @@ I run https://lizzyongit.github.io/fruits-hold-em/ through Realfavicongenerator'
 |be able to quit or restart the game, so that I have control over the game without needing to leave the website.|**Restart** and **Quit** buttons in the credit info section, the **Quit game** modal triggered by the **Quit** button, with buttons to confirm if you want to quit, or if you change your mind you can stay on the current game, and the **Game over** modal after last round, with a button to restart and a button to quit the game.|
 |**As a site owner, I want to offer visitors a:**|
 |fun and addictive, user-friendly game, so that I can get a steady user base and gain traffic to my website.|Responsive layout, favicon, the game is easy and fast to play with not too many clicks, and the game is playable with keys as well as with a mouse.|
-
-
-
 
 ### Issues
 
@@ -145,7 +148,6 @@ After I implemented a new modal, I noticed that the **GO** button looses focus a
 
 The warning about aria-hidden seemed a much larger issue, as I found posts about it being an issue with the attribute *disabled*: https://github.com/WordPress/gutenberg/issues/56547, and about Bootstrap using this attribute while it should not: https://github.com/twbs/bootstrap/issues/41005. So I did find a workaround [here](https://stackoverflow.com/questions/62677291/aria-hidden-elements-do-not-contain-focusable-elements-issue-when-modal-is-sho) that says you should use aria-modal for modals, but now I see in Chrome develop tools that this is actually added in all the modals, and not aria-hidden, and then I don't get this warning. When I got the warning, there was aria-hidden. But I did not do anything, so it may come back and is some kind of random error. 
 
-
 #### Responsiveness
 
 I used Chrome developer tools and [Responsinator](http://www.responsinator.com/) to keep track of responsiveness, placement and size of buttons and how the content and background image behaved together on different sreen sizes. 
@@ -153,9 +155,7 @@ I used Chrome developer tools and [Responsinator](http://www.responsinator.com/)
 The background image was a challenge, as it's a frame that needs to be around the content at all time. It needs to be stretched and it is not a problem that the aspect ratio is not kept in this case, because it is only a decorative curly frame which can be a bit distorted and still look good. I started with vh100 and vw100 which seemed ok, but then when you tilt your smartphone, the game and credit info sections overlapped the frame. So I needed some different css properties. I tried adding the background to another div above the content, but this did not work, and I tried different size values for the background, like *cover*. In the end, *background-size: 100% 100%* worked. First I had *object-fit: fill* as well, as I found these two lines together on some forum, and thought that was the one that did the trick, but I could comment it out in Chrome developer tools without any effect. So I realised it was exactly this *background-size: 100% 100%* that did what I wanted. When I look up why, it makes sense that it works, since it sets the image to the full size of its parent element, the *body* in this case. And now I understand better what the different values do, since I found a clear description [here](https://cloudinary.com/guides/front-end-development/6-ways-to-stretch-a-background-image-with-css). I understand now as well that *object-fit* does not work on a body tag, it only works on *replaced elements*, as I read [here](https://www.sitepoint.com/using-css-object-fit-object-position-properties/). 
 After I found this solution, I just had to adjust padding and margin for different screens sizes so the content would fit inside the decorative frame and not overlap it.
 
-
-
-##### Different fruit looks
+#### Different fruit looks
 The fruit symbols on my newer computer with Window 11 look different than on my older computer with Windows 10. This is something I did not notice until I got a new computer, so it came as a surprise. Normally, this kind of thing depends on a browser, but this was not the case. I had to test if the background colour for a winning combination worked for both computers. I changed the background in Chrome developer tools for the all the columns and think it is OK.
 
 
@@ -167,7 +167,7 @@ My Android phone and iPhone also have different fruits, but they do work with th
 
 This is the price I am willing to pay by chosing HTML symbols instead of images. For the game functionality, it does not matter and I do think performance is more important than similar images.
 
-#### Safari lacks *h1* font support
+#### Safari lacks font support
 Unfortunately, Safari does not support *Nabla*, my chosen font for all *h1* elements. I considered creating an image for all h1 elements, so that these can be the same for all browsers, but I don't like the impact that would have on performance. I also did not want to change my font, because I really like it. So I tried to find similar one that would be supported in Safari. I found one in Goodle Fonts, *Passero One*. After some searching on the internet, I found a way to only target Safari with CSS [in this article](https://wojtek.im/journal/targeting-safari-with-css-media-query). While not ideal, Safari now has a different font for the logo and titles for modals and the 404 page. And the favicon now does not match the logo in Safari, but I find this an acceptable discrepency.
 
 ### Full testing
@@ -222,6 +222,6 @@ This website does not have a lot of different lay-outs on different screen sizes
 |Not possible to click/press **GO** during pause at end of a round so **Spins left** will not go negative|**GO** button is not possible to click/press at the end of a round during the 1 second pause|Try to click/press **GO** at end of a round during the pause|It is not possible to click/press **GO** during pause at end of a round, and **Spins left** is not going negative|Pass|
 |Winning row on first 'spin'|A winning row counts also when it comes after fruits are reset at start of the game or a new round, not after an actual spin|Playing until I get a winning row at the start|The winning row works as expected with the background, text, credit increase and pause before a new round|Pass|
 
-#### Unfixed Bugs
+#### Unfixed bugs
 
 None.
