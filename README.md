@@ -13,7 +13,7 @@ Click **GO** and the fruit images will line up randomly each spin. You get three
 - [Features](#features)
 - [Testing](#testing)
 - [Technologies used](#technologies-used)
-- [Deployment](#deployment)
+- [Deployment and development](#deployment-and-development)
 - [Credits](#credits)
 
 ## Planning
@@ -315,11 +315,13 @@ To clone the repository:
   - https://www.myperfectcolor.com/paint/101581-true-value-3496-casino-green#:~:text=The%20RGB%20values%20for%20True,light%20that%20a%20color%20reflects
 - For getting a colour scheme and checking the color contrast, [Coolors.co](https://coolors.co).
 
+
 - Bootstrap documentation [Bootstrap](https://getbootstrap.com/docs/5.3/getting-started/introduction/).
 - [W3schools](https://www.w3schools.com/) for getting the fruit icons and to read up on concepts.
 - [MDN Web Docs](https://developer.mozilla.org/en-US/) to read up on concepts.
 - [Stackoverflow](https://stackoverflow.com/) for general code questions.
 - Inspiration and code bits from CI walkthrough project *Simon says*.
+
 
 - How to redirect to other page with javascript: [tutorialspoint](https://www.tutorialspoint.com/how-to-redirect-to-another-webpage-using-javascript).
 - How to open a Bootstrap modal with javascript: [Stackoverflow](https://stackoverflow.com/questions/62101647/.javascript-bootstrap-open-bootstrap-modal-with-javascript-and-not-with-button).
@@ -332,6 +334,7 @@ To clone the repository:
 - To understand background-size setting: [Cloudinary](https://cloudinary.com/guides/front-end-development/6-ways-to-stretch-a-background-image-with-css).
 - Slack post on a console error I got as well: https://code-institute-room.slack.com/archives/D07L9QW7YS3/p1738070720220649.
 - How to target Safari with CSS: [Wojtek Witkowski](https://wojtek.im/journal/targeting-safari-with-css-media-query). 
+
 
 - [Grammarly](https://www.grammarly.com/grammar-check) spellchecker.
 - [Diffchecker](https://www.diffchecker.com/text-compare/) for checking autoprefixer changes.
