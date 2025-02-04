@@ -5,8 +5,8 @@
 :root {
     --primary-font: "Didact Gothic", sans-serif;
     --secondary-font: "Poiret One", cursive;
-    --logo-font: "Nabla", cursive;
-    --safari-font: "Passero One", crusive;
+    --logo-font: "Nabla", "Passero One", cursive;
+    --safari-font: "Passero One", cursive;
     --background-color: #4C004C; /*purple*/
     --background-color-light: #28775B; /*casino green*/
     --primary-color: #FF0000; /* red */
