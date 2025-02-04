@@ -37,14 +37,10 @@ body {
 }
 
 
-
-
-
 /*All text white*/
 body * {
     color: #FFFFFF;
 }
-
 
 
 /*Modal styles, background colour needs to be set to fit white text*/
@@ -53,13 +49,21 @@ body * {
 }
 
 
-
 /*Logo styles*/
 
 h1 {
     font-family: var(--logo-font);
     color: var(--primary-button-color); /*Text colour in case back-up font is used*/
 }
+
+
+@supports (hanging-punctuation: first) and (font: -apple-system-body) and (-webkit-appearance: none) {
+    .safari-only h1{
+        font-family: var(--secondary-font);
+        color: var(--primary-button-color);
+    }
+  }
+
 
 
 /*Heading styles*/
@@ -116,7 +120,6 @@ h2, h3 {
 }
 
 
-
 /*GO button and 404 page button styles*/
 #button-go, #error-button {
     background-color: var(--primary-button-color);
@@ -159,11 +162,7 @@ h2, h3 {
 }
 
 
-
-
 /*Game styles*/
-
-
 #game-section {
     background-color: #000000;
     border: 5px solid var(--secondary-color);
@@ -173,7 +172,6 @@ h2, h3 {
     background-color: var(--background-color-light);
     border: 5px solid #000000;
 }
-
 
 
 /*Fruit styles*/
