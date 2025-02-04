@@ -175,7 +175,17 @@ I tested on Chrome, Edge and FireFox.
 
 In Firefox, I get two warnings in the console about the used font using an empty gid in glyph 1 and 209: *downloadable font: glyf: empty gid 1364 used as component in glyph 1 (font-family: "Nabla" style:normal weight:400 stretch:100 src index:0) source: https://fonts.gstatic.com/s/nabla/v10/j8_D6-LI0Lvpe7Makz5UhJt9C3uqg_X_75gyGS4jAxsNIjrRBRdeFQx8.woff2*, and *downloadable font: glyf: empty gid 1649 used as component in glyph 209 (font-family: "Nabla" style:normal weight:400 stretch:100 src index:0) source: https://fonts.gstatic.com/s/nabla/v10/j8_D6-LI0Lvpe7Makz5UhJt9C3uqg_X_75gyGS4jAxsNIjrRBRdeFQx8.woff2*. While I could not figure out what glyphs these are, I found someone else getting the same kind of warning which could be ignored [here](https://github.com/arrowtype/recursive/issues/539). But this was related to a different font. I know that my font *Nabla* is not suported everywhere, but it renders OK in Firefox. When I check the console for the [Google Fonts page for Nabla](https://fonts.google.com/specimen/Nabla/glyphs), I get similar warnings including the two exact ones I got. My conclusion is that I did not do anything wrong, these are warnings related to *Nabla* only.
 
+#### Device testing
 
+This website does not have a lot of different lay-outs on different screen sizes, the differences I have implemented work as intended:
+
+- From 768px width, the game section and the credit info section display next to each other. Below that, they display vertically with the credit info section under the game section. The credit info section does then not have the empty space between the text and buttons, as it does not neet to be aligned with the height of the game section. 
+
+- From 768px width, the header with the logo, intro text and **How to play** button, displays with the logo and intro text left aligned above the game section, and the button left aligned above the credit info section. Below 768px, they are centered and vertically stacked above the game section. 
+
+- From 576px width, there is added padding left and right of the box with fruit columns, below 576px, there is no padding so that the fruits have enough space to be visible on small screens.
+
+- On some screen sizes, the content had a tendency to overlap with the decoration in the background image, while the buttons would be distorted with too large of a padding. I have added Bootstrap classes for padding and margin to the container section for the game and credit info sections, and adapted this with media queries where necessary. Until 368px width, the padding left and right of game and credit info sections was minimised to allow for the buttons to remain wide enough, with the padding still large enough to not overlap the decoration. Until 650px width, I added extra padding on the bottom to not overlap the decoration. 
 
 
 |Feature|Expected outcome|Testing performed|Result|Pass/Fail|
