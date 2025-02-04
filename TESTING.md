@@ -25,17 +25,22 @@ I have been testing throughout developing, fixing issues as I went.
 
 ### HTML validator
 
-No issues for index.html and 404.html.
-
+During development when I ran this validator, I needed to add a hidden heading for the sections surrounding the game and credit info section index.html. Currently, there are no issues for index.html and 404.html: 
+ -  [index.html](https://validator.w3.org/nu/?doc=https%3A%2F%2Flizzyongit.github.io%2Ffruits-hold-em%2Findex.html)
+ -  [404.html](https://validator.w3.org/nu/?doc=https%3A%2F%2Flizzyongit.github.io%2Ffruits-hold-em%2F404.html)
 
 ### W3C validator
 
-For style.css, there are no errors. There are some warnings related to the imported Google Fonts and used variables, that can be ignored. There are also warnings about setting the same colours for backgrounds and borders onbuttons and the middle row when there is no winning combination, which I did on purpose to override the boostrap button and border colours, and for the middle row, the border is the same colour but it is distinctive from the background colour, to highlight the middle row is the row the whole game is about. Because I ran my code through the Autoprefixer, I also get warnings about this, which can be ignored.
+For style.css, there are no errors. There are some warnings related to the imported Google Fonts and used variables, that can be ignored. There are also warnings about setting the same colours for backgrounds and borders onbuttons and the middle row when there is no winning combination, which I did on purpose to override the boostrap button and border colours, and for the middle row, the border is the same colour but it is distinctive from the background colour, to highlight the middle row is the row the whole game is about. Because I ran my code through the [Autoprefixer](https://autoprefixer.github.io/), I also get warnings about this, which can be ignored.
+
+ ![Css warnings](docs/screenshots/css-warnings.png)
 
 
 ### Javascript validator
 
 I used [JSHint](https://jshint.com/) to validate my script.js file. With the setting ES6, the code passes, part from one error: **One undefined variable: bootstrap**. This has to do with **let resultModal =  new bootstrap.Modal(document.querySelector('#result-modal'));**. Apart from the [Stackoverflow post](https://stackoverflow.com/questions/62101647/.javascript-bootstrap-open-bootstrap-modal-with-javascript-and-not-with-button) that I took this from, the code is also in the [Bootstrap documentation](https://getbootstrap.com/docs/5.3/components/modal/#via-javascript). So I did not think I needed to change the code, I suspected this had to with the Bootstrap JavaScript file not being read because it is external. I went to look for this error and if I needed to do anything, and I found [this post](https://code-institute-room.slack.com/archives/C026PTF46F5/p1718936785177029) on Slack with the same issue, saying I can indeed ignore this. 
+
+ ![JSHint error](docs/screenshots/jshint.png)
 
 
 ### Lighthouse testing
@@ -145,7 +150,7 @@ The warning about aria-hidden seemed a much larger issue, as I found posts about
 
 #### Responsiveness
 
-I used Chrome developer tools to keep track of responsiveness, placement and size of buttons and how the content and background image behaved together on different sreen sizes. 
+I used Chrome developer tools and [Responsinator](http://www.responsinator.com/) to keep track of responsiveness, placement and size of buttons and how the content and background image behaved together on different sreen sizes. 
 
 The background image was a challenge, as it's a frame that needs to be around the content at all time. It needs to be stretched and it is not a problem that the aspect ratio is not kept in this case, because it is only a decorative curly frame which can be a bit distorted and still look good. I started with vh100 and vw100 which seemed ok, but then when you tilt your smartphone, the game and credit info sections overlapped the frame. So I needed some different css properties. I tried adding the background to another div above the content, but this did not work, and I tried different size values for the background, like *cover*. In the end, *background-size: 100% 100%* worked. First I had *object-fit: fill* as well, as I found these two lines together on some forum, and thought that was the one that did the trick, but I could comment it out in Chrome developer tools without any effect. So I realised it was exactly this *background-size: 100% 100%* that did what I wanted. When I look up why, it makes sense that it works, since it sets the image to the full size of its parent element, the *body* in this case. And now I understand better what the different values do, since I found a clear description [here](https://cloudinary.com/guides/front-end-development/6-ways-to-stretch-a-background-image-with-css). I understand now as well that *object-fit* does not work on a body tag, it only works on *replaced elements*, as I read [here](https://www.sitepoint.com/using-css-object-fit-object-position-properties/). 
 After I found this solution, I just had to adjust padding and margin for different screens sizes so the content would fit inside the decorative frame and not overlap it.
@@ -187,6 +192,7 @@ This website does not have a lot of different lay-outs on different screen sizes
 
 - On some screen sizes, the content had a tendency to overlap with the decoration in the background image, while the buttons would be distorted with too large of a padding. I have added Bootstrap classes for padding and margin to the container section for the game and credit info sections, and adapted this with media queries where necessary. Until 368px width, the padding left and right of game and credit info sections was minimised to allow for the buttons to remain wide enough, with the padding still large enough to not overlap the decoration. Until 650px width, I added extra padding on the bottom to not overlap the decoration. I see that sometimes it still touches the decoration, but I think this is acceptible.
 
+#### Feature testing
 
 |Feature|Expected outcome|Testing performed|Result|Pass/Fail|
 | --- | --- | --- | --- | --- |
@@ -208,6 +214,7 @@ This website does not have a lot of different lay-outs on different screen sizes
 |All buttons hover effect|All buttons have a distinctive hover colour effect, except for **HELD** buttons|Hover over all buttons|Minor hover colour effect on **X** in modals, but still OK|Pass|
 |All buttons focus effect|All buttons have an extra border around them when they are focused with a key, and they change colour according to the hover effect|Focus all buttons with the keyboard|All buttons have an extra border around when they are in focus, and their colour changes to their hover colour|Pass|
 
+#### Scenario testing
 
 |Scenario|Expected outcome|Testing performed|Result|Pass/Fail|
 | --- | --- | --- | --- | --- |
@@ -217,3 +224,6 @@ This website does not have a lot of different lay-outs on different screen sizes
 |Not possible to click/press **GO** during pause at end of a round so **Spins left** will not go negative|**GO** button is not possible to click/press at the end of a round during the 1 second pause|Try to click/press **GO** at end of a round during the pause|It is not possible to click/press **GO** during pause at end of a round, and **Spins left** is not going negative|Pass|
 |Winning row on first 'spin'|A winning row counts also when it comes after fruits are reset at start of the game or a new round, not after an actual spin|Playing until I get a winning row at the start|The winning row works as expected with the background, text, credit increase and pause before a new round|Pass|
 
+#### Unfixed Bugs
+
+None.
