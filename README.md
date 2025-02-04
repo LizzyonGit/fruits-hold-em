@@ -194,13 +194,12 @@ The logo is the game name written in font *Nabla*.
      __No winning row__
 
      - When you have zero spins left and no winning combination, the round ends just like when you would have a winning combination; the final spin's fruits display for one second, during which **HOLD** and **GO** buttons are disabled, and a new round starts automatically after that.
+     
+  ![Game section before start](docs/screenshots/game-before-start.png)
 
+  ![Game section in play with one held column](docs/screenshots/game-in-play.png)
 
-![Game section before start](docs/screenshots/game-before-start.png)
-
-![Game section in play with one held column](docs/screenshots/game-in-play.png)
-
-![Game section with winning row](docs/screenshots/winning-game.png)
+  ![Game section with winning row](docs/screenshots/winning-game.png)
 
 
 
@@ -208,40 +207,43 @@ The logo is the game name written in font *Nabla*.
 
   The credit info section holds the following:
 
-  __Spins left__
-  - The spin count counts down from 3 to 0 each round. A new round gives you 3 spins. At the start of a new round, new fruits are set and count right away if you win, without needing to spin. So effectively, you get four fruit spins, but you can not control the first one.
+    __Spins left__
+    - The spin count counts down from 3 to 0 each round. A new round gives you 3 spins. At the start of a new round, new fruits are set and count right away if you win, without needing to spin. So effectively, you get four fruit spins, but you can not control the first one.
 
-  __Credit__
-  - You start the game with 10 credit. Apart from the first round, which is effectively free, at the start of each new round, credit decreases with 5. If you get a winning row, credit increases with 10 during the 1 second pause at the end of the round. This may look like credit only increases with 5, because a new round takes 5 credit at the start. When you have two winning combinations in a row, credit increases with 10 twice, but then takes 5 at the start of a new round, if this round does not start with a winning combination, so it looks like credit increases with 15.
+    __Credit__
+    - You start the game with 10 credit. Apart from the first round, which is effectively free, at the start of each new round, credit decreases with 5. If you get a winning row, credit increases with 10 during the 1 second pause at the end of the round. This may look like credit only increases with 5, because a new round takes 5 credit at the start. When you have two winning combinations in a row, credit increases with 10 twice, but then takes 5 at the start of a new round, if this round does not start with a winning combination, so it looks like credit increases with 15.
 
-  - When credit is 0 after the last spin of a round, the **Game over** modal pops up. Credit can not go negative.
+    - When credit is 0 after the last spin of a round, the **Game over** modal pops up. Credit can not go negative.
   
-  __Game over modal__
+    __Rounds played__
+    - The number of rounds you played starts at 0 for your first round, and increases with 1 at the start of each new round. If you never get winning combinations, you can play 3 rounds. This is because the first round is effectively free, because you start with 10 credit the first round, and it does not decrease until the start of the next round. 
+
+    __Restart button__
+    - The **Restart** button starts a new game right away with reset fruits and the credit info default values. It works the same as the first time you click **GO**.
+  
+ ![Credit info section](docs/screenshots/credit-info-section.png)
+
+- __Game over modal__
+
   - The **Game over** modal informs you that you have no credit left for a new round. It informs you how many rounds you have managed to play. When you click **Play again**, a new game starts. When you click **Quit** r the **X** in the top right corner, you go back to the start page, before a game starts.
+ 
+  ![Game over modal](docs/screenshots/game-over-modal.png)
 
-  __Rounds played__
-  - The number of rounds you played starts at 0 for your first round, and increases with 1 at the start of each new round. If you never get winning combinations, you can play 3 rounds. This is because the first round is effectively free, because you start with 10 credit the first round, and it does not decrease until the start of the next round. 
+- __Quit button and Quit game modal__
 
-  __Restart button__
-  - The **Restart** button starts a new game right away with reset fruits and the credit info default values. It works the same as the first time you click **GO**.
-
-  __Quit button and Quit game modal__
    - The **Quit** button triggers the **Quit game** modal and asks you to confirm if you want to quit the game. You can click **Stay** or the **X** in the top right corner, to stay on the current game. You can click **Quit** to go back to the start page, before a game starts.
-
-
-
-![Credit info section](docs/screenshots/credit-info-section.png)
-![Quit game modal](docs/screenshots/quit-game-modal.png)
-![Game over modal](docs/screenshots/game-over-modal.png)
+   
+   ![Quit game modal](docs/screenshots/quit-game-modal.png)
 
 
 - __The 404 page__
 
   - The 404.html page consists of a simple text saying it is not a lucky page, and a **Play Fruits hold 'em** button that links to the home page.
+  
+  ![404 not found](docs/screenshots/404.png)
 
   Project file: 404.html
 
-![404 not found](docs/screenshots/features-404.png)
 
 ### Features left to implement
 
