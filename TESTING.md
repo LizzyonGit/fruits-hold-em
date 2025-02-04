@@ -185,7 +185,7 @@ This website does not have a lot of different lay-outs on different screen sizes
 
 - From 576px width, there is added padding left and right of the box with fruit columns, below 576px, there is no padding so that the fruits have enough space to be visible on small screens.
 
-- On some screen sizes, the content had a tendency to overlap with the decoration in the background image, while the buttons would be distorted with too large of a padding. I have added Bootstrap classes for padding and margin to the container section for the game and credit info sections, and adapted this with media queries where necessary. Until 368px width, the padding left and right of game and credit info sections was minimised to allow for the buttons to remain wide enough, with the padding still large enough to not overlap the decoration. Until 650px width, I added extra padding on the bottom to not overlap the decoration. 
+- On some screen sizes, the content had a tendency to overlap with the decoration in the background image, while the buttons would be distorted with too large of a padding. I have added Bootstrap classes for padding and margin to the container section for the game and credit info sections, and adapted this with media queries where necessary. Until 368px width, the padding left and right of game and credit info sections was minimised to allow for the buttons to remain wide enough, with the padding still large enough to not overlap the decoration. Until 650px width, I added extra padding on the bottom to not overlap the decoration. I see that sometimes it still touches the decoration, but I think this is acceptible.
 
 
 |Feature|Expected outcome|Testing performed|Result|Pass/Fail|
