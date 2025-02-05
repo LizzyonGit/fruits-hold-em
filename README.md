@@ -297,7 +297,7 @@ To fork the repository:
   - In the GitHub repository, click the **Fork** button in the top right corner.
 
 To clone the repository:
-  1. In the GitHub repository, click **Code**.
+  1. In the GitHub repository, click the **Code** button.
   2. In the **Local** tab, select if you want to clone with HTTPS, SSH, or GitHub CLI, and copy the link below it.
   2. Open the terminal in your code editor and change the current working directory to the location you want to clone this repository to.
   3. Type *git clone* and paste the link from step 2, and press Enter.
@@ -348,6 +348,7 @@ To clone the repository:
 
 - [Grammarly](https://www.grammarly.com/grammar-check) spellchecker.
 - [Diffchecker](https://www.diffchecker.com/text-compare/) for checking Autoprefixer changes.
+- Other students' readme files for learning about local development processes.
 
 ## Acknowledgments
 - My mentor Jubril for the feedback.
