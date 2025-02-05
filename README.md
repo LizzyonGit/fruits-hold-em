@@ -197,7 +197,7 @@ The logo is the game name written in font *Nabla*, and in *Passero One* for the 
 
 - __Credit info section__
 
-  The credit info section holds the following information, giving the user constant information on how the game is going:
+  The credit info section holds the following information, so the user can keep track of how the game is going at all times:
 
     __Spins left__
     - The spin count counts down from 3 to 0 each round. A new round gives you 3 spins. At the start of a new round, new fruits are set and count right away if you win, without needing to spin. So effectively, you get four fruit spins, but you can not control the first one.
