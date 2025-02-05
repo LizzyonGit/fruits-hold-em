@@ -3,7 +3,7 @@
 [Live link to website](https://lizzyongit.github.io/fruits-hold-em/index.html)
 
 
-I have been testing throughout developing, fixing issues as I went. 
+I have been testing throughout developing, fixing issues as I went. I deployed early in the process to be able to continiously test on the deployed version rather than only the local version.
 - - -
 
 ## Contents
@@ -19,7 +19,7 @@ I have been testing throughout developing, fixing issues as I went.
   * [Issues](#issues)
     * [Logic](#logic)
     * [Accessibility](#accessibility)
-    * [Warning in console](#warning-in-console)
+    * [Error in console](#error-in-console)
     * [Responsiveness](#responsiveness)
     * [Different fruit looks](#different-fruit-looks)
     * [Safari lacks font support](#safari-lacks-h1-font-support)
@@ -145,11 +145,11 @@ When I was testing the keys with the different buttons, I noticed a difference b
 
 I also noticed that all buttons had a border around them when focused, making it clear which button you are on since they appear larger, together with the different background colour of the button. Except for the button **How to play**, which only changed colour and did not have this extra border around it. I could not find out why this was, as it was a Bootstrap button like the others, with custom styled colours. I found [a post](https://github.com/twbs/bootstrap/issues/38903) that this can happen, so I decided to focus on just adding it in my css for the button. I learned about *outline* and found that in Chrome developer tools, I can force a button in certain state. So I did that for the buttons that worked normally, to find out which code I needed to add for the button that did not work. That's how I added *outline: 0*, and *box-shadow: 0 0 0 0.25rem* with a yellow colour, to the **How to play** button, and now it works.
 
-After I implemented the **Game over** modal, I noticed that the **GO** button looses focus after it's re-enabled at the beginning of a new round. This is bad when you play with the keys and you expect the focus to still be on the **GO** button, since you would have always clicked it at the end of the prevous round. It did not even have any visible focus anywhere else, but it did not respond to a Space or Enter. I thought this had to do with my new modal and I also got a warning about aria-hidden in the console. I found an easy way to fix the focus issue by just adding *buttonGo.focus();* after the line where the button is enabled again in the *gameDone* function. I found this solution here: https://laracasts.com/index.php/discuss/channels/vue/how-to-focus-on-an-input-after-disabling, and I double checked other documentation for this method.
+After I implemented the **Game over** modal, I noticed that the **GO** button looses focus after it's re-enabled at the beginning of a new round. This is bad when you play with the keys and you expect the focus to still be on the **GO** button, since you would have always clicked it at the end of the prevous round. It did not even have any visible focus anywhere else, but it did not respond to a Space or Enter. I thought this had to do with my new modal and I also got an error about aria-hidden in the console (more about this in the next paragraph). I found an easy way to fix the focus issue by just adding *buttonGo.focus();* after the line where the button is enabled again in the *gameDone* function. I found this solution here: https://laracasts.com/index.php/discuss/channels/vue/how-to-focus-on-an-input-after-disabling, and I double checked other documentation for this method.
 
-#### Warning in console
+#### Error in console
 
-The warning about aria-hidden seemed a much larger issue, as I found posts about it being an issue with the attribute *disabled*: https://github.com/WordPress/gutenberg/issues/56547, and about Bootstrap using this attribute while it should not: https://github.com/twbs/bootstrap/issues/41005. So I did find a workaround [here](https://stackoverflow.com/questions/62677291/aria-hidden-elements-do-not-contain-focusable-elements-issue-when-modal-is-sho) that says you should use aria-modal for modals, but now I see in Chrome develop tools that this is actually added in all the modals, and not aria-hidden, and then I don't get this warning. When I got the warning, aria-hidden was added to the **Game over** modal. But I did not change anything, so it may come back and is some kind of random error that I can not control.
+The error about aria-hidden seemed a much larger issue, as I found posts about it being an issue with the attribute *disabled*: https://github.com/WordPress/gutenberg/issues/56547, and about Bootstrap using this attribute while it should not: https://github.com/twbs/bootstrap/issues/41005. So I did find a workaround [here](https://stackoverflow.com/questions/62677291/aria-hidden-elements-do-not-contain-focusable-elements-issue-when-modal-is-sho) that says you should use aria-modal for modals, but now I see in Chrome develop tools that this is actually added in all the modals, and not aria-hidden, and then I don't get this warning. When I got the warning, aria-hidden was added to the **Game over** modal. But I did not change anything, so it may come back and is some kind of random error that I can not control.
 
 
 Below shows screenshots of when the error is triggered and when not, without me changing any code. The first screenshot shows that *aria-hidden = true" is added, the second screenshot shows *aria-modal = true* is added to the same modal, and then there is no error.
@@ -189,7 +189,7 @@ In Firefox, I get two warnings in the console about the used font using an empty
 
 #### Device testing
 
-Tested on Dell, Lenovo laptop and on Huawei phone.
+Tested on a Dell and a Lenovo laptop, and on a Huawei phone.
 
 This website does not have a lot of different lay-outs on different screen sizes, the differences I have implemented work as intended:
 
