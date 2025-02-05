@@ -178,6 +178,8 @@ The logo is the game name written in font *Nabla*, and in *Passero One* for the 
      - You can click **HOLD** to prevent the column above it to spin. The **HOLD** button changes from green to red with the button text **HELD**, and it changes back when you click it again. When you hold two columns, the third **HOLD** button becomes disabled so you can not hold three columns. If you enable one of the two **HELD** buttons again, the disabled button gets enabled again.
 
      - Your chosen held columns stay held between the spins, but the buttons get reset at the start of a new round.
+
+     - With the **HOLD** buttons, you increase your change of winning, for example if you get two identical fruits in a spin, you can hold them so only the third fruit needs to be correct, giving you a 20% chance of a winning middle row.
   
      __Winning row__
 
@@ -195,7 +197,7 @@ The logo is the game name written in font *Nabla*, and in *Passero One* for the 
 
 - __Credit info section__
 
-  The credit info section holds the following:
+  The credit info section holds the following information, giving the user constant information on how the game is going:
 
     __Spins left__
     - The spin count counts down from 3 to 0 each round. A new round gives you 3 spins. At the start of a new round, new fruits are set and count right away if you win, without needing to spin. So effectively, you get four fruit spins, but you can not control the first one.
@@ -208,20 +210,27 @@ The logo is the game name written in font *Nabla*, and in *Passero One* for the 
     __Rounds played__
     - The number of rounds you played starts at 0 for your first round, and increases with 1 at the start of each new round. If you never get winning combinations, you can play 3 rounds. This is because the first round is effectively free, because you start with 10 credit the first round, and it does not decrease until the start of the next round. 
 
-    __Restart button__
-    - The **Restart** button starts a new game right away with reset fruits and the credit info default values. It works the same as the first time you click **GO**.
-  
- ![Credit info section](docs/screenshots/credit-info-section.png)
+  The section holds the following buttons:
+
+   __Restart button__
+     - The **Restart** button starts a new game right away with reset fruits and the credit info default values. It works the same as the first time you click **GO**.
+   
+   __Quit button__
+     - The **Quit** button triggers the **Quit game** modal.
+
+![Credit info section](docs/screenshots/credit-info-section.png)
 
 - __Game over modal__
 
-  - The **Game over** modal informs you that you have no credit left for a new round. It informs you how many rounds you have managed to play. When you click **Play again**, a new game starts. When you click **Quit** r the **X** in the top right corner, you go back to the start page, before a game starts.
+   - The **Game over** modal informs you that you have no credit left for a new round. It informs you how many rounds you have managed to play. The more rounds, the luckier you have been, since everyone starts with the same credit and you can only gain credit by winning rounds. 
+   
+   - When you click **Play again**, a new game starts. When you click **Quit** or the **X** in the top right corner, you go back to the start page, before a game starts.
  
-  ![Game over modal](docs/screenshots/game-over-modal.png)
+   ![Game over modal](docs/screenshots/game-over-modal.png)
 
-- __Quit button and Quit game modal__
+- __Quit game modal__
 
-   - The **Quit** button triggers the **Quit game** modal and asks you to confirm if you want to quit the game. You can click **Stay** or the **X** in the top right corner, to stay on the current game. You can click **Quit** to go back to the start page, before a game starts.
+   - The **Quit game** modal opens when you click the **Quit** button, and asks you to confirm if you want to quit the game. You can click **Stay** or the **X** in the top right corner, to stay on the current game. You can click **Quit** to go back to the start page, before a game starts.
    
    ![Quit game modal](docs/screenshots/quit-game-modal.png)
 
