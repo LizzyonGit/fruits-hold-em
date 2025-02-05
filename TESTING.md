@@ -152,7 +152,7 @@ After I implemented the **Game over** modal, I noticed that the **GO** button lo
 The warning about aria-hidden seemed a much larger issue, as I found posts about it being an issue with the attribute *disabled*: https://github.com/WordPress/gutenberg/issues/56547, and about Bootstrap using this attribute while it should not: https://github.com/twbs/bootstrap/issues/41005. So I did find a workaround [here](https://stackoverflow.com/questions/62677291/aria-hidden-elements-do-not-contain-focusable-elements-issue-when-modal-is-sho) that says you should use aria-modal for modals, but now I see in Chrome develop tools that this is actually added in all the modals, and not aria-hidden, and then I don't get this warning. When I got the warning, aria-hidden was added to the **Game over** modal. But I did not change anything, so it may come back and is some kind of random error that I can not control.
 
 
-Below shows screenshots of when the error is triggered and when not, without me changing any code.
+Below shows screenshots of when the error is triggered and when not, without me changing any code. The first screenshot shows that *aria-hidden = true" is added, the second screenshot shows *aria-modal = true* is added to the same modal, and then there is no error.
 
 ![Error aria-hidden](docs/screenshots/aria-hidden-error.png)
 ![No error aria-modal](docs/screenshots/aria-modal.png)
@@ -183,11 +183,13 @@ Unfortunately, Safari does not support *Nabla*, my chosen font for all *h1* elem
 
 #### Browser testing
 
-I tested on Chrome, Edge and FireFox.
+I tested on Chrome, Edge and FireFox. The lay-out and functionality was tested in Safari as well.
 
 In Firefox, I get two warnings in the console about the used font using an empty gid in glyph 1 and 209: *downloadable font: glyf: empty gid 1364 used as component in glyph 1 (font-family: "Nabla" style:normal weight:400 stretch:100 src index:0) source: https://fonts.gstatic.com/s/nabla/v10/j8_D6-LI0Lvpe7Makz5UhJt9C3uqg_X_75gyGS4jAxsNIjrRBRdeFQx8.woff2*, and *downloadable font: glyf: empty gid 1649 used as component in glyph 209 (font-family: "Nabla" style:normal weight:400 stretch:100 src index:0) source: https://fonts.gstatic.com/s/nabla/v10/j8_D6-LI0Lvpe7Makz5UhJt9C3uqg_X_75gyGS4jAxsNIjrRBRdeFQx8.woff2*. While I could not figure out what glyphs these are, I found someone else getting the same kind of warning which could be ignored [here](https://github.com/arrowtype/recursive/issues/539). But this was related to a different font. I know that my font *Nabla* is not suported everywhere, but it renders OK in Firefox. When I check the console for the [Google Fonts page for Nabla](https://fonts.google.com/specimen/Nabla/glyphs), I get similar warnings including the two exact ones I got. My conclusion is that I did not do anything wrong, these are warnings related to *Nabla* only.
 
 #### Device testing
+
+Tested on Dell, Lenovo laptop and on Huawei phone.
 
 This website does not have a lot of different lay-outs on different screen sizes, the differences I have implemented work as intended:
 
