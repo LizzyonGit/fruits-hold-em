@@ -17,7 +17,6 @@
 
 /*Global styles*/
 
-
 /*Remove default padding and margins*/
 * {
     margin: 0;
@@ -68,7 +67,6 @@ h1 {
 
 
 /*Heading styles*/
-
 h2, h3 {
     font-family: var(--secondary-font);
 }
@@ -94,8 +92,8 @@ h2, h3 {
 }
 
 /*When focused, there is an indicator around the buttons so it's clear that the button is in focus*/
-/*For How to play and closing buttons with cross in the modals*/
 
+/*For How to play and closing buttons with cross in the modals*/
 #how-play-button:focus-visible, .btn-close:focus {
    outline: 0;
    -webkit-box-shadow: 0 0 0 0.25rem var(--secondary-color);
@@ -112,8 +110,6 @@ h2, h3 {
 /*held-button class is added when clicking a HOLD button, changes colour and border*/
 /*Changes default hover effect to clicked colour, so you can see it is still red and it gets red directly when clicking, instead of when moving away from button*/
 /*Focused important to be red as well, otherwise held buttons are green when focused*/
-
-
 .held-button, .held-button:hover, .held-button:focus {
     background-color: var(--primary-color);
     border: 1px solid var(--primary-color);
@@ -122,6 +118,7 @@ h2, h3 {
 
 
 /*GO button and 404 page button styles*/
+
 #button-go, #error-button {
     background-color: var(--primary-button-color);
     border: 1px solid var(--primary-button-color);
@@ -136,6 +133,7 @@ h2, h3 {
 }
 
 /*Buttons inside modals (quit-button gets later style)*/
+
 .modal-footer button {
     background-color: #000000;
     border-color:#000000;
@@ -164,6 +162,7 @@ h2, h3 {
 
 
 /*Game styles*/
+
 #game-section {
     background-color: #000000;
     border: 5px solid var(--secondary-color);
@@ -207,7 +206,6 @@ h2, h3 {
 }
 
 /*Styles winning text in game*/
-
 #winning-text {
     font-family: var(--secondary-font);
     font-weight: 600;
