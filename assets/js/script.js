@@ -37,6 +37,7 @@ function selectNineFruits(){
 }
 
 //Hold function implementation
+
 //Targets all hold buttons
 const holdButtons = document.querySelectorAll('.hold-button');
 
@@ -93,8 +94,8 @@ function holdColumn(e){
    
 }
 
-// Function to change text
-// If button contains held-button class, change inner text, otherwise change back to HOLD
+/* Function to change text
+   If button contains held-button class, change inner text, otherwise change back to HOLD*/
 function changeText(e){
 if (this.classList.contains('held-button')){
     this.innerText = 'HELD';}
@@ -104,14 +105,15 @@ if (this.classList.contains('held-button')){
     }
 
 }
+
 // Variables for individual Hold buttons
 
 const holdColumnOne = document.getElementById('hold-column-one');
 const holdColumnTwo = document.getElementById('hold-column-two');
 const holdColumnThree = document.getElementById('hold-column-three');
 
-// Function to populate all fruit columns with nine random fruits from allFruits array, or not, depending on Hold button
-// If button corresponding to column is held (contains .held-button), do not add new fruits
+/* Function to populate all fruit columns with nine random fruits from allFruits array, or not, depending on Hold button
+   If button corresponding to column is held (contains .held-button), do not add new fruits*/
 
 function populateFruits(){
     if (!(holdColumnOne.classList.contains('held-button'))){
@@ -137,6 +139,7 @@ function populateFruits(){
 }
 
 //Needed for winning functionality
+
 //Variable for winning row
 const winningRow = document.querySelectorAll('.winning-row');
 
@@ -167,8 +170,8 @@ function selectFruitFunction() {
       // Call function to populate fruit columns (depending in Hold)
       populateFruits();
 
-      //If winning combination call winRound function
-      //if statement needs to be inside this function as it should check this condition after populateFruits
+      /*If winning combination call winRound function
+        if statement needs to be inside this function as it should check this condition after populateFruits*/
       if (middleFruitOne.innerHTML === middleFruitTwo.innerHTML && middleFruitOne.innerHTML === middleFruitThree.innerHTML){
       
          winRound();
@@ -190,8 +193,8 @@ function showCreditInfo(){
 }
 
 
-//Default values for credit, spins left and rounds played.
-//Without this I get an error in JSHint, even if the functions work because game is read in resetGame funtion, which is always run
+/*Default values for credit, spins left and rounds played.
+  Without this I get an error in JSHint, even if the functions work because game is read in resetGame funtion, which is always run*/
 let game = {
     credit: 10,
     spinsLeft: 3,
@@ -228,8 +231,8 @@ function resetGame(){
     // Call function to populate fruit columns (depending in Hold)
     populateFruits();
 
-    //If winning combination call winRound function
-    //if statement needs to be inside this function as it should check this condition after populateFruits
+    /*If winning combination call winRound function
+      if statement needs to be inside this function as it should check this condition after populateFruits*/
     if (middleFruitOne.innerHTML === middleFruitTwo.innerHTML && middleFruitOne.innerHTML === middleFruitThree.innerHTML){
       
       winRound();
@@ -237,8 +240,8 @@ function resetGame(){
 }
 
 
-// From resetGame, each time you click Go:
-// - Spins left -1, until 0
+/* From resetGame, each time you click Go:
+   - Spins left -1, until 0 */
 
 function spinDecrease(){
 
@@ -264,10 +267,10 @@ function spinDecrease(){
 
 }
 
-//After third time you clicked Go:
-// - Spins left back to 3,
-// - Rounds played +1,
-// - Credit -5
+/*After third time you clicked Go:
+  - Spins left back to 3,
+  - Rounds played +1,
+  - Credit -5 */
 
 // Function called when spins left = 0 and after won round
 function roundDone(){
@@ -308,8 +311,8 @@ function roundDone(){
        // Call function to populate fruit columns (depending in Hold)
        populateFruits();
 
-       //If winning combination call winRound function
-       //if statement needs to be inside this function as it should check this condition after populateFruits
+       /*If winning combination call winRound function
+         if statement needs to be inside this function as it should check this condition after populateFruits*/
        if (middleFruitOne.innerHTML === middleFruitTwo.innerHTML && middleFruitOne.innerHTML === middleFruitThree.innerHTML){
       
            winRound();
@@ -319,8 +322,8 @@ function roundDone(){
 
 }
 
-//If there is a winning combination in one of the 3 spins
-// - Credit +10
+/*If there is a winning combination in one of the 3 spins
+  - Credit +10*/
 
 
 function winRound(){
