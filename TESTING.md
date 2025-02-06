@@ -152,12 +152,17 @@ After I implemented the **Game over** modal, I noticed that the **GO** button lo
 The error about *aria-hidden* seemed a much larger issue, as I found posts about it being an issue with the attribute *disabled*: https://github.com/WordPress/gutenberg/issues/56547, and about Bootstrap using this attribute while it should not: https://github.com/twbs/bootstrap/issues/41005. So I did find a workaround [here](https://stackoverflow.com/questions/62677291/aria-hidden-elements-do-not-contain-focusable-elements-issue-when-modal-is-sho) that says you should use *aria-modal* for modals, but now I see in Chrome developer tools that this is actually added in all the modals, and not *aria-hidden*, and then I don't get this warning. When I got the warning, *aria-hidden* was added to the **Game over** modal. But I did not change anything, so it may come back and is some kind of random error that I can not control.
 
 
-Below are screenshots of when the error is triggered and when not, without me changing any code. The first screenshot shows that *aria-hidden = true" is added, the second screenshot shows *aria-modal = true* is added to the same modal, and then there is no error.
+Below are screenshots of when the error is triggered and when not, without me changing any code. The first screenshot shows that *aria-hidden = true* is added, the second screenshot shows *aria-modal = true* is added to the same modal, and then there is no error.
 
 ![Error aria-hidden](docs/screenshots/aria-hidden-error.png)
 
 
 ![No error aria-modal](docs/screenshots/aria-modal.png)
+
+
+Looking at this issue later again, I found that even sometimes when the *aria-hidden = true* is added, I don not get the error. So since the error talks about *Blocked aria-hidden on an element because its descendant retained focus. The focus must not be hidden from assistive technology*, I decided to focus on which button is in focus after this modal closes. It seems that no button is in focus, which may mean that the button in focus is in the closed, now hidden modal. So I thought I can add another *buttonGo.focus();* after this modal closes, to move focus to the **GO** button after you click **Play again**. It is not needed for **Quit** because it just goes back to the start pre-game page. 
+
+
 
 #### Responsiveness
 

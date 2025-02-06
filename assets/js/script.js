@@ -209,7 +209,11 @@ const startSpinsLeft = 3;
 document.getElementById('button-restart').addEventListener('click', resetGame);
 
 function resetGame(){
+    //Focuses on GO so you can continue with key press, from https://laracasts.com/index.php/discuss/channels/vue/how-to-focus-on-an-input-after-disabling
+    buttonGo.focus();
+
     resetHold();
+    
     //Sets and shows default values
     game = {
         credit: 10,
