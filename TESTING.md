@@ -10,7 +10,7 @@ I have been testing throughout development, fixing issues as I went. I deployed 
 
 * [Automated testing](#automated-testing)
   * [HTML validator](#html-validator)
-  * [W3C validator](#w3c-validator)
+  * [CSS validator](#css-validator)
   * [JavaScript validator](#javascript-validator)
   * [Lighthouse testing](#lighthouse-testing)
   * [Favicon testing](#favicon-testing)
@@ -35,13 +35,13 @@ I have been testing throughout development, fixing issues as I went. I deployed 
 
 ### HTML validator
 
-During development when I ran this validator, I needed to add a hidden heading for the sections surrounding the game and credit info section index.html. Currently, there are no issues for index.html and 404.html: 
+During development when I ran this [HTML validator](https://validator.w3.org/), I needed to add a hidden heading for the sections surrounding the game and credit info section index.html. Currently, there are no issues for index.html and 404.html: 
  -  [index.html](https://validator.w3.org/nu/?doc=https%3A%2F%2Flizzyongit.github.io%2Ffruits-hold-em%2Findex.html)
  -  [404.html](https://validator.w3.org/nu/?doc=https%3A%2F%2Flizzyongit.github.io%2Ffruits-hold-em%2F404.html)
 
-### W3C validator
+### CSS validator
 
-For style.css, there are no errors. There are some warnings related to the imported Google Fonts and used variables, that can be ignored. There are also warnings about setting the same colours for backgrounds and borders on buttons and the middle row when there is no winning combination, which I did on purpose to override the Bootstrap button and border colours, and for the middle row, the border is the same colour but it is distinctive from the background colour, to highlight the middle row is the row the whole game is about. Because I ran my code through the [Autoprefixer](https://autoprefixer.github.io/), I also get warnings about this, which can be ignored.
+For style.css, there are no errors in the [Jigsaw validator](https://jigsaw.w3.org/css-validator/). There are some warnings related to the imported Google Fonts and used variables, that can be ignored. There are also warnings about setting the same colours for backgrounds and borders on buttons and the middle row when there is no winning combination, which I did on purpose to override the Bootstrap button and border colours, and for the middle row, the border is the same colour but it is distinctive from the background colour, to highlight the middle row is the row the whole game is about. Because I ran my code through the [Autoprefixer](https://autoprefixer.github.io/), I also get warnings about this, which can be ignored.
 
  ![Css warnings](docs/screenshots/css-warnings.png)
 
@@ -155,6 +155,8 @@ The error about *aria-hidden* seemed a much larger issue, as I found posts about
 Below are screenshots of when the error is triggered and when not, without me changing any code. The first screenshot shows that *aria-hidden = true" is added, the second screenshot shows *aria-modal = true* is added to the same modal, and then there is no error.
 
 ![Error aria-hidden](docs/screenshots/aria-hidden-error.png)
+
+
 ![No error aria-modal](docs/screenshots/aria-modal.png)
 
 #### Responsiveness

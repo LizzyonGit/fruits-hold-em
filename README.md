@@ -296,8 +296,8 @@ To fork the repository:
 To clone the repository:
   1. In the GitHub repository, click the **Code** button.
   2. In the **Local** tab, select if you want to clone with HTTPS, SSH, or GitHub CLI, and copy the link below it.
-  2. Open the terminal in your code editor and change the current working directory to the location you want to clone this repository to.
-  3. Type *git clone* and paste the link from step 2, and press Enter.
+  3. Open the terminal in your code editor and change the current working directory to the location you want to clone this repository to.
+  4. Type *git clone* and paste the link from step 2, and press Enter.
 
 ## Credits 
 
@@ -311,6 +311,7 @@ To clone the repository:
 
 ### Resources
 
+__Planning__
 - For a font pairing idea, [this article](https://www.creatopy.com/blog/google-font-pairings/#21).
 - To decide on which colours to use, I have researched several websites:
   - https://www.newwavemagazine.com/single-post/the-psychology-of-color-in-casinos-how-design-choices-influence-the-player-s-mood
@@ -322,14 +323,12 @@ To clone the repository:
   - https://www.myperfectcolor.com/paint/101581-true-value-3496-casino-green#:~:text=The%20RGB%20values%20for%20True,light%20that%20a%20color%20reflects
 - For getting a colour scheme and checking the color contrast, [Coolors.co](https://coolors.co).
 
-
+__During development and testing__
 - Bootstrap documentation [Bootstrap](https://getbootstrap.com/docs/5.3/getting-started/introduction/).
 - [W3schools](https://www.w3schools.com/) for getting the fruit icons and reading up on concepts.
 - [MDN Web Docs](https://developer.mozilla.org/en-US/) to read up on concepts.
 - [Stackoverflow](https://stackoverflow.com/) for general code questions.
 - Inspiration and code bits from CI walkthrough project *Simon says*.
-
-
 - How to redirect to another page with JavaScript: [tutorialspoint](https://www.tutorialspoint.com/how-to-redirect-to-another-webpage-using-javascript).
 - How to open a Bootstrap modal with JavaScript: [Stackoverflow](https://stackoverflow.com/questions/62101647/.javascript-bootstrap-open-bootstrap-modal-with-javascript-and-not-with-button).
 - To set focus on an element: [Laracasts](https://laracasts.com/index.php/discuss/channels/vue/how-to-focus-on-an-input-after-disabling).
@@ -342,7 +341,7 @@ To clone the repository:
 - Slack post on a console error I got as well: https://code-institute-room.slack.com/archives/D07L9QW7YS3/p1738070720220649.
 - How to target Safari with CSS: [Wojtek Witkowski](https://wojtek.im/journal/targeting-safari-with-css-media-query). 
 
-
+__Project finalisation__ 
 - [Grammarly](https://www.grammarly.com/grammar-check) spellchecker.
 - [Diffchecker](https://www.diffchecker.com/text-compare/) for checking Autoprefixer changes.
 - Other students' readme files for learning about local development processes.
