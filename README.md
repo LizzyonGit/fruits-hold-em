@@ -83,16 +83,13 @@ Create a:
 Below are my initial wireframes per page for mobile, tablet, and laptop screen sizes. I used [Figma](https://www.figma.com/) to create them.
 
 <details>
-    <summary>Start page (not used)</summary>
-
-    I decided to not have this separate start page as it just increases the amount of clicks and does not give any value, since the buttons can be on the game page.
+    <summary>Start page (not used)</summary>I decided to not have this separate start page as it just increases the amount of clicks and does not give any value, since the buttons can be on the game page.
 
   ![Startpage wireframe for mobile, tablet and laptop](docs/wireframes/wireframe-start.png)
+
 </details>
 <details>
-    <summary>Game page</summary>
-
-    This is how I saw the page with the game itself.
+    <summary>Game page</summary>This is how I saw the page with the game itself. Later, I decided to not have a footer as it is not needed for an MVP.
 
   ![Game page wireframe for mobile, tablet and laptop](docs/wireframes/wireframe-game.png)
 
@@ -215,7 +212,7 @@ The logo is the game name written in font *Nabla*, and in *Passero One* for the 
    __Quit button__
      - The **Quit** button triggers the **Quit game** modal.
 
-![Credit info section](docs/screenshots/credit-info-section.png)
+  ![Credit info section](docs/screenshots/credit-info-section.png)
 
 - __Game over modal__
 
