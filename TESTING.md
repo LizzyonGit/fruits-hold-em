@@ -22,7 +22,7 @@ I have been testing throughout development, fixing issues as I went. I deployed 
     * [Error in console](#error-in-console)
     * [Responsiveness](#responsiveness)
     * [Different fruit looks](#different-fruit-looks)
-    * [Safari lacks font support](#safari-lacks-h1-font-support)
+    * [Safari lacks font support](#safari-lacks-font-support)
   * [Full testing](#full-testing)
     * [Browser testing](#browser-testing)
     * [Device testing](#device-testing)
@@ -84,7 +84,7 @@ For mobile, it gives 98% for performance, and apart from the same issues as befo
 ![Lighthouse result mobile](docs/screenshots/lighthouse-404-mobile-incognito.png)
 
 ### Favicon testing
-I run https://lizzyongit.github.io/fruits-hold-em/ through Realfavicongenerator's [favicon checker](https://realfavicongenerator.net/favicon-checker/lizzyongit.github.io%2Ffruits-hold-em%2F), and I only got a warning about a missing title for web apps, which actually would be taken from the website's title if this would be applicable, which it is not because the website is not an app. There is a missing web app manifest which is also not applicable.
+I ran https://lizzyongit.github.io/fruits-hold-em/ through Realfavicongenerator's [favicon checker](https://realfavicongenerator.net/favicon-checker/lizzyongit.github.io%2Ffruits-hold-em%2F), and I only got a warning about a missing title for web apps, which actually would be taken from the website's title if this would be applicable, which it is not because the website is not an app. There is a missing web app manifest which is also not applicable.
 
 ## Manual testing
 

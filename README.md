@@ -346,6 +346,6 @@ __Project finalisation__
 - [Diffchecker](https://www.diffchecker.com/text-compare/) for checking Autoprefixer changes.
 - Other students' readme files for learning about local development processes.
 
-## Acknowledgments
+### Acknowledgments
 - My mentor Jubril for the feedback.
 - My cohort facilitator Kay for the pep talks.
